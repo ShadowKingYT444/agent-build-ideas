@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+"""Build index.html for the agent-build-ideas site from ideas.json.
+
+ideas.json schema:
+{"days": [{"date": "2026-10-03", "items": [
+    {"name": str, "what": str, "innovative": str, "link": str,
+     "hackathon": str, "screenshot": str|null (path under screenshots/) }]}]}
+
+Screenshots live in screenshots/ and are referenced relative to index.html.
+Days are rendered newest-first.
+"""
+import json, html, os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+def esc(s):
+    return html.escape(s or "", quote=True)
+
+def card(it):
+    shot = ""
+    if it.get("screenshot"):
+        shot = f'<a class="shot" href="{esc(it["screenshot"])}" target="_blank" rel="noopener"><img src="{esc(it["screenshot"])}" alt="screenshot" loading="lazy"></a>'
+    return f"""<article class="card">
+  <h3>{esc(it.get("name",""))}</h3>
+  <p class="what">{esc(it.get("what",""))}</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> {esc(it.get("innovative",""))}</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> {esc(it.get("hackathon",""))}</p>
+  <p class="links"><a href="{esc(it.get("link",""))}" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  {shot}
+</article>"""
+
+def day_block(d):
+    items = "\n".join(card(it) for it in d.get("items", []))
+    return f"""<section class="day">
+  <h2>{esc(d.get("date",""))} <span class="count">{len(d.get("items",[]))} ideas</span></h2>
+  <div class="grid">{items}</div>
+</section>"""
+
+def main():
+    with open(os.path.join(HERE, "ideas.json")) as f:
+        data = json.load(f)
+    days = sorted(data.get("days", []), key=lambda d: d.get("date", ""), reverse=True)
+    body = "\n".join(day_block(d) for d in days) or '<p class="empty">No ideas yet — the first daily scan lands soon.</p>'
+    n = sum(len(d.get("items", [])) for d in days)
+    page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Build Ideas — daily top-5 niche AI-agent builds</title>
+<style>
+:root{{--bg:#0d1117;--card:#161b22;--border:#30363d;--txt:#e6edf3;--mut:#8b949e;--acc:#58a6ff}}
+*{{box-sizing:border-box}}body{{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;margin:0;padding:24px;line-height:1.5}}
+.wrap{{max-width:1080px;margin:0 auto}}
+header{{margin-bottom:28px}}h1{{font-size:1.7rem;margin:0 0 6px}}.sub{{color:var(--mut);margin:0 0 4px}}
+.day h2{{font-size:1.15rem;border-bottom:1px solid var(--border);padding-bottom:8px;margin:34px 0 16px}}
+.count{{color:var(--mut);font-size:.85rem;font-weight:400}}
+.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}}
+.card{{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px}}
+.card h3{{margin:0 0 8px;font-size:1.05rem}}
+.what{{margin:0 0 8px}}.innov{{margin:0 0 8px}}.hack{{color:var(--mut);margin:0 0 8px;font-size:.93rem}}
+.lbl{{color:var(--acc);font-weight:600}}.links a{{color:var(--acc);text-decoration:none}}.links a:hover{{text-decoration:underline}}
+.shot img{{width:100%;border-radius:6px;border:1px solid var(--border);margin-top:8px}}
+.empty{{color:var(--mut)}}
+footer{{color:var(--mut);font-size:.85rem;margin-top:40px;border-top:1px solid var(--border);padding-top:12px}}
+</style>
+</head>
+<body><div class="wrap">
+<header>
+<h1>Agent Build Ideas</h1>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. {n} ideas so far.</p>
+</header>
+{body}
+<footer>Updated daily ~08:48 PT. Read-only scans; no logins, no interactions.</footer>
+</div></body></html>"""
+    with open(os.path.join(HERE, "index.html"), "w") as f:
+        f.write(page)
+    print(f"built index.html with {len(days)} days, {n} ideas")
+
+if __name__ == "__main__":
+    main()
