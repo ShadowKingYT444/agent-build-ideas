@@ -24,7 +24,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:40px;border-top:1px solid va
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 5 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 10 ideas so far.</p>
 </header>
 <section class="day">
   <h2>2026-10-03 <span class="count">5 ideas</span></h2>
@@ -67,6 +67,49 @@ footer{color:var(--mut);font-size:.85rem;margin-top:40px;border-top:1px solid va
   <p class="hack"><span class="lbl">Hackathon angle:</span> Testing that writes itself — agent watches your app, generates tests from a prompt, self-heals flaky selectors.</p>
   <p class="links"><a href="https://x.com/o_kwasniewski/status/2105675143464763540" target="_blank" rel="noopener">Original post &rarr;</a></p>
   <a class="shot" href="screenshots/2026-10-03-e2e.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-e2e.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
+<section class="day">
+  <h2>2026-10-03 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>caveman</h3>
+  <p class="what">Go skill + HTTP proxy for coding agents that forces terse output in a constrained &quot;caveman speak&quot; dialect, cutting token usage ~65%. Commits 9h before the scan; release Caveman 3.0.0 three days prior.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Token shaping as infrastructure, not prompting: the proxy intercepts agent responses and rewrites them in a maximally-dense constrained dialect instead of asking the model to be concise.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A token-shaping proxy for one specific domain (SQL, legal docs) is a tight weekend build.</p>
+  <p class="links"><a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-03-caveman.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-caveman.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>MCP security scanner (life-forge)</h3>
+  <p class="what">Deterministic static scanner for MCP tool definitions (Show HN, Oct 3, 2026): flags schema poisoning, invisible/bidi Unicode, homoglyph tool-name spoofing, destructive tools with no authorization surface, unbounded params, cross-server tool shadowing, and rug-pull description drift.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Treats MCP tool definitions as an attack surface with deterministic checks rather than asking an LLM to judge safety — its scan of 15 popular public MCP servers rated 40% CRITICAL.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> An &quot;is my agent&#x27;s MCP stack pwned?&quot; audit tool — a perfect pre-flight check for any agent hackathon build.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=49944383" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-03-lifeforge.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-lifeforge.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>hyperframes</h3>
+  <p class="what">&quot;Write HTML. Render video. Built for agents.&quot; Open-source rendering layer (HeyGen team, a small startup) letting AI agents generate videos by writing plain HTML instead of wrangling video codecs. Commits 17 minutes before the scan, Oct 3, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Flips video generation from a codec problem to a document problem — agents already write great HTML, so the renderer meets them where they are instead of teaching them ffmpeg.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Agents producing explainer videos or ads from a single prompt makes a strong demo.</p>
+  <p class="links"><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-03-hyperframes.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-hyperframes.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>stillwet.art (Opus 5.5 paint canvas)</h3>
+  <p class="what">Show HN (Oct 2, 2026, 328 pts): a simulated painting canvas handed to agents as a novel capability eval — painters get a command line plus canvas, with an automated evaluation runner grading the output.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Evaluates agents in a creative/visual domain far outside coding benchmarks, probing genuine tool-use reasoning no benchmark has memorized — comments note the models obsess over the grader.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A ready-made quirky eval harness — score your agent on something no one trains for.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=49928566" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-03-stillwet.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-stillwet.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>raid (offense-research)</h3>
+  <p class="what">Brand-new Go policy-and-approval engine for AI agents (v0.1.0, Oct 3, 2026): deterministic CEL policies combined with signed, single-use human approvals for agent actions.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Governance built for autonomous agents rather than bolted on — deterministic policy checks gate the action, and human approval is a cryptographically signed single-use token, not a chat interruption.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Weekend-scale codebase itself; extend it with a policy for one risky action class (e.g. payments).</p>
+  <p class="links"><a href="https://github.com/offense-research/raid" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
 </article></div>
 </section>
 <footer>Updated daily ~08:48 PT. Read-only scans; no logins, no interactions.</footer>
