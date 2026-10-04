@@ -1,139 +1,75 @@
 {
-  "days": [
+ "days": [
+  {
+   "date": "2026-10-03",
+   "items": [
     {
-      "date": "2026-10-03",
-      "items": [
-        {
-          "hackathon": "Memory is the obvious moat layer — build a scoped-down version (e.g. memory for one vertical like coding agents) or a novel retrieval strategy on top.",
-          "innovative": "Recall runs four retrieval strategies in parallel (semantic, keyword BM25, graph, temporal), merges them with reciprocal rank fusion, and reranks with a cross-encoder. Separately, a background consolidation turns retained facts into 'observations' — deduplicated, evidence-backed beliefs that are refined rather than overwritten when new evidence arrives — and then into 'mental models' (standing synthesized answers) and knowledge pages. Memories live in isolated 'banks' with tag scoping, and 'Memory Defense' scans retains for secrets/PII. The twist isn't memory itself — it's refine-don't-overwrite consolidation plus 4-strategy fused recall.",
-          "link": "https://github.com/vectorize-io/hindsight",
-          "name": "hindsight",
-          "screenshot": null,
-          "what": "Agent memory that learns — memory infrastructure with integrations for 25+ agent frameworks (LangGraph, Claude Agent SDK, CrewAI, OpenAI Agents). #1 on GitHub weekly trending (+16K stars this week, 44.8K total). Apache-2.0, Docker-first (surrealdb + qdrant + redis)."
-        },
-        {
-          "hackathon": "Agent-generated hardware gadget — natural-language spec in, firmware + enclosure out; hardware track winner material.",
-          "innovative": "Open-source ESP32 firmware + Linux SDK that inverts the usual flow: instead of agents doing software only, you 'point your favorite coding agent at the github repo' and it builds you physical hardware peripherals for Muse. Also launching Muse Home Link, a USB-C powered open-source device that bridges Muse to smart-home devices (TVs, speakers over HTTPS) — 5,000 units free to Muse subscribers. Agents going from code to atoms is the novelty.",
-          "link": "https://x.com/natfriedman/status/2106099383037309211",
-          "name": "Muse Gadgets",
-          "screenshot": null,
-          "what": "Nat Friedman's side-project launch (Oct 2, 2026): open-source ESP32 firmware and Linux SDK so coding agents can design and build physical gadgets for Muse. 738K views, rauchg: 'this is gonna be huge.'"
-        },
-        {
-          "hackathon": "Browser-as-agent-runtime is an emerging category — extend it: agent session recording/replay for debugging, or multi-agent shared browsing.",
-          "innovative": "tmux for the browser — split panes, named sessions, separate profiles in one window — with the agentic-era twist: agents use a CLI to navigate, inspect pages, click, type, and take screenshots in background sessions without stealing focus, and the human 'attaches' to the agent's session (like tmux attach) to watch their work. Saveable layouts, detachable windows whose pages keep running. Free, open source, early preview.",
-          "link": "https://www.producthunt.com/products/bmux",
-          "name": "bmux",
-          "screenshot": "screenshots/2026-10-03-bmux.png",
-          "what": "Browser multiplexer for the agentic era (launched Oct 1, 2026 on Product Hunt). Free, open-source browser: split panes, named sessions, separate profiles; agents browse in background sessions via CLI, you attach to inspect."
-        },
-        {
-          "hackathon": "Steal the org-chart metaphor for a narrower domain — e.g. 'hire' agents as a QA team or a research team with roles and approval gates.",
-          "innovative": "'If OpenClaw is an employee, Paperclip is a company' — agents are 'hired' via heartbeats ('If it can receive a heartbeat, it's hired', DB-backed wakeup queue), then managed like employees: org charts with roles/titles/reporting lines, task assignment with atomic checkout and execution locks, approval gates, spend budgets, and portable company templates (export/import entire orgs). BYOA (bring your own agent, any runtime) with skill injection for training. Novelty is the heartbeats-as-employment-contract + org-chart governance metaphor.",
-          "link": "https://github.com/paperclipai/paperclip",
-          "name": "paperclip",
-          "screenshot": null,
-          "what": "The open-source app to manage agents at work — open-source MCP tool gateway + orchestration platform for agent teams. 96.4K stars, shipping daily (release v2026.1001.0 yesterday)."
-        },
-        {
-          "hackathon": "Testing that writes itself — agent watches your app, generates tests from a prompt, self-heals flaky selectors.",
-          "innovative": "One framework that mixes deterministic and agentic APIs in the same test — use locators and deterministic assertions where stable, drop in agent steps like agent.act()/agent.assert() for flows you'd otherwise hand-describe; works across web and mobile with the same API. BYO agent/infra: any model via Vercel AI Gateway, or sign in with ChatGPT/GitHub Copilot/SuperGrok subscription. Fully open source, npx e2e init, runs locally or in CI. Novelty is the hybrid deterministic+agentic testing contract rather than pure-agent E2E.",
-          "link": "https://x.com/o_kwasniewski/status/2105675143464763540",
-          "name": "e2e",
-          "screenshot": "screenshots/2026-10-03-e2e.png",
-          "what": "The agentic testing framework for any app (YC P26 TesterArmy, launched Oct 1, 2026, 1.1M views). rauchg: 'The future is verification-engineering. Some tests will be written by hand, most will be generated by AI and executed on real browsers.'"
-        }
-      ]
+     "hackathon": "Memory is the obvious moat layer \u2014 build a scoped-down version (e.g. memory for one vertical like coding agents) or a novel retrieval strategy on top.",
+     "innovative": "Recall runs four retrieval strategies in parallel (semantic, keyword BM25, graph, temporal), merges them with reciprocal rank fusion, and reranks with a cross-encoder. Separately, a background consolidation turns retained facts into 'observations' \u2014 deduplicated, evidence-backed beliefs that are refined rather than overwritten when new evidence arrives \u2014 and then into 'mental models' (standing synthesized answers) and knowledge pages. Memories live in isolated 'banks' with tag scoping, and 'Memory Defense' scans retains for secrets/PII. The twist isn't memory itself \u2014 it's refine-don't-overwrite consolidation plus 4-strategy fused recall.",
+     "link": "https://github.com/vectorize-io/hindsight",
+     "name": "hindsight",
+     "screenshot": null,
+     "what": "Agent memory that learns \u2014 memory infrastructure with integrations for 25+ agent frameworks (LangGraph, Claude Agent SDK, CrewAI, OpenAI Agents). #1 on GitHub weekly trending (+16K stars this week, 44.8K total). Apache-2.0, Docker-first (surrealdb + qdrant + redis)."
     },
     {
-      "date": "2026-10-03",
-      "items": [
-        {
-          "name": "caveman",
-          "what": "Go skill + HTTP proxy for coding agents that forces terse output in a constrained \"caveman speak\" dialect, cutting token usage ~65%. Commits 9h before the scan; release Caveman 3.0.0 three days prior.",
-          "innovative": "Token shaping as infrastructure, not prompting: the proxy intercepts agent responses and rewrites them in a maximally-dense constrained dialect instead of asking the model to be concise.",
-          "link": "https://github.com/JuliusBrussee/caveman",
-          "hackathon": "A token-shaping proxy for one specific domain (SQL, legal docs) is a tight weekend build.",
-          "screenshot": "screenshots/2026-10-03-caveman.png"
-        },
-        {
-          "name": "MCP security scanner (life-forge)",
-          "what": "Deterministic static scanner for MCP tool definitions (Show HN, Oct 3, 2026): flags schema poisoning, invisible/bidi Unicode, homoglyph tool-name spoofing, destructive tools with no authorization surface, unbounded params, cross-server tool shadowing, and rug-pull description drift.",
-          "innovative": "Treats MCP tool definitions as an attack surface with deterministic checks rather than asking an LLM to judge safety — its scan of 15 popular public MCP servers rated 40% CRITICAL.",
-          "link": "https://news.ycombinator.com/item?id=49944383",
-          "hackathon": "An \"is my agent's MCP stack pwned?\" audit tool — a perfect pre-flight check for any agent hackathon build.",
-          "screenshot": "screenshots/2026-10-03-lifeforge.png"
-        },
-        {
-          "name": "hyperframes",
-          "what": "\"Write HTML. Render video. Built for agents.\" Open-source rendering layer (HeyGen team, a small startup) letting AI agents generate videos by writing plain HTML instead of wrangling video codecs. Commits 17 minutes before the scan, Oct 3, 2026.",
-          "innovative": "Flips video generation from a codec problem to a document problem — agents already write great HTML, so the renderer meets them where they are instead of teaching them ffmpeg.",
-          "link": "https://github.com/heygen-com/hyperframes",
-          "hackathon": "Agents producing explainer videos or ads from a single prompt makes a strong demo.",
-          "screenshot": "screenshots/2026-10-03-hyperframes.png"
-        },
-        {
-          "name": "stillwet.art (Opus 5.5 paint canvas)",
-          "what": "Show HN (Oct 2, 2026, 328 pts): a simulated painting canvas handed to agents as a novel capability eval — painters get a command line plus canvas, with an automated evaluation runner grading the output.",
-          "innovative": "Evaluates agents in a creative/visual domain far outside coding benchmarks, probing genuine tool-use reasoning no benchmark has memorized — comments note the models obsess over the grader.",
-          "link": "https://news.ycombinator.com/item?id=49928566",
-          "hackathon": "A ready-made quirky eval harness — score your agent on something no one trains for.",
-          "screenshot": "screenshots/2026-10-03-stillwet.png"
-        },
-        {
-          "name": "raid (offense-research)",
-          "what": "Brand-new Go policy-and-approval engine for AI agents (v0.1.0, Oct 3, 2026): deterministic CEL policies combined with signed, single-use human approvals for agent actions.",
-          "innovative": "Governance built for autonomous agents rather than bolted on — deterministic policy checks gate the action, and human approval is a cryptographically signed single-use token, not a chat interruption.",
-          "link": "https://github.com/offense-research/raid",
-          "hackathon": "Weekend-scale codebase itself; extend it with a policy for one risky action class (e.g. payments).",
-          "screenshot": null
-        }
-      ]
-    },
-    {
-      "date": "2026-10-04",
-      "items": [
-        {
-          "name": "openrig",
-          "what": "Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work. Indie (mvschwarz), 4.9k stars, Apache-2.0, #4 weekly trending with +4,245 stars this week.",
-          "innovative": "Heterogeneous agent runtimes (Claude Code + Codex + Pi) composed in one YAML RigSpec and booted with `rig up`; \"seats\" give each agent a stable role identity (e.g. dev-owner@first-project) so conversations can change while identity and context persist. Ships snapshot/restore, tmux sessions, Slack integration, an MCP server and a typing guard.",
-          "link": "https://github.com/mvschwarz/openrig",
-          "hackathon": "A weekend version could be a single-YAML multi-agent CLI for one harness pair — e.g. two Claude Code tmux sessions sharing one scratch file.",
-          "screenshot": "screenshots/2026-10-04-openrig.png"
-        },
-        {
-          "name": "Offrun",
-          "what": "A single workspace that runs Claude Code, Codex, AGY and Grok Build side by side — showing who is working, who needs your attention, and what every account has left. Show HN Oct 3 (75 pts, 63 comments).",
-          "innovative": "One cockpit across heterogeneous agent CLIs from different vendors, with account/usage tracking layered on top — a meta-dashboard for parallel agents. The HN thread already spawned agentmgmt.dev, a comparison site covering 68 such tools.",
-          "link": "https://news.ycombinator.com/item?id=49942434",
-          "hackathon": "Hot indie category — a weekend cockpit for 2-3 agent CLIs with usage bars is very shippable.",
-          "screenshot": "screenshots/2026-10-04-offrun.png"
-        },
-        {
-          "name": "Agent Commons Playground",
-          "what": "A playground (here.now) where AI agents find each other and play — a shared social space built for agents, not humans. HN Oct 4.",
-          "innovative": "Agent-to-agent discovery and interaction as the product itself: a social network / play space for agents with humans as spectators.",
-          "link": "https://news.ycombinator.com/item?id=49954675",
-          "hackathon": "Whimsical indie experiment — a multi-agent \"town square\" with agent-vs-agent games is a great hackathon stage piece.",
-          "screenshot": "screenshots/2026-10-04-agent-commons-playground.png"
-        },
-        {
-          "name": "Moxie",
-          "what": "A \"Built for Claude Code\" menu-bar app by indie maker @birjuvachhani that lets you run Claude Code on any AI backend (ChatGPT, Gemini, DeepSeek, local Ollama, OpenRouter) instead of only Claude, and switch Claude accounts mid-task. Announced via Product Hunt on X, Oct 2.",
-          "innovative": "Mid-task account switching that dodges Claude's 5-hour usage limits mid-refactor, plus a unified backend picker routing Claude Code to cheaper or non-Anthropic models — it attacks the rate-limit constraint rather than the model itself.",
-          "link": "https://x.com/ProductHunt/status/2106025449201791309",
-          "hackathon": "Very weekend-shippable — a thin launcher/router over Claude Code's API surface with an account pool and model dropdown.",
-          "screenshot": "screenshots/2026-10-04-moxie.png"
-        },
-        {
-          "name": "impeccable",
-          "what": "\"The design language that makes your AI harness better at design\" — a design skill for AI coding agents with 24 commands and a shared vocabulary between human and agent. Solo-led indie (pbakaus), 76k stars, commits 6-7 hours ago.",
-          "innovative": "61 deterministic detector rules compiled into a self-contained Rust engine binary, so design checks run with zero LLM tokens — wired into 17+ agent harnesses via provider-native hook manifests so checks auto-run on agent Stop; plus durable PRODUCT.md as product truth.",
-          "link": "https://github.com/pbakaus/impeccable",
-          "hackathon": "A weekend builder could ship a mini deterministic linter-skill for one niche (e.g. landing-page hero sections) with a small rule set and one harness hook.",
-          "screenshot": "screenshots/2026-10-04-impeccable.png"
-        }
-      ]
+     "hackathon": "Testing that writes itself \u2014 agent watches your app, generates tests from a prompt, self-heals flaky selectors.",
+     "innovative": "One framework that mixes deterministic and agentic APIs in the same test \u2014 use locators and deterministic assertions where stable, drop in agent steps like agent.act()/agent.assert() for flows you'd otherwise hand-describe; works across web and mobile with the same API. BYO agent/infra: any model via Vercel AI Gateway, or sign in with ChatGPT/GitHub Copilot/SuperGrok subscription. Fully open source, npx e2e init, runs locally or in CI. Novelty is the hybrid deterministic+agentic testing contract rather than pure-agent E2E.",
+     "link": "https://x.com/o_kwasniewski/status/2105675143464763540",
+     "name": "e2e",
+     "screenshot": "screenshots/2026-10-03-e2e.png",
+     "what": "The agentic testing framework for any app (YC P26 TesterArmy, launched Oct 1, 2026, 1.1M views). rauchg: 'The future is verification-engineering. Some tests will be written by hand, most will be generated by AI and executed on real browsers.'"
     }
-  ]
+   ]
+  },
+  {
+   "date": "2026-10-03",
+   "items": [
+    {
+     "name": "MCP security scanner (life-forge)",
+     "what": "Deterministic static scanner for MCP tool definitions (Show HN, Oct 3, 2026): flags schema poisoning, invisible/bidi Unicode, homoglyph tool-name spoofing, destructive tools with no authorization surface, unbounded params, cross-server tool shadowing, and rug-pull description drift.",
+     "innovative": "Treats MCP tool definitions as an attack surface with deterministic checks rather than asking an LLM to judge safety \u2014 its scan of 15 popular public MCP servers rated 40% CRITICAL.",
+     "link": "https://news.ycombinator.com/item?id=49944383",
+     "hackathon": "An \"is my agent's MCP stack pwned?\" audit tool \u2014 a perfect pre-flight check for any agent hackathon build.",
+     "screenshot": "screenshots/2026-10-03-lifeforge.png"
+    },
+    {
+     "name": "hyperframes",
+     "what": "\"Write HTML. Render video. Built for agents.\" Open-source rendering layer (HeyGen team, a small startup) letting AI agents generate videos by writing plain HTML instead of wrangling video codecs. Commits 17 minutes before the scan, Oct 3, 2026.",
+     "innovative": "Flips video generation from a codec problem to a document problem \u2014 agents already write great HTML, so the renderer meets them where they are instead of teaching them ffmpeg.",
+     "link": "https://github.com/heygen-com/hyperframes",
+     "hackathon": "Agents producing explainer videos or ads from a single prompt makes a strong demo.",
+     "screenshot": "screenshots/2026-10-03-hyperframes.png"
+    },
+    {
+     "name": "raid (offense-research)",
+     "what": "Brand-new Go policy-and-approval engine for AI agents (v0.1.0, Oct 3, 2026): deterministic CEL policies combined with signed, single-use human approvals for agent actions.",
+     "innovative": "Governance built for autonomous agents rather than bolted on \u2014 deterministic policy checks gate the action, and human approval is a cryptographically signed single-use token, not a chat interruption.",
+     "link": "https://github.com/offense-research/raid",
+     "hackathon": "Weekend-scale codebase itself; extend it with a policy for one risky action class (e.g. payments).",
+     "screenshot": null
+    }
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "items": [
+    {
+     "name": "Agent Commons Playground",
+     "what": "A playground (here.now) where AI agents find each other and play \u2014 a shared social space built for agents, not humans. HN Oct 4.",
+     "innovative": "Agent-to-agent discovery and interaction as the product itself: a social network / play space for agents with humans as spectators.",
+     "link": "https://news.ycombinator.com/item?id=49954675",
+     "hackathon": "Whimsical indie experiment \u2014 a multi-agent \"town square\" with agent-vs-agent games is a great hackathon stage piece.",
+     "screenshot": "screenshots/2026-10-04-agent-commons-playground.png"
+    },
+    {
+     "name": "impeccable",
+     "what": "\"The design language that makes your AI harness better at design\" \u2014 a design skill for AI coding agents with 24 commands and a shared vocabulary between human and agent. Solo-led indie (pbakaus), 76k stars, commits 6-7 hours ago.",
+     "innovative": "61 deterministic detector rules compiled into a self-contained Rust engine binary, so design checks run with zero LLM tokens \u2014 wired into 17+ agent harnesses via provider-native hook manifests so checks auto-run on agent Stop; plus durable PRODUCT.md as product truth.",
+     "link": "https://github.com/pbakaus/impeccable",
+     "hackathon": "A weekend builder could ship a mini deterministic linter-skill for one niche (e.g. landing-page hero sections) with a small rule set and one harness hook.",
+     "screenshot": "screenshots/2026-10-04-impeccable.png"
+    }
+   ]
+  }
+ ]
 }
