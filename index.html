@@ -25,25 +25,49 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 7 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 10 ideas so far.</p>
 </header>
 <section class="day">
-  <h2>2026-10-04 <span class="count">2 ideas</span></h2>
+  <h2>2026-10-04 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
-  <h3>Agent Commons Playground</h3>
-  <p class="what">A playground (here.now) where AI agents find each other and play — a shared social space built for agents, not humans. HN Oct 4.</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> Agent-to-agent discovery and interaction as the product itself: a social network / play space for agents with humans as spectators.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> Whimsical indie experiment — a multi-agent &quot;town square&quot; with agent-vs-agent games is a great hackathon stage piece.</p>
-  <p class="links"><a href="https://news.ycombinator.com/item?id=49954675" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  <a class="shot" href="screenshots/2026-10-04-agent-commons-playground.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-agent-commons-playground.png" alt="screenshot" loading="lazy"></a>
+  <h3>Observer AI</h3>
+  <p class="what">Solo-dev open-source micro-agent system for passive monitoring. A controller agent turns a plain-English request into a small local watcher that loops over screen, camera, mic, clipboard, or memory and fires actions such as SMS, Telegram, email, calls, logging, or recording when a condition becomes true.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It separates the expensive one-time planning step from the cheap continuous loop. A larger agent configures a narrow micro-agent; then a small local model repeatedly evaluates only the sensor state it needs. That makes &#x27;watch this until X happens&#x27; practical without keeping a frontier model or a human in the loop.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a vertical event agent instead of another chatbot: lab experiment watcher, CI approval sentinel, robotics pit monitor, accessibility assistant, or anti-distraction coach. The demo is strong because judges can cause the event live and watch the action trigger.</p>
+  <p class="links"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wtelk8/thanks_to_you_rlocalllama_my_mom_was_able_to_use/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
 </article>
 <article class="card">
-  <h3>impeccable</h3>
-  <p class="what">&quot;The design language that makes your AI harness better at design&quot; — a design skill for AI coding agents with 24 commands and a shared vocabulary between human and agent. Solo-led indie (pbakaus), 76k stars, commits 6-7 hours ago.</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> 61 deterministic detector rules compiled into a self-contained Rust engine binary, so design checks run with zero LLM tokens — wired into 17+ agent harnesses via provider-native hook manifests so checks auto-run on agent Stop; plus durable PRODUCT.md as product truth.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend builder could ship a mini deterministic linter-skill for one niche (e.g. landing-page hero sections) with a small rule set and one harness hook.</p>
-  <p class="links"><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  <a class="shot" href="screenshots/2026-10-04-impeccable.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-impeccable.png" alt="screenshot" loading="lazy"></a>
+  <h3>ClosePaw</h3>
+  <p class="what">Small open-source Android phone-use agent that works against the apps and accounts already on your phone. It has a floating Smart Capsule for pause/takeover, per-app approval, and optional background execution through a virtual display.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The background virtual-display mode is the important part: the agent can operate Android without taking over the screen you are actively using. Pair that with an always-visible pause/takeover surface and hard blocks for sensitive apps, and phone-use starts to look like a usable delegated worker rather than a demo that hijacks your device.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Pick one mobile workflow that is painful because it has no API — returns, appointment rescheduling, field-service checklists, campus admin — and let an agent run it in the background while the user keeps using the phone.</p>
+  <p class="links"><a href="https://github.com/imoonkey/closepaw" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>cubefarm</h3>
+  <p class="what">New open-source &#x27;software company&#x27; where a CEO agent studies a repo, writes the QA checklist and GitHub issues, proposes hires, developer agents work the issues, and QA agents test pull requests in a real browser before the office can merge them. The whole pipeline is visible as a 3D cartoon office.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The 3D office is not only decoration: it exposes the actual control loop. Planning, delegation, implementation, browser verification, screenshots, and merge gates become visible roles and places. That gives humans observability over a real multi-agent workflow instead of a wall of terminal tabs.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Use the same &#x27;visible organization&#x27; pattern for a non-code domain — research lab, incident-response room, robotics scouting team, or due-diligence desk. A judge can literally walk through the agent workflow while it runs.</p>
+  <p class="links"><a href="https://github.com/leonvanzyl/cubefarm" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Bountora</h3>
+  <p class="what">Experimental job board for AI agents. Jobs have strict acceptance tests; agents discover work, bid, submit deliverables, and the system verifies the result. The full agent-facing surface is intentionally tiny: discover, create, bid, submit over MCP/REST.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The key primitive is not the marketplace UI. It is machine-verifiable settlement: the job includes a test that decides whether submitted work counts. That changes agent-to-agent delegation from &#x27;trust the other agent&#x27; into &#x27;pay or award only when an objective verifier passes.&#x27;</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a narrow agent labor market where outputs are easy to verify — benchmark fixes, data extraction, web QA, puzzle solving, or code patches. Add reputation based on verifier pass rate rather than likes.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1wjkdn4/bountora_a_job_board_where_ai_agents_bid_on/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>clodfarm</h3>
+  <p class="what">Fresh open-source farm for Claude Code agents. You give it a mission, it splits work into sub-agents, runs across multiple boxes/accounts, exposes the farm over MCP, alerts on failures, and only lands work when your verification command passes.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Its scheduler treats subscription limits as compute capacity. Each seat has its own real 5-hour and weekly budget, so the farm paces and routes work around quota pressure instead of letting one agent burn the whole allowance. It is effectively a cluster scheduler for human-owned agent subscriptions.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Generalize the scheduler: route tasks across paid frontier agents, cheap APIs, and local models based on remaining quota, latency, and task difficulty. Show the queue continue draining even when one provider rate-limits you.</p>
+  <p class="links"><a href="https://github.com/matank001/clodfarm" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
 </article></div>
 </section>
 <section class="day">
@@ -92,5 +116,5 @@ footer a{color:var(--acc);text-decoration:none}
   
 </article></div>
 </section>
-<footer>Updated daily ~08:48 PT. Read-only scans; no logins, no interactions. · <a href="admin.html">manage</a></footer>
+<footer>Updated daily ~08:00 PT. Read-only scans; no logins, no interactions. · <a href="admin.html">manage</a></footer>
 </div></body></html>
