@@ -25,41 +25,17 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 15 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 7 ideas so far.</p>
 </header>
 <section class="day">
-  <h2>2026-10-04 <span class="count">5 ideas</span></h2>
+  <h2>2026-10-04 <span class="count">2 ideas</span></h2>
   <div class="grid"><article class="card">
-  <h3>openrig</h3>
-  <p class="what">Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work. Indie (mvschwarz), 4.9k stars, Apache-2.0, #4 weekly trending with +4,245 stars this week.</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> Heterogeneous agent runtimes (Claude Code + Codex + Pi) composed in one YAML RigSpec and booted with `rig up`; &quot;seats&quot; give each agent a stable role identity (e.g. dev-owner@first-project) so conversations can change while identity and context persist. Ships snapshot/restore, tmux sessions, Slack integration, an MCP server and a typing guard.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend version could be a single-YAML multi-agent CLI for one harness pair — e.g. two Claude Code tmux sessions sharing one scratch file.</p>
-  <p class="links"><a href="https://github.com/mvschwarz/openrig" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  <a class="shot" href="screenshots/2026-10-04-openrig.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-openrig.png" alt="screenshot" loading="lazy"></a>
-</article>
-<article class="card">
-  <h3>Offrun</h3>
-  <p class="what">A single workspace that runs Claude Code, Codex, AGY and Grok Build side by side — showing who is working, who needs your attention, and what every account has left. Show HN Oct 3 (75 pts, 63 comments).</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> One cockpit across heterogeneous agent CLIs from different vendors, with account/usage tracking layered on top — a meta-dashboard for parallel agents. The HN thread already spawned agentmgmt.dev, a comparison site covering 68 such tools.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> Hot indie category — a weekend cockpit for 2-3 agent CLIs with usage bars is very shippable.</p>
-  <p class="links"><a href="https://news.ycombinator.com/item?id=49942434" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  <a class="shot" href="screenshots/2026-10-04-offrun.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-offrun.png" alt="screenshot" loading="lazy"></a>
-</article>
-<article class="card">
   <h3>Agent Commons Playground</h3>
   <p class="what">A playground (here.now) where AI agents find each other and play — a shared social space built for agents, not humans. HN Oct 4.</p>
   <p class="innov"><span class="lbl">The innovative part:</span> Agent-to-agent discovery and interaction as the product itself: a social network / play space for agents with humans as spectators.</p>
   <p class="hack"><span class="lbl">Hackathon angle:</span> Whimsical indie experiment — a multi-agent &quot;town square&quot; with agent-vs-agent games is a great hackathon stage piece.</p>
   <p class="links"><a href="https://news.ycombinator.com/item?id=49954675" target="_blank" rel="noopener">Original post &rarr;</a></p>
   <a class="shot" href="screenshots/2026-10-04-agent-commons-playground.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-agent-commons-playground.png" alt="screenshot" loading="lazy"></a>
-</article>
-<article class="card">
-  <h3>Moxie</h3>
-  <p class="what">A &quot;Built for Claude Code&quot; menu-bar app by indie maker @birjuvachhani that lets you run Claude Code on any AI backend (ChatGPT, Gemini, DeepSeek, local Ollama, OpenRouter) instead of only Claude, and switch Claude accounts mid-task. Announced via Product Hunt on X, Oct 2.</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> Mid-task account switching that dodges Claude&#x27;s 5-hour usage limits mid-refactor, plus a unified backend picker routing Claude Code to cheaper or non-Anthropic models — it attacks the rate-limit constraint rather than the model itself.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> Very weekend-shippable — a thin launcher/router over Claude Code&#x27;s API surface with an account pool and model dropdown.</p>
-  <p class="links"><a href="https://x.com/ProductHunt/status/2106025449201791309" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  <a class="shot" href="screenshots/2026-10-04-moxie.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-moxie.png" alt="screenshot" loading="lazy"></a>
 </article>
 <article class="card">
   <h3>impeccable</h3>
@@ -71,37 +47,13 @@ footer a{color:var(--acc);text-decoration:none}
 </article></div>
 </section>
 <section class="day">
-  <h2>2026-10-03 <span class="count">5 ideas</span></h2>
+  <h2>2026-10-03 <span class="count">2 ideas</span></h2>
   <div class="grid"><article class="card">
   <h3>hindsight</h3>
   <p class="what">Agent memory that learns — memory infrastructure with integrations for 25+ agent frameworks (LangGraph, Claude Agent SDK, CrewAI, OpenAI Agents). #1 on GitHub weekly trending (+16K stars this week, 44.8K total). Apache-2.0, Docker-first (surrealdb + qdrant + redis).</p>
   <p class="innov"><span class="lbl">The innovative part:</span> Recall runs four retrieval strategies in parallel (semantic, keyword BM25, graph, temporal), merges them with reciprocal rank fusion, and reranks with a cross-encoder. Separately, a background consolidation turns retained facts into &#x27;observations&#x27; — deduplicated, evidence-backed beliefs that are refined rather than overwritten when new evidence arrives — and then into &#x27;mental models&#x27; (standing synthesized answers) and knowledge pages. Memories live in isolated &#x27;banks&#x27; with tag scoping, and &#x27;Memory Defense&#x27; scans retains for secrets/PII. The twist isn&#x27;t memory itself — it&#x27;s refine-don&#x27;t-overwrite consolidation plus 4-strategy fused recall.</p>
   <p class="hack"><span class="lbl">Hackathon angle:</span> Memory is the obvious moat layer — build a scoped-down version (e.g. memory for one vertical like coding agents) or a novel retrieval strategy on top.</p>
   <p class="links"><a href="https://github.com/vectorize-io/hindsight" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  
-</article>
-<article class="card">
-  <h3>Muse Gadgets</h3>
-  <p class="what">Nat Friedman&#x27;s side-project launch (Oct 2, 2026): open-source ESP32 firmware and Linux SDK so coding agents can design and build physical gadgets for Muse. 738K views, rauchg: &#x27;this is gonna be huge.&#x27;</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> Open-source ESP32 firmware + Linux SDK that inverts the usual flow: instead of agents doing software only, you &#x27;point your favorite coding agent at the github repo&#x27; and it builds you physical hardware peripherals for Muse. Also launching Muse Home Link, a USB-C powered open-source device that bridges Muse to smart-home devices (TVs, speakers over HTTPS) — 5,000 units free to Muse subscribers. Agents going from code to atoms is the novelty.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> Agent-generated hardware gadget — natural-language spec in, firmware + enclosure out; hardware track winner material.</p>
-  <p class="links"><a href="https://x.com/natfriedman/status/2106099383037309211" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  
-</article>
-<article class="card">
-  <h3>bmux</h3>
-  <p class="what">Browser multiplexer for the agentic era (launched Oct 1, 2026 on Product Hunt). Free, open-source browser: split panes, named sessions, separate profiles; agents browse in background sessions via CLI, you attach to inspect.</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> tmux for the browser — split panes, named sessions, separate profiles in one window — with the agentic-era twist: agents use a CLI to navigate, inspect pages, click, type, and take screenshots in background sessions without stealing focus, and the human &#x27;attaches&#x27; to the agent&#x27;s session (like tmux attach) to watch their work. Saveable layouts, detachable windows whose pages keep running. Free, open source, early preview.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> Browser-as-agent-runtime is an emerging category — extend it: agent session recording/replay for debugging, or multi-agent shared browsing.</p>
-  <p class="links"><a href="https://www.producthunt.com/products/bmux" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  <a class="shot" href="screenshots/2026-10-03-bmux.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-bmux.png" alt="screenshot" loading="lazy"></a>
-</article>
-<article class="card">
-  <h3>paperclip</h3>
-  <p class="what">The open-source app to manage agents at work — open-source MCP tool gateway + orchestration platform for agent teams. 96.4K stars, shipping daily (release v2026.1001.0 yesterday).</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> &#x27;If OpenClaw is an employee, Paperclip is a company&#x27; — agents are &#x27;hired&#x27; via heartbeats (&#x27;If it can receive a heartbeat, it&#x27;s hired&#x27;, DB-backed wakeup queue), then managed like employees: org charts with roles/titles/reporting lines, task assignment with atomic checkout and execution locks, approval gates, spend budgets, and portable company templates (export/import entire orgs). BYOA (bring your own agent, any runtime) with skill injection for training. Novelty is the heartbeats-as-employment-contract + org-chart governance metaphor.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> Steal the org-chart metaphor for a narrower domain — e.g. &#x27;hire&#x27; agents as a QA team or a research team with roles and approval gates.</p>
-  <p class="links"><a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">Original post &rarr;</a></p>
   
 </article>
 <article class="card">
@@ -114,16 +66,8 @@ footer a{color:var(--acc);text-decoration:none}
 </article></div>
 </section>
 <section class="day">
-  <h2>2026-10-03 <span class="count">5 ideas</span></h2>
+  <h2>2026-10-03 <span class="count">3 ideas</span></h2>
   <div class="grid"><article class="card">
-  <h3>caveman</h3>
-  <p class="what">Go skill + HTTP proxy for coding agents that forces terse output in a constrained &quot;caveman speak&quot; dialect, cutting token usage ~65%. Commits 9h before the scan; release Caveman 3.0.0 three days prior.</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> Token shaping as infrastructure, not prompting: the proxy intercepts agent responses and rewrites them in a maximally-dense constrained dialect instead of asking the model to be concise.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> A token-shaping proxy for one specific domain (SQL, legal docs) is a tight weekend build.</p>
-  <p class="links"><a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  <a class="shot" href="screenshots/2026-10-03-caveman.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-caveman.png" alt="screenshot" loading="lazy"></a>
-</article>
-<article class="card">
   <h3>MCP security scanner (life-forge)</h3>
   <p class="what">Deterministic static scanner for MCP tool definitions (Show HN, Oct 3, 2026): flags schema poisoning, invisible/bidi Unicode, homoglyph tool-name spoofing, destructive tools with no authorization surface, unbounded params, cross-server tool shadowing, and rug-pull description drift.</p>
   <p class="innov"><span class="lbl">The innovative part:</span> Treats MCP tool definitions as an attack surface with deterministic checks rather than asking an LLM to judge safety — its scan of 15 popular public MCP servers rated 40% CRITICAL.</p>
@@ -138,14 +82,6 @@ footer a{color:var(--acc);text-decoration:none}
   <p class="hack"><span class="lbl">Hackathon angle:</span> Agents producing explainer videos or ads from a single prompt makes a strong demo.</p>
   <p class="links"><a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">Original post &rarr;</a></p>
   <a class="shot" href="screenshots/2026-10-03-hyperframes.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-hyperframes.png" alt="screenshot" loading="lazy"></a>
-</article>
-<article class="card">
-  <h3>stillwet.art (Opus 5.5 paint canvas)</h3>
-  <p class="what">Show HN (Oct 2, 2026, 328 pts): a simulated painting canvas handed to agents as a novel capability eval — painters get a command line plus canvas, with an automated evaluation runner grading the output.</p>
-  <p class="innov"><span class="lbl">The innovative part:</span> Evaluates agents in a creative/visual domain far outside coding benchmarks, probing genuine tool-use reasoning no benchmark has memorized — comments note the models obsess over the grader.</p>
-  <p class="hack"><span class="lbl">Hackathon angle:</span> A ready-made quirky eval harness — score your agent on something no one trains for.</p>
-  <p class="links"><a href="https://news.ycombinator.com/item?id=49928566" target="_blank" rel="noopener">Original post &rarr;</a></p>
-  <a class="shot" href="screenshots/2026-10-03-stillwet.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-03-stillwet.png" alt="screenshot" loading="lazy"></a>
 </article>
 <article class="card">
   <h3>raid (offense-research)</h3>
