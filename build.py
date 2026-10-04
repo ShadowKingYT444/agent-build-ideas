@@ -63,6 +63,7 @@ header{{margin-bottom:28px}}h1{{font-size:1.7rem;margin:0 0 6px}}.sub{{color:var
 .shot img{{width:100%;border-radius:6px;border:1px solid var(--border);margin-top:8px}}
 .empty{{color:var(--mut)}}
 footer{{color:var(--mut);font-size:.85rem;margin-top:40px;border-top:1px solid var(--border);padding-top:12px}}
+footer a{{color:var(--acc);text-decoration:none}}
 </style>
 </head>
 <body><div class="wrap">
@@ -71,7 +72,7 @@ footer{{color:var(--mut);font-size:.85rem;margin-top:40px;border-top:1px solid v
 <p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. {n} ideas so far.</p>
 </header>
 {body}
-<footer>Updated daily ~08:48 PT. Read-only scans; no logins, no interactions.</footer>
+<footer>Updated daily ~08:48 PT. Read-only scans; no logins, no interactions. · <a href="admin.html">manage</a></footer>
 </div></body></html>"""
     with open(os.path.join(HERE, "index.html"), "w") as f:
         f.write(page)
