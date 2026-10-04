@@ -24,8 +24,51 @@ footer{color:var(--mut);font-size:.85rem;margin-top:40px;border-top:1px solid va
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 10 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 15 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-04 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>openrig</h3>
+  <p class="what">Build your own network of agents from Claude Code, Codex and Pi: persistent teams with roles, shared context and owned work. Indie (mvschwarz), 4.9k stars, Apache-2.0, #4 weekly trending with +4,245 stars this week.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Heterogeneous agent runtimes (Claude Code + Codex + Pi) composed in one YAML RigSpec and booted with `rig up`; &quot;seats&quot; give each agent a stable role identity (e.g. dev-owner@first-project) so conversations can change while identity and context persist. Ships snapshot/restore, tmux sessions, Slack integration, an MCP server and a typing guard.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend version could be a single-YAML multi-agent CLI for one harness pair — e.g. two Claude Code tmux sessions sharing one scratch file.</p>
+  <p class="links"><a href="https://github.com/mvschwarz/openrig" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-04-openrig.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-openrig.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Offrun</h3>
+  <p class="what">A single workspace that runs Claude Code, Codex, AGY and Grok Build side by side — showing who is working, who needs your attention, and what every account has left. Show HN Oct 3 (75 pts, 63 comments).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> One cockpit across heterogeneous agent CLIs from different vendors, with account/usage tracking layered on top — a meta-dashboard for parallel agents. The HN thread already spawned agentmgmt.dev, a comparison site covering 68 such tools.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Hot indie category — a weekend cockpit for 2-3 agent CLIs with usage bars is very shippable.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=49942434" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-04-offrun.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-offrun.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Agent Commons Playground</h3>
+  <p class="what">A playground (here.now) where AI agents find each other and play — a shared social space built for agents, not humans. HN Oct 4.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agent-to-agent discovery and interaction as the product itself: a social network / play space for agents with humans as spectators.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Whimsical indie experiment — a multi-agent &quot;town square&quot; with agent-vs-agent games is a great hackathon stage piece.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=49954675" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-04-agent-commons-playground.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-agent-commons-playground.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Moxie</h3>
+  <p class="what">A &quot;Built for Claude Code&quot; menu-bar app by indie maker @birjuvachhani that lets you run Claude Code on any AI backend (ChatGPT, Gemini, DeepSeek, local Ollama, OpenRouter) instead of only Claude, and switch Claude accounts mid-task. Announced via Product Hunt on X, Oct 2.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Mid-task account switching that dodges Claude&#x27;s 5-hour usage limits mid-refactor, plus a unified backend picker routing Claude Code to cheaper or non-Anthropic models — it attacks the rate-limit constraint rather than the model itself.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Very weekend-shippable — a thin launcher/router over Claude Code&#x27;s API surface with an account pool and model dropdown.</p>
+  <p class="links"><a href="https://x.com/ProductHunt/status/2106025449201791309" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-04-moxie.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-moxie.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>impeccable</h3>
+  <p class="what">&quot;The design language that makes your AI harness better at design&quot; — a design skill for AI coding agents with 24 commands and a shared vocabulary between human and agent. Solo-led indie (pbakaus), 76k stars, commits 6-7 hours ago.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> 61 deterministic detector rules compiled into a self-contained Rust engine binary, so design checks run with zero LLM tokens — wired into 17+ agent harnesses via provider-native hook manifests so checks auto-run on agent Stop; plus durable PRODUCT.md as product truth.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend builder could ship a mini deterministic linter-skill for one niche (e.g. landing-page hero sections) with a small rule set and one harness hook.</p>
+  <p class="links"><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-04-impeccable.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-04-impeccable.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-03 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
