@@ -9,7 +9,7 @@
           "innovative": "Agent runs are stored as replayable workflows, so they can continue after a process or connection failure instead of starting again.",
           "link": "https://www.producthunt.com/products/opengeni",
           "hackathon": "Build a durable workflow agent for one narrow domain and demo interruption, recovery, approval, and proof that the task finished correctly.",
-          "screenshot": null
+          "screenshot": "https://ph-files.imgix.net/659d5145-c7c0-4aae-ab25-8105cf8f5ee4.jpeg?auto=compress%2Cformat&codec=mozjpeg&cs=strip&fit=max&frame=1&h=220&w=391"
         },
         {
           "name": "CoreSpeed",
@@ -25,7 +25,7 @@
           "innovative": "It converts design intent into native platform objects under structural rules and reuses the existing design system instead of creating a separate page-builder format.",
           "link": "https://fabrement.com/",
           "hackathon": "Apply the same compiler idea to another ecosystem: design input to native Shopify sections, React design-system components, or CMS blocks with review and rollback.",
-          "screenshot": null
+          "screenshot": "https://fabrement.com/wp-content/uploads/2026/08/generate-blocks-1024x559.jpg"
         },
         {
           "name": "Octri.dev",
