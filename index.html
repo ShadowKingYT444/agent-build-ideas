@@ -28,8 +28,46 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 5 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 10 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-05 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>OpenGeni</h3>
+  <p class="what">Open-source runtime for durable, long-running AI agents with persistent sessions, isolated execution, recovery, approvals, and run history.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agent runs are stored as replayable workflows, so they can continue after a process or connection failure instead of starting again.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a durable workflow agent for one narrow domain and demo interruption, recovery, approval, and proof that the task finished correctly.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/opengeni" target="_blank" rel="noopener">Original post / product &rarr;</a></p>
+</article>
+<article class="card">
+  <h3>CoreSpeed</h3>
+  <p class="what">A shared MCP layer that gives several coding agents the same connected apps, accounts, memory, usage limits, activity history, and approvals.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The common capability layer sits outside each model, so different agents can share tools and context while one external policy controls what each agent can use.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a capability wallet for a group of agents, with scopes, budgets, approvals, and live revocation for each connected service.</p>
+  <p class="links"><a href="https://x.com/CoreSpeedHQ/status/2099655515706208393" target="_blank" rel="noopener">Original post / product &rarr;</a></p>
+</article>
+<article class="card">
+  <h3>Fabrement</h3>
+  <p class="what">A WordPress agent that converts prompts, screenshots, or Figma designs into native Gutenberg blocks, templates, pages, forms, menus, and site changes.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It converts design intent into native platform objects under structural rules and reuses the existing design system instead of creating a separate page-builder format.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Apply the same compiler idea to another ecosystem: design input to native Shopify sections, React design-system components, or CMS blocks with review and rollback.</p>
+  <p class="links"><a href="https://fabrement.com/" target="_blank" rel="noopener">Original post / product &rarr;</a></p>
+</article>
+<article class="card">
+  <h3>Octri.dev</h3>
+  <p class="what">A small API platform where one API specification generates documentation, SDKs, an MCP server for agents, and production monitoring.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> One schema controls the human documentation, programmatic clients, agent tools, and monitoring, which keeps all four surfaces synchronized as the API changes.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a schema compiler for a narrow domain where one definition generates a human interface, agent tools, access rules, and monitoring.</p>
+  <p class="links"><a href="https://octri.dev/" target="_blank" rel="noopener">Original post / product &rarr;</a></p>
+</article>
+<article class="card">
+  <h3>Tokenectomy Razor</h3>
+  <p class="what">A small Rust MCP and stream processor that filters coding-agent logs before they enter model context, reducing repeated framework noise and retaining useful error frames.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It performs deterministic local filtering before model inference, so repeated or low-value log text does not consume the agent context window.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a general context filter for agent tool output and measure task quality and context use before and after filtering across shell, browser, and network logs.</p>
+  <p class="links"><a href="https://github.com/Tokenectomy-Labs/Tokenectomy" target="_blank" rel="noopener">Original post / product &rarr;</a></p>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-04 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
