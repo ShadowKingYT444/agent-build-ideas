@@ -1,6 +1,51 @@
 {
   "days": [
     {
+      "date": "2026-10-05",
+      "items": [
+        {
+          "name": "OpenGeni",
+          "what": "Open-source runtime for durable, long-running AI agents with persistent sessions, isolated execution, recovery, approvals, and run history.",
+          "innovative": "Agent runs are stored as replayable workflows, so they can continue after a process or connection failure instead of starting again.",
+          "link": "https://www.producthunt.com/products/opengeni",
+          "hackathon": "Build a durable workflow agent for one narrow domain and demo interruption, recovery, approval, and proof that the task finished correctly.",
+          "screenshot": null
+        },
+        {
+          "name": "CoreSpeed",
+          "what": "A shared MCP layer that gives several coding agents the same connected apps, accounts, memory, usage limits, activity history, and approvals.",
+          "innovative": "The common capability layer sits outside each model, so different agents can share tools and context while one external policy controls what each agent can use.",
+          "link": "https://x.com/CoreSpeedHQ/status/2099655515706208393",
+          "hackathon": "Build a capability wallet for a group of agents, with scopes, budgets, approvals, and live revocation for each connected service.",
+          "screenshot": null
+        },
+        {
+          "name": "Fabrement",
+          "what": "A WordPress agent that converts prompts, screenshots, or Figma designs into native Gutenberg blocks, templates, pages, forms, menus, and site changes.",
+          "innovative": "It converts design intent into native platform objects under structural rules and reuses the existing design system instead of creating a separate page-builder format.",
+          "link": "https://fabrement.com/",
+          "hackathon": "Apply the same compiler idea to another ecosystem: design input to native Shopify sections, React design-system components, or CMS blocks with review and rollback.",
+          "screenshot": null
+        },
+        {
+          "name": "Octri.dev",
+          "what": "A small API platform where one API specification generates documentation, SDKs, an MCP server for agents, and production monitoring.",
+          "innovative": "One schema controls the human documentation, programmatic clients, agent tools, and monitoring, which keeps all four surfaces synchronized as the API changes.",
+          "link": "https://octri.dev/",
+          "hackathon": "Build a schema compiler for a narrow domain where one definition generates a human interface, agent tools, access rules, and monitoring.",
+          "screenshot": null
+        },
+        {
+          "name": "Tokenectomy Razor",
+          "what": "A small Rust MCP and stream processor that filters coding-agent logs before they enter model context, reducing repeated framework noise and retaining useful error frames.",
+          "innovative": "It performs deterministic local filtering before model inference, so repeated or low-value log text does not consume the agent context window.",
+          "link": "https://github.com/Tokenectomy-Labs/Tokenectomy",
+          "hackathon": "Build a general context filter for agent tool output and measure task quality and context use before and after filtering across shell, browser, and network logs.",
+          "screenshot": null
+        }
+      ]
+    },
+    {
       "date": "2026-10-04",
       "items": [
         {
