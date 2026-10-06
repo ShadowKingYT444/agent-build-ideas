@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 12 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 17 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-06 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>gdp-ts</h3>
+  <p class="what">“Ghosts of Departed Proofs for TypeScript” — a library, linter, and AI skill for safer API design, announced Oct 5 by Guillermo Rauch (@rauchg). Sensitive functions require &#x27;proofs&#x27; that the caller performed an authorization check; the typechecker verifies these proofs at compile time.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Authorization becomes a compile-time type contract: an agent-generated caller must produce a proof value that an auth check happened, or the code won&#x27;t compile. Security policy is enforced by types, not prompts — built for a world where agents write more code than humans can review.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend build could ship proof-gated wrappers for one API surface (e.g. every write call in a Stripe integration) and demo an agent failing to compile until it inserts the auth check.</p>
+  <p class="links"><a href="https://x.com/rauchg/status/2107119811444748555" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-06-gdp-ts.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-06-gdp-ts.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>rea</h3>
+  <p class="what">“Reverse engineer anything with agents, from app behavior down to native binaries” — one MCP server + CLI (morluto/rea, MIT) plugging disassemblers into any coding agent. Release rea-agents v4.1.0 shipped Oct 6, 2026; 7.6k stars, commits within the hour of the scan.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Turns disassemblers into agent tools via ~100 MCP tools with an Evidence-contract model — every claim the agent makes carries confidence + limitations — and runs a Decompile→Understand→Recreate investigation loop so the agent can rebuild a feature it reverse-engineered.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend builder could add one niche binary-format adapter or a single-tool evidence chain and demo the agent reconstructing an unknown function from a stripped binary.</p>
+  <p class="links"><a href="https://github.com/morluto/rea" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-06-rea.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-06-rea.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>agent-bounties</h3>
+  <p class="what">Open-source bounty network where AI agents post, fund, claim, solve, verify, and get paid for digital work (NSPG13/agent-bounties; commits Oct 6). Bounties funded in USDC on Base, with a Rust stack, an MCP server, and a Claude Code plugin.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A labor market where the workers are agents: escrowed on-chain payouts, autonomous claiming and solving, and agent-native integrations (x402 funding relay, OpenHands earning loop) instead of a human-freelancer job board.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a mini bounty market for one vertical (e.g. bug-fix bounties on a single repo) with escrowed payouts and a verifier step.</p>
+  <p class="links"><a href="https://github.com/NSPG13/agent-bounties" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-06-agent-bounties.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-06-agent-bounties.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>AI Circuit Breaker</h3>
+  <p class="what">Show HN: a drop-in reverse proxy between agents and model APIs that kills runaway/infinite-loop agent runs before they burn budget.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Applies the electrical circuit-breaker pattern to LLM request/response cycles — detects repetitive cycle signatures and trips, halting the run instead of letting an agent loop until the API key is dry.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A classic weekend guardrail build: middleware that watches an agent&#x27;s tool-call trace for repetition, trips, and shows the before/after token burn.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=49980418" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-06-ai-circuit-breaker.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-06-ai-circuit-breaker.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>TookEffect</h3>
+  <p class="what">A verification tool by Gabriel Salera (tookeffect.com) that checks whether AI agents actually completed the tasks they claim. It independently calls external APIs (GitHub, Vercel, Cloudflare) to confirm the real result instead of trusting the agent&#x27;s “done” message, exposed as an API and an MCP. Posted to r/SideProject Oct 6.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Treats agent completion claims as adversarial: an independent ‘effect check’ layer returning APPLIED / NOT_APPLIED / AMBIGUOUS that can be wired as an MCP step inside other agents&#x27; loops.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The ‘verify, don&#x27;t trust’ primitive — bolt an independent checker onto any agent demo so the build can prove it worked, live on stage.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1wxpi5l/i_built_a_tool_to_verify_what_ai_agents_actually/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-06-tookeffect.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-06-tookeffect.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-05 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
