@@ -115,6 +115,51 @@
           "screenshot": "screenshots/2026-10-05-ponytail.png"
         }
       ]
+    },
+    {
+      "date": "2026-10-06",
+      "items": [
+        {
+          "name": "gdp-ts",
+          "what": "“Ghosts of Departed Proofs for TypeScript” — a library, linter, and AI skill for safer API design, announced Oct 5 by Guillermo Rauch (@rauchg). Sensitive functions require 'proofs' that the caller performed an authorization check; the typechecker verifies these proofs at compile time.",
+          "innovative": "Authorization becomes a compile-time type contract: an agent-generated caller must produce a proof value that an auth check happened, or the code won't compile. Security policy is enforced by types, not prompts — built for a world where agents write more code than humans can review.",
+          "link": "https://x.com/rauchg/status/2107119811444748555",
+          "hackathon": "A weekend build could ship proof-gated wrappers for one API surface (e.g. every write call in a Stripe integration) and demo an agent failing to compile until it inserts the auth check.",
+          "screenshot": "screenshots/2026-10-06-gdp-ts.png"
+        },
+        {
+          "name": "rea",
+          "what": "“Reverse engineer anything with agents, from app behavior down to native binaries” — one MCP server + CLI (morluto/rea, MIT) plugging disassemblers into any coding agent. Release rea-agents v4.1.0 shipped Oct 6, 2026; 7.6k stars, commits within the hour of the scan.",
+          "innovative": "Turns disassemblers into agent tools via ~100 MCP tools with an Evidence-contract model — every claim the agent makes carries confidence + limitations — and runs a Decompile→Understand→Recreate investigation loop so the agent can rebuild a feature it reverse-engineered.",
+          "link": "https://github.com/morluto/rea",
+          "hackathon": "A weekend builder could add one niche binary-format adapter or a single-tool evidence chain and demo the agent reconstructing an unknown function from a stripped binary.",
+          "screenshot": "screenshots/2026-10-06-rea.png"
+        },
+        {
+          "name": "agent-bounties",
+          "what": "Open-source bounty network where AI agents post, fund, claim, solve, verify, and get paid for digital work (NSPG13/agent-bounties; commits Oct 6). Bounties funded in USDC on Base, with a Rust stack, an MCP server, and a Claude Code plugin.",
+          "innovative": "A labor market where the workers are agents: escrowed on-chain payouts, autonomous claiming and solving, and agent-native integrations (x402 funding relay, OpenHands earning loop) instead of a human-freelancer job board.",
+          "link": "https://github.com/NSPG13/agent-bounties",
+          "hackathon": "Ship a mini bounty market for one vertical (e.g. bug-fix bounties on a single repo) with escrowed payouts and a verifier step.",
+          "screenshot": "screenshots/2026-10-06-agent-bounties.png"
+        },
+        {
+          "name": "AI Circuit Breaker",
+          "what": "Show HN: a drop-in reverse proxy between agents and model APIs that kills runaway/infinite-loop agent runs before they burn budget.",
+          "innovative": "Applies the electrical circuit-breaker pattern to LLM request/response cycles — detects repetitive cycle signatures and trips, halting the run instead of letting an agent loop until the API key is dry.",
+          "link": "https://news.ycombinator.com/item?id=49980418",
+          "hackathon": "A classic weekend guardrail build: middleware that watches an agent's tool-call trace for repetition, trips, and shows the before/after token burn.",
+          "screenshot": "screenshots/2026-10-06-ai-circuit-breaker.png"
+        },
+        {
+          "name": "TookEffect",
+          "what": "A verification tool by Gabriel Salera (tookeffect.com) that checks whether AI agents actually completed the tasks they claim. It independently calls external APIs (GitHub, Vercel, Cloudflare) to confirm the real result instead of trusting the agent's “done” message, exposed as an API and an MCP. Posted to r/SideProject Oct 6.",
+          "innovative": "Treats agent completion claims as adversarial: an independent ‘effect check’ layer returning APPLIED / NOT_APPLIED / AMBIGUOUS that can be wired as an MCP step inside other agents' loops.",
+          "link": "https://www.reddit.com/r/SideProject/comments/1wxpi5l/i_built_a_tool_to_verify_what_ai_agents_actually/",
+          "hackathon": "The ‘verify, don't trust’ primitive — bolt an independent checker onto any agent demo so the build can prove it worked, live on stage.",
+          "screenshot": "screenshots/2026-10-06-tookeffect.png"
+        }
+      ]
     }
   ]
 }
