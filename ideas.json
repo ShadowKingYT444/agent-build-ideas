@@ -160,6 +160,51 @@
           "screenshot": "screenshots/2026-10-06-tookeffect.png"
         }
       ]
+    },
+    {
+      "date": "2026-10-07",
+      "items": [
+        {
+          "name": "Pawl",
+          "what": "A Rust tool using agent CLI hooks to gate destructive commands so coding agents can't nuke your machine (Show HN, Oct 7, by ulukaya).",
+          "innovative": "A deterministic three-tier risk ladder — Tier 1 hard-blocks rm/mkfs-class ops, Tier 2 needs approval, Tier 3 bypassable with a flag — with NO LLM in the classification path, plus prompt-injection blocking in tool output; and it learns, auto-promoting repeatedly-approved commands so approval fatigue decays over time.",
+          "link": "https://news.ycombinator.com/item?id=49993085",
+          "hackathon": "A weekend regex+hooks MVP in any language demos instantly — the pain is universal among coding-agent users.",
+          "screenshot": "screenshots/2026-10-07-pawl.png"
+        },
+        {
+          "name": "KORA Doctor",
+          "what": "Open-source CLI (krako-labs) that statically scans TS/Python agent codebases and flags LLM calls the agent may not have needed (Show HN, Oct 6).",
+          "innovative": "A linter for agent spend via deterministic static analysis rather than runtime tracing: flags outputs never consumed, duplicate prompts, mergeable tools, uncached static prompts, and reasoning steps feeding no decision — with token-waste estimates and CI thresholds so it gates PRs.",
+          "link": "https://news.ycombinator.com/item?id=49988380",
+          "hackathon": "'Find the dead tool calls in your agent app' demoed with dollar figures — a universal, quantifiable pain.",
+          "screenshot": "screenshots/2026-10-07-kora-doctor.png"
+        },
+        {
+          "name": "llm-openai-decisions",
+          "what": "Simon Willison's open-source LLM plugin (0.1a0) that sends prompts to OpenAI's new Decisions API — a decision model for agents to route/choose among structured alternatives (X, Oct 7).",
+          "innovative": "Exposes decision-making as a callable model: agents delegate yes/no/multiple-choice judgments and get back ranked options with probabilities for calibration — replacing free-form text parsing and prompt gymnastics with calibrated action selection.",
+          "link": "https://x.com/simonw/status/2107630159927062921",
+          "hackathon": "Wrap any agent loop with a decide() tool returning ranked options + probabilities — a weekend build riding the decision-model wave (same week a 2B open-source decider hit HN's front page).",
+          "screenshot": null
+        },
+        {
+          "name": "Agamemnon",
+          "what": "'The watcher at the gate' — an AI-agent write-path guardian for Postgres by indie builder Elamaran Elangovan, featured in AI Tinkerers' Top AI Demos #47 this week (repo: MaranZeal678/agamemnon).",
+          "innovative": "Every database write becomes a proposal: scored for blast radius, checked by deterministic policy, and made reversible by snapshot — converting raw agent tool calls into scored, undoable proposals, with a Sentry-style console and eval harness.",
+          "link": "https://github.com/MaranZeal678/agamemnon",
+          "hackathon": "Intercept one agent framework's tool calls, add blast-radius scoring plus undo snapshots — agent safety is a proven judge-friendly category.",
+          "screenshot": "screenshots/2026-10-07-agamemnon.png"
+        },
+        {
+          "name": "Prompt2ELF",
+          "what": "By faustinoaq — 'uses an AI model as the front end of a zero-toolchain software pipeline,' packaged as a portable agent skill (r/LocalLLaMA, Oct 6).",
+          "innovative": "Spell -> bytes -> ELF: it deletes the entire compiler toolchain from the loop, so a coding agent goes from prompt to executable binary with no compiler installed — software synthesis as a file-format trick.",
+          "link": "https://www.reddit.com/r/LocalLLaMA/comments/1wzj2ug/github_faustinoaqprompt2elf_prompt2elf_uses_an_ai/",
+          "hackathon": "Live-prompt a working ELF binary into existence with zero toolchain installed — a jaw-dropper stage demo.",
+          "screenshot": "screenshots/2026-10-07-prompt2elf.png"
+        }
+      ]
     }
   ]
 }
