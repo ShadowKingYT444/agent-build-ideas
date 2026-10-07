@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 17 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 22 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-07 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Pawl</h3>
+  <p class="what">A Rust tool using agent CLI hooks to gate destructive commands so coding agents can&#x27;t nuke your machine (Show HN, Oct 7, by ulukaya).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A deterministic three-tier risk ladder — Tier 1 hard-blocks rm/mkfs-class ops, Tier 2 needs approval, Tier 3 bypassable with a flag — with NO LLM in the classification path, plus prompt-injection blocking in tool output; and it learns, auto-promoting repeatedly-approved commands so approval fatigue decays over time.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend regex+hooks MVP in any language demos instantly — the pain is universal among coding-agent users.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=49993085" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-07-pawl.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-07-pawl.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>KORA Doctor</h3>
+  <p class="what">Open-source CLI (krako-labs) that statically scans TS/Python agent codebases and flags LLM calls the agent may not have needed (Show HN, Oct 6).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A linter for agent spend via deterministic static analysis rather than runtime tracing: flags outputs never consumed, duplicate prompts, mergeable tools, uncached static prompts, and reasoning steps feeding no decision — with token-waste estimates and CI thresholds so it gates PRs.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> &#x27;Find the dead tool calls in your agent app&#x27; demoed with dollar figures — a universal, quantifiable pain.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=49988380" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-07-kora-doctor.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-07-kora-doctor.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>llm-openai-decisions</h3>
+  <p class="what">Simon Willison&#x27;s open-source LLM plugin (0.1a0) that sends prompts to OpenAI&#x27;s new Decisions API — a decision model for agents to route/choose among structured alternatives (X, Oct 7).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Exposes decision-making as a callable model: agents delegate yes/no/multiple-choice judgments and get back ranked options with probabilities for calibration — replacing free-form text parsing and prompt gymnastics with calibrated action selection.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Wrap any agent loop with a decide() tool returning ranked options + probabilities — a weekend build riding the decision-model wave (same week a 2B open-source decider hit HN&#x27;s front page).</p>
+  <p class="links"><a href="https://x.com/simonw/status/2107630159927062921" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Agamemnon</h3>
+  <p class="what">&#x27;The watcher at the gate&#x27; — an AI-agent write-path guardian for Postgres by indie builder Elamaran Elangovan, featured in AI Tinkerers&#x27; Top AI Demos #47 this week (repo: MaranZeal678/agamemnon).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Every database write becomes a proposal: scored for blast radius, checked by deterministic policy, and made reversible by snapshot — converting raw agent tool calls into scored, undoable proposals, with a Sentry-style console and eval harness.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Intercept one agent framework&#x27;s tool calls, add blast-radius scoring plus undo snapshots — agent safety is a proven judge-friendly category.</p>
+  <p class="links"><a href="https://github.com/MaranZeal678/agamemnon" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-07-agamemnon.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-07-agamemnon.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Prompt2ELF</h3>
+  <p class="what">By faustinoaq — &#x27;uses an AI model as the front end of a zero-toolchain software pipeline,&#x27; packaged as a portable agent skill (r/LocalLLaMA, Oct 6).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Spell -&gt; bytes -&gt; ELF: it deletes the entire compiler toolchain from the loop, so a coding agent goes from prompt to executable binary with no compiler installed — software synthesis as a file-format trick.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Live-prompt a working ELF binary into existence with zero toolchain installed — a jaw-dropper stage demo.</p>
+  <p class="links"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1wzj2ug/github_faustinoaqprompt2elf_prompt2elf_uses_an_ai/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-07-prompt2elf.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-07-prompt2elf.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-06 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
