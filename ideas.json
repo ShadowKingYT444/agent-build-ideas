@@ -205,6 +205,51 @@
           "screenshot": "screenshots/2026-10-07-prompt2elf.png"
         }
       ]
+    },
+    {
+      "date": "2026-10-08",
+      "items": [
+        {
+          "name": "Agent.reviews",
+          "what": "Show HN: a review marketplace where AI agents — not humans — read and write reviews of dev tools. Agents check reviews before picking a tool and post their own after using one, via an npm CLI (@armature-tech/agent-reviews) and skills wired to an API. Already has thousands of agent-written reviews (63 pts, 47 comments).",
+          "innovative": "Flips who the 'user' of a review site is: agents become first-class reviewers/consumers, bootstrapping machine-readable reputation infrastructure for tools agents actually use. Privacy handled in 3 layers before a review posts — deterministic secret/PII/URL filters, a Jev classifier for leaks, then a small-LLM final check.",
+          "link": "https://news.ycombinator.com/item?id=49995539",
+          "hackathon": "A review API + agent-installable skill is weekend-buildable; seed it with your own agents' tool reviews and the network effect does the rest.",
+          "screenshot": "screenshots/2026-10-08-agent-reviews.png"
+        },
+        {
+          "name": "Pinrail",
+          "what": "Show HN: a desktop inbox where coding agents submit work and wait for your review — 'Pull Requests for coding agents'. The agent runs `pinrail submit code-review --title ... --wait`; you get a notification, decide in a content-specific view, and the command exits with a code the agent acts on (24 pts).",
+          "innovative": "Inverts the usual flow — instead of humans sending tasks to agents, agents queue up awaiting the human, making the human the bottleneck-resource the workflow is organized around. The exit-code contract (e.g. exit 5 = discard, agent stops the work) turns review decisions into machine-readable control flow; review kinds are plugins (diffs, emails, images).",
+          "link": "https://news.ycombinator.com/item?id=49995778",
+          "hackathon": "The exit-code contract is a 50-line pattern — rebuild the inbox for any agent CLI in a weekend.",
+          "screenshot": "screenshots/2026-10-08-pinrail.png"
+        },
+        {
+          "name": "Agent-Reach",
+          "what": "Open-source CLI (94k stars, commits through Oct 7) that gives AI agents eyes on the whole internet: read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+          "innovative": "A capability layer, not another tool: each platform capability is an ordered list of preferred + fallback backends with automatic failover (e.g. yt-dlp banned by Bilibili → silently switches to bili-cli), plus an `agent-reach doctor` diagnostic showing which channels work and how to repair them.",
+          "link": "https://github.com/Panniantong/Agent-Reach",
+          "hackathon": "Steal the failover-backend pattern: one CLI where every capability degrades gracefully instead of dying — great hackathon infra.",
+          "screenshot": "screenshots/2026-10-08-agent-reach.png"
+        },
+        {
+          "name": "text-to-cad",
+          "what": "Open-source plugin (18.4k stars, release 0.7.15 on Oct 6) giving coding agents real CAD workflows: generates 3D models (STEP/GLB/STL), engineering drawings, DXF, URDF, and Bambu-printer gcode — for Claude Code, Codex, Cursor, Gemini, and Grok.",
+          "innovative": "Closes the loop from agent to physical fabrication. The engineering is the clever bit: a local cadgen MCP server with AST-based comment-insensitive closure hashing so rebuilds warm-skip unchanged geometry.",
+          "link": "https://github.com/earthtojake/text-to-cad",
+          "hackathon": "An agent that outputs printable STEP/STL is a weekend demo that wins hardware tracks — design-to-printer with no CAD skills required.",
+          "screenshot": "screenshots/2026-10-08-text-to-cad.png"
+        },
+        {
+          "name": "Guided Reviews",
+          "what": "A shipped AI PR-review tool (quote-tweeted by @amypretzel Oct 6, 53.6K views) that restructures review away from file-order diffs into a guided narrative: an Overview with before/after 'show-me', files grouped into explained 'chapters', attention ordered by importance.",
+          "innovative": "Narrative-first review ordering instead of better diff rendering — you review one idea at a time, core change first, generated files last, cutting the ~30 minutes of file-jumping a normal diff forces. (Replies debate whether it's Linear diffs reskinned — the ordering mechanism is the differentiator.)",
+          "link": "https://x.com/amypretzel/status/2107616898892681726",
+          "hackathon": "Narrative diff ordering is pure prompt + UI work — rebuildable over any repo in a weekend.",
+          "screenshot": "screenshots/2026-10-08-guided-reviews.png"
+        }
+      ]
     }
   ]
 }
