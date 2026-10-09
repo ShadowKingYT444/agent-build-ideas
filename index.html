@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 27 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 32 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-09 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>hermes-agent</h3>
+  <p class="what">Self-improving AI agent from independent research org Nous Research (&#x27;the agent that grows with you&#x27;): full TUI, Telegram/Discord/Slack/WhatsApp/Signal integrations, cron scheduling, subagents, 40+ tools — with a built-in learning loop so capabilities compound over time. Release v0.21.6 shipped Oct 8, active commits Oct 9.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Autonomous skill creation after complex tasks plus batch trajectory generation/compression to train better tool-calling models — the agent writes its own skills and distills its own runs into training data.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Weekend-buildable core: a skill-writer loop that turns any agent&#x27;s solved tasks into reusable skills, plus trajectory logging for later fine-tuning.</p>
+  <p class="links"><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-09-hermes-agent.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-09-hermes-agent.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>openrig</h3>
+  <p class="what">Build your own network of agents from Claude Code, Codex and Pi — persistent teams with roles, shared context and owned work, declared in YAML. Individual builder (mvschwarz), commit activity Oct 9.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Declarative multi-agent topologies (RigSpec: pods, edges, continuity policies); every agent runs in tmux so whole topologies can be snapshotted and restored; an MCP server lets agents manage their own network (rig_ps, rig_send); ships built-in teams including a HashiCorp Vault-backed secrets manager.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Steal the tmux-snapshot trick: checkpointable multi-agent teams you can pause, inspect, and resume mid-run.</p>
+  <p class="links"><a href="https://github.com/mvschwarz/openrig" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-09-openrig.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-09-openrig.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Nokia 110 AI agent</h3>
+  <p class="what">Show HN (Oct 8): reverse-engineered a Nokia 110&#x27;s C firmware (48MB RAM, MTK chipset) and wrote a custom C app that calls the DeepSeek API with tool calling — a full AI agent pipeline running on a 2009-era dumbphone.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Firmware-level hacking: extracted the firmware, mapped how built-in apps use screen/keypad/network, hid an agent client inside the calculator app, and solved API-response buffering in tiny RAM.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The extreme edge-computing demo: what agent UX fits in 48MB? A weekend port of the thin-client-agent idea to any cheap embedded board.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50006114" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-09-nokia-110-agent.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-09-nokia-110-agent.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>graphify</h3>
+  <p class="what">Turns any codebase (docs, SQL schemas, configs, PDFs) into a queryable knowledge graph for agents via a /graphify skill for Claude Code, Cursor, Codex, Gemini CLI (MCP + CLI). Release 0.9.82 on Oct 8.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> &#x27;Real graph, not vector index&#x27; — local deterministic AST parsing, zero embeddings, no vector store; every edge carries EXTRACTED/INFERRED confidence tags; a git merge driver for graph.json; claims LOCOMO recall@10 0.497 vs mem0 0.048.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Deterministic code-graph extraction beats embeddings for precision tasks — prototype it on one repo and benchmark retrieval against vector RAG in a weekend.</p>
+  <p class="links"><a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-09-graphify.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-09-graphify.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Pocketty</h3>
+  <p class="what">Show HN (Oct 8): iPhone SSH terminal built for herdr agent sessions — a Rust daemon watches your agent panes and pings your phone the moment an agent stalls waiting for input.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Blocked-agent alerts are HPKE-sealed (X25519 + ChaCha20-Poly1305) to your phone&#x27;s key through a stateless relay that can&#x27;t read them; SSH keys live in the iPhone Secure Enclave; tunneled over Tailscale; no accounts, no analytics, zero cloud in the middle.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Unblock long-running agents from your phone — the sealed-push-over-dumb-relay pattern ports to any notification channel.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50009634" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-09-pocketty.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-09-pocketty.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-08 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
