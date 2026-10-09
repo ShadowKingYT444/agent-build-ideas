@@ -250,6 +250,61 @@
           "screenshot": "screenshots/2026-10-08-guided-reviews.png"
         }
       ]
+    },
+    {
+      "date": "2026-10-09",
+      "items": [
+        {
+          "name": "RoboHarness",
+          "what": "An open-source embodied-agent harness for robot manipulation. A language model uses RGB-D camera views, persistent keypoints, and geometric constraints instead of directly predicting a full motor policy.",
+          "innovative": "The agent marks points on a 2D image. Optical flow tracks them across camera frames, depth projection maps them to 3D, and a geometric controller executes and checks motion primitives. This makes precise tracking and correction tool functions rather than hidden language-model guesses. The published runs use task-specific human-written prompts.",
+          "why": "A judge can watch an agent correct after an object moves, using measurable keypoints instead of relying on a one-shot vision guess.",
+          "hackathon": "Build a one-object tabletop manipulation demo in a small simulator: annotate 2–3 keypoints, track motion, estimate 3D/2D target displacement, drive a control primitive, and deliberately disturb the object. Compare against an open-loop baseline.",
+          "caveat": "Maker benchmarks are not independently verified. Full BEHAVIOR evaluation requires considerable GPU capacity and datasets; use a small simulator for a hackathon.",
+          "link": "https://github.com/BinceQu/RoboHarness",
+          "screenshot": "https://raw.githubusercontent.com/BinceQu/RoboHarness/main/docs/assets/overview.png"
+        },
+        {
+          "name": "CircleIt",
+          "what": "A Chrome extension that sends point-and-circle feedback on a real site directly to the correct coding-agent session and shows when the fix is complete.",
+          "innovative": "A markup bundle carries page address, CSS selector, element text/styles, cropped annotated screenshots, and project identification. Claude Code or Codex gets the feedback when active, or picks it up after reconnecting. A review queue can approve client feedback before delivery.",
+          "why": "This is a complete visual feedback-to-code workflow, not a screenshot copied into chat.",
+          "hackathon": "Build a browser DOM annotation to isolated-branch repair loop: click an element, submit an exact visual bug, let an agent patch the right component, run Playwright visual checks, and ask for approval of the diff.",
+          "caveat": "No published independent success-rate benchmark; dynamic DOM mapping can be fragile. BugHerd, Marker.io and Agentation are relevant alternatives.",
+          "link": "https://circleit.ai/",
+          "screenshot": null
+        },
+        {
+          "name": "Busabase",
+          "what": "A shared business-data and document workspace for people and AI agents with versioned proposed changes rather than blind updates.",
+          "innovative": "Each Change Request packages operations with the starting version and new record values. Independent updates to different fields can merge; conflicting same-field edits are flagged for revision or human review. Permissions decide who can write or propose.",
+          "why": "Two agents can contribute to the same CRM or operations database without silently overwriting each other's updates.",
+          "hackathon": "Build a Git-like record change queue for service jobs or lab samples: have two agents modify one record, merge compatible field changes, surface deliberate conflicts, and store an auditable decision.",
+          "caveat": "Shared workspaces are crowded, so the distinctive feature is field-level conflict handling, not simply shared memory. Behavior is maker-described, not stress-tested independently.",
+          "link": "https://www.producthunt.com/products/busabase",
+          "screenshot": "https://ph-files.imgix.net/451cfa00-04d4-4540-9457-b39cd54fe236.jpeg?auto=compress%2Cformat&codec=mozjpeg&cs=strip&fit=max&frame=1&h=220&w=391"
+        },
+        {
+          "name": "Pocketty",
+          "what": "An iPhone/iPad SSH client for supervising coding agents: get notified when an exact session is blocked, open that pane, see the changes, and reply.",
+          "innovative": "A host daemon encrypts only the agent state notification using HPKE and pushes ciphertext through a relay. The terminal itself connects directly over SSH, with Secure Enclave keys. Worktree snapshots show the diff from the most recent agent turn.",
+          "why": "Remote agent intervention is tied to the exact blocked process and exact changes, while the notification service never handles terminal contents.",
+          "hackathon": "Build an agent approval pager: detect blocked state, send an encrypted phone notification, attach over authenticated SSH to the right session, show its latest Git diff, and send a decision.",
+          "caveat": "The advanced agent-state and diff integration depends on the companion herdr runtime. Do not implement custom cryptography.",
+          "link": "https://pocketty.app/",
+          "screenshot": "https://pocketty.app/_astro/agents.BgC8uZhk_2kYRJt.webp"
+        },
+        {
+          "name": "Refs",
+          "what": "A shot-level reference library for creative agents: launch films are measured and converted into structured 15-part video blueprints accessed through an MCP integration.",
+          "innovative": "Instead of a generic prompt, the agent retrieves a specific film's edit rhythm, beats, typography, sound, script, and shot sequence. The maker reports 2,449 catalogued films and 60,539 shots as of launch, but the public listing states a different total.",
+          "why": "Domain-specific structural evidence can constrain a creative plan more effectively than vague genre keywords.",
+          "hackathon": "Use 10 public-domain or permissioned film clips. Extract shot cuts and durations; construct structured creative blueprints; render a new original film from a selected blueprint; compare the delivered shot plan with the final render.",
+          "caveat": "This is primarily retrieval and planning, not verified creative quality. Respect copyrights and avoid copied frames.",
+          "link": "https://www.producthunt.com/products/refs",
+          "screenshot": "https://ph-files.imgix.net/ceaab832-4584-46fa-ba59-f9a575bc772a.jpeg?auto=compress%2Cformat&codec=mozjpeg&cs=strip&fit=max&frame=1&h=220&w=391"
+        }
+      ]
     }
   ]
 }
