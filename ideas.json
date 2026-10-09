@@ -255,54 +255,44 @@
       "date": "2026-10-09",
       "items": [
         {
-          "name": "RoboHarness",
-          "what": "An open-source embodied-agent harness for robot manipulation. A language model uses RGB-D camera views, persistent keypoints, and geometric constraints instead of directly predicting a full motor policy.",
-          "innovative": "The agent marks points on a 2D image. Optical flow tracks them across camera frames, depth projection maps them to 3D, and a geometric controller executes and checks motion primitives. This makes precise tracking and correction tool functions rather than hidden language-model guesses. The published runs use task-specific human-written prompts.",
-          "why": "A judge can watch an agent correct after an object moves, using measurable keypoints instead of relying on a one-shot vision guess.",
-          "hackathon": "Build a one-object tabletop manipulation demo in a small simulator: annotate 2–3 keypoints, track motion, estimate 3D/2D target displacement, drive a control primitive, and deliberately disturb the object. Compare against an open-loop baseline.",
-          "caveat": "Maker benchmarks are not independently verified. Full BEHAVIOR evaluation requires considerable GPU capacity and datasets; use a small simulator for a hackathon.",
-          "link": "https://github.com/BinceQu/RoboHarness",
-          "screenshot": "https://raw.githubusercontent.com/BinceQu/RoboHarness/main/docs/assets/overview.png"
+          "name": "hermes-agent",
+          "what": "Self-improving AI agent from independent research org Nous Research ('the agent that grows with you'): full TUI, Telegram/Discord/Slack/WhatsApp/Signal integrations, cron scheduling, subagents, 40+ tools — with a built-in learning loop so capabilities compound over time. Release v0.21.6 shipped Oct 8, active commits Oct 9.",
+          "innovative": "Autonomous skill creation after complex tasks plus batch trajectory generation/compression to train better tool-calling models — the agent writes its own skills and distills its own runs into training data.",
+          "link": "https://github.com/NousResearch/hermes-agent",
+          "hackathon": "Weekend-buildable core: a skill-writer loop that turns any agent's solved tasks into reusable skills, plus trajectory logging for later fine-tuning.",
+          "screenshot": "screenshots/2026-10-09-hermes-agent.png"
         },
         {
-          "name": "CircleIt",
-          "what": "A Chrome extension that sends point-and-circle feedback on a real site directly to the correct coding-agent session and shows when the fix is complete.",
-          "innovative": "A markup bundle carries page address, CSS selector, element text/styles, cropped annotated screenshots, and project identification. Claude Code or Codex gets the feedback when active, or picks it up after reconnecting. A review queue can approve client feedback before delivery.",
-          "why": "This is a complete visual feedback-to-code workflow, not a screenshot copied into chat.",
-          "hackathon": "Build a browser DOM annotation to isolated-branch repair loop: click an element, submit an exact visual bug, let an agent patch the right component, run Playwright visual checks, and ask for approval of the diff.",
-          "caveat": "No published independent success-rate benchmark; dynamic DOM mapping can be fragile. BugHerd, Marker.io and Agentation are relevant alternatives.",
-          "link": "https://circleit.ai/",
-          "screenshot": null
+          "name": "openrig",
+          "what": "Build your own network of agents from Claude Code, Codex and Pi — persistent teams with roles, shared context and owned work, declared in YAML. Individual builder (mvschwarz), commit activity Oct 9.",
+          "innovative": "Declarative multi-agent topologies (RigSpec: pods, edges, continuity policies); every agent runs in tmux so whole topologies can be snapshotted and restored; an MCP server lets agents manage their own network (rig_ps, rig_send); ships built-in teams including a HashiCorp Vault-backed secrets manager.",
+          "link": "https://github.com/mvschwarz/openrig",
+          "hackathon": "Steal the tmux-snapshot trick: checkpointable multi-agent teams you can pause, inspect, and resume mid-run.",
+          "screenshot": "screenshots/2026-10-09-openrig.png"
         },
         {
-          "name": "Busabase",
-          "what": "A shared business-data and document workspace for people and AI agents with versioned proposed changes rather than blind updates.",
-          "innovative": "Each Change Request packages operations with the starting version and new record values. Independent updates to different fields can merge; conflicting same-field edits are flagged for revision or human review. Permissions decide who can write or propose.",
-          "why": "Two agents can contribute to the same CRM or operations database without silently overwriting each other's updates.",
-          "hackathon": "Build a Git-like record change queue for service jobs or lab samples: have two agents modify one record, merge compatible field changes, surface deliberate conflicts, and store an auditable decision.",
-          "caveat": "Shared workspaces are crowded, so the distinctive feature is field-level conflict handling, not simply shared memory. Behavior is maker-described, not stress-tested independently.",
-          "link": "https://www.producthunt.com/products/busabase",
-          "screenshot": "https://ph-files.imgix.net/451cfa00-04d4-4540-9457-b39cd54fe236.jpeg?auto=compress%2Cformat&codec=mozjpeg&cs=strip&fit=max&frame=1&h=220&w=391"
+          "name": "Nokia 110 AI agent",
+          "what": "Show HN (Oct 8): reverse-engineered a Nokia 110's C firmware (48MB RAM, MTK chipset) and wrote a custom C app that calls the DeepSeek API with tool calling — a full AI agent pipeline running on a 2009-era dumbphone.",
+          "innovative": "Firmware-level hacking: extracted the firmware, mapped how built-in apps use screen/keypad/network, hid an agent client inside the calculator app, and solved API-response buffering in tiny RAM.",
+          "link": "https://news.ycombinator.com/item?id=50006114",
+          "hackathon": "The extreme edge-computing demo: what agent UX fits in 48MB? A weekend port of the thin-client-agent idea to any cheap embedded board.",
+          "screenshot": "screenshots/2026-10-09-nokia-110-agent.png"
+        },
+        {
+          "name": "graphify",
+          "what": "Turns any codebase (docs, SQL schemas, configs, PDFs) into a queryable knowledge graph for agents via a /graphify skill for Claude Code, Cursor, Codex, Gemini CLI (MCP + CLI). Release 0.9.82 on Oct 8.",
+          "innovative": "'Real graph, not vector index' — local deterministic AST parsing, zero embeddings, no vector store; every edge carries EXTRACTED/INFERRED confidence tags; a git merge driver for graph.json; claims LOCOMO recall@10 0.497 vs mem0 0.048.",
+          "link": "https://github.com/Graphify-Labs/graphify",
+          "hackathon": "Deterministic code-graph extraction beats embeddings for precision tasks — prototype it on one repo and benchmark retrieval against vector RAG in a weekend.",
+          "screenshot": "screenshots/2026-10-09-graphify.png"
         },
         {
           "name": "Pocketty",
-          "what": "An iPhone/iPad SSH client for supervising coding agents: get notified when an exact session is blocked, open that pane, see the changes, and reply.",
-          "innovative": "A host daemon encrypts only the agent state notification using HPKE and pushes ciphertext through a relay. The terminal itself connects directly over SSH, with Secure Enclave keys. Worktree snapshots show the diff from the most recent agent turn.",
-          "why": "Remote agent intervention is tied to the exact blocked process and exact changes, while the notification service never handles terminal contents.",
-          "hackathon": "Build an agent approval pager: detect blocked state, send an encrypted phone notification, attach over authenticated SSH to the right session, show its latest Git diff, and send a decision.",
-          "caveat": "The advanced agent-state and diff integration depends on the companion herdr runtime. Do not implement custom cryptography.",
-          "link": "https://pocketty.app/",
-          "screenshot": "https://pocketty.app/_astro/agents.BgC8uZhk_2kYRJt.webp"
-        },
-        {
-          "name": "Refs",
-          "what": "A shot-level reference library for creative agents: launch films are measured and converted into structured 15-part video blueprints accessed through an MCP integration.",
-          "innovative": "Instead of a generic prompt, the agent retrieves a specific film's edit rhythm, beats, typography, sound, script, and shot sequence. The maker reports 2,449 catalogued films and 60,539 shots as of launch, but the public listing states a different total.",
-          "why": "Domain-specific structural evidence can constrain a creative plan more effectively than vague genre keywords.",
-          "hackathon": "Use 10 public-domain or permissioned film clips. Extract shot cuts and durations; construct structured creative blueprints; render a new original film from a selected blueprint; compare the delivered shot plan with the final render.",
-          "caveat": "This is primarily retrieval and planning, not verified creative quality. Respect copyrights and avoid copied frames.",
-          "link": "https://www.producthunt.com/products/refs",
-          "screenshot": "https://ph-files.imgix.net/ceaab832-4584-46fa-ba59-f9a575bc772a.jpeg?auto=compress%2Cformat&codec=mozjpeg&cs=strip&fit=max&frame=1&h=220&w=391"
+          "what": "Show HN (Oct 8): iPhone SSH terminal built for herdr agent sessions — a Rust daemon watches your agent panes and pings your phone the moment an agent stalls waiting for input.",
+          "innovative": "Blocked-agent alerts are HPKE-sealed (X25519 + ChaCha20-Poly1305) to your phone's key through a stateless relay that can't read them; SSH keys live in the iPhone Secure Enclave; tunneled over Tailscale; no accounts, no analytics, zero cloud in the middle.",
+          "link": "https://news.ycombinator.com/item?id=50009634",
+          "hackathon": "Unblock long-running agents from your phone — the sealed-push-over-dumb-relay pattern ports to any notification channel.",
+          "screenshot": "screenshots/2026-10-09-pocketty.png"
         }
       ]
     }
