@@ -287,6 +287,51 @@
      "screenshot": "screenshots/2026-10-09-pocketty.png"
     }
    ]
+  },
+  {
+   "date": "2026-10-10",
+   "items": [
+    {
+     "name": "big-arrow-on-the-screen",
+     "what": "A tiny macOS CLI (Swift, single binary) plus a SKILL.md skill that lets coding agents like Claude Code and Codex paint giant arrows, boxes, and text overlays directly on the user's screen. 403 HN points, 183 comments.",
+     "innovative": "Inverts the agent-interface problem: instead of the agent describing what it means in chat text, the agent gets a visual annotation layer on the human's screen - click-through, self-clearing overlays form a one-way agent-to-human gesture channel.",
+     "link": "https://news.ycombinator.com/item?id=50018817",
+     "hackathon": "Weekend-sized build: an overlay binary plus a skill file; port it to Windows/Linux or add two-way pointing.",
+     "screenshot": "screenshots/2026-10-10-big-arrow-on-the-screen.png"
+    },
+    {
+     "name": "Rutter",
+     "what": "Append-only 'memory of use' shared across AI coding tools via an MCP server (Claude Code, Grok, Codex): captures session decisions and reasoning into plain Markdown notes, searchable and recallable across tools.",
+     "innovative": "Each record gets a sha256 content-hash reference to the notes it cited, so recall can verify whether a cited source changed after the fact; a hard rule forbids the model from ever resolving what a dead reference meant - the human does.",
+     "link": "https://ruttermemory.com/",
+     "hackathon": "Protocol-only (no model inside), so a weekend build: MCP server plus Stop hooks writing hash-addressed Markdown, then a recall command.",
+     "screenshot": null
+    },
+    {
+     "name": "OpenCharm",
+     "what": "An open-source voice interface for the AI agent you already run - hold one key to talk to Claude Code, Codex, or any CLI agent; it lives by the Mac notch. Launched Oct 9 on Product Hunt.",
+     "innovative": "Does not try to be an agent itself; it is a voice layer that wraps existing CLI agents, turning text-only agent sessions into hands-free conversations without touching the agent's configuration.",
+     "link": "https://www.producthunt.com/products/opencharm",
+     "hackathon": "Weekend-buildable: global hotkey plus speech-to-text piped into the agent CLI plus TTS back; differentiate with per-agent voice profiles or voice-driven approval flows.",
+     "screenshot": null
+    },
+    {
+     "name": "ST21-Door",
+     "what": "A small indie guardrail tool for AI agent outputs: you submit a triple (task, output, boundary) and it judges whether the output crossed the stated boundary. Built by one person, posted on r/SideProject.",
+     "innovative": "Deliberately narrow - not a monolithic moderation API but a boundary check parameterized by the user's own stated boundary per task, keeping the judgment scoped and auditable.",
+     "link": "https://www.reddit.com/r/SideProject/comments/1x19zyr/i_built_a_boundary_judge_for_ai_agent_outputs_can",
+     "hackathon": "Ships in a weekend: a judging prompt template plus a structured verdict schema; the wedge is boundary-inference - learning the boundary from a few examples instead of requiring it up front.",
+     "screenshot": null
+    },
+    {
+     "name": "Talorys",
+     "what": "A self-hosted personal AI agent (chat, memory, tasks, notes, scheduled reminders) that runs entirely inside your own Cloudflare account, deployed with one command: npx create-talorys@latest. Free-tier friendly, no telemetry.",
+     "innovative": "The whole agent stack - memory via Vectorize plus KV/D1/R2, cron reminders via Workflows - is architected to fit inside Cloudflare's free tier, making a real personal agent cost zero dollars in infra.",
+     "link": "https://news.ycombinator.com/item?id=50031614",
+     "hackathon": "A blueprint for zero-cost agent infra: clone the free-tier-first stack pattern and add a vertical the big assistants ignore, like hardware-shop agents or field-note takers.",
+     "screenshot": null
+    }
+   ]
   }
  ]
 }
