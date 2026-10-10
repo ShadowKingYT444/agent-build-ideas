@@ -29,7 +29,7 @@ button.save:disabled{opacity:.5;cursor:wait}
 </head>
 <body><div class="wrap">
 <h1>Manage ideas</h1>
-<p class="sub">Uncheck anything you don't find unique, then hit Save. The public page rebuilds immediately.</p>
+<p class="sub">Uncheck anything you don't find unique, then hit Save. The public page rebuilds immediately, and removed items won't be suggested again by the daily scan.</p>
 
 <div class="auth">
 <label for="token">GitHub token (fine-grained PAT, this repo only, <b>Contents: read &amp; write</b>)</label>
@@ -148,6 +148,18 @@ async function putFile(path,content,token,msg){
   await gh(path,"PUT",{message:msg,content:b64encodeUnicode(content),sha:cur.sha,branch:BRANCH},token);
 }
 
+async function getFile(path,token){
+  const r=await fetch("https://api.github.com/repos/"+OWNER+"/"+REPO+"/contents/"+path+"?ref="+BRANCH,{
+    headers:{"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json"}});
+  if(r.status===404) return null;
+  if(!r.ok){const t=await r.text();throw new Error("GitHub "+r.status+": "+t.slice(0,200));}
+  return r.json();
+}
+function b64decodeUnicode(b64){
+  const bin=atob(String(b64).replace(/\n/g,""));
+  const bytes=Uint8Array.from(bin,c=>c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
 async function save(){
   const token=$("token").value.trim();
   if(!token){setStatus("Paste a GitHub token first.","err");return;}
@@ -155,19 +167,37 @@ async function save(){
   const btn=$("saveBtn");btn.disabled=true;
   try{
     setStatus("Collecting your selection…","");
+    const removedItems=[];
     const days=data.days.map((d,di)=>{
-      const items=d.items.filter((_,ii)=>{
+      const items=d.items.filter((it,ii)=>{
         const cb=document.querySelector(`input[data-d="${di}"][data-i="${ii}"]`);
-        return cb&&cb.checked;
+        const keep=cb&&cb.checked;
+        if(!keep) removedItems.push({name:it.name,link:it.link||null,
+          trimmed_on:new Date().toISOString().slice(0,10),note:"user trimmed via admin page"});
+        return keep;
       });
       return {date:d.date,items};
     }).filter(d=>d.items.length>0);
-    const removed=data.days.reduce((s,d)=>s+d.items.length,0)-days.reduce((s,d)=>s+d.items.length,0);
+    const removed=removedItems.length;
     setStatus("Saving ideas.json…","");
     await putFile("ideas.json",JSON.stringify({days},null,1),token,"admin: trim ideas ("+removed+" removed)");
     setStatus("Rebuilding index.html…","");
     await putFile("index.html",buildIndex(days),token,"admin: rebuild index");
-    setStatus("Done — removed "+removed+" item(s). The public page updates in ~1 minute.","ok");
+    if(removed>0){
+      setStatus("Adding "+removed+" item(s) to the exclusion list so the daily scan stops re-surfacing them…","");
+      const cur=await getFile("excluded.json",token);
+      const excl=cur?JSON.parse(b64decodeUnicode(cur.content)):{excluded:[]};
+      const have=new Set(excl.excluded.map(e=>(e.link||"")+"|"+String(e.name||"").toLowerCase()));
+      for(const it of removedItems){
+        const k=(it.link||"")+"|"+String(it.name||"").toLowerCase();
+        if(!have.has(k)){excl.excluded.push(it);have.add(k);}
+      }
+      const payload={message:"admin: add "+removed+" trimmed item(s) to exclusion list",
+        content:b64encodeUnicode(JSON.stringify(excl,null,1)),branch:BRANCH};
+      if(cur) payload.sha=cur.sha;
+      await gh("excluded.json","PUT",payload,token);
+    }
+    setStatus("Done — removed "+removed+" item(s). They won't be suggested again. The public page updates in ~1 minute.","ok");
     data={days};render();
   }catch(e){setStatus("Failed: "+e.message,"err");}
   btn.disabled=false;
