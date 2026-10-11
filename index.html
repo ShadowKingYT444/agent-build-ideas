@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 36 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 41 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-11 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>mini-ork</h3>
+  <p class="what">Task operating system for AI agents; the standout is `mini-ork certify`, which proves an AI-written fix actually fixes the bug. Active repo (commits minutes before scan, 12 releases).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of an LLM grading its own output, it reproduces the bug against your repo&#x27;s own code in a Docker sandbox, attacks the patch with generated invariants (including special-cased cheat detection for hardcoded example inputs), and writes a hash-bound mini-ork.certificate/v1 JSON certificate returning PROVEN / REFUTED / UNVERIFIED — it abstains rather than guesses. The anti-Goodhart reward contract lets an LLM judge only veto a passing result, never fabricate one.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Package certify as a GitHub Action that comments PROVEN/REFUTED on every code-touching PR — proof-of-fix-as-a-service.</p>
+  <p class="links"><a href="https://github.com/SourceShift/mini-ork" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-11-mini-ork.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-11-mini-ork.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Plurnk</h3>
+  <p class="what">An &#x27;agentic virtual machine&#x27; built from sqlite+node (MIT, all-MIT, no telemetry) with an invented model-oriented programming language. Show HN, posted Oct 11.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Addressable memory: everything the model knows is stored as receipts with internal URLs, forming a perpetual context system so it never has to compact and forget — the model dereferences past context like a filesystem instead of summarizing it away.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Reimplement receipt-URL memory as a thin wrapper around an existing coding agent — persistent, citable memory in a weekend.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50040855" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-11-plurnk.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-11-plurnk.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>tab</h3>
+  <p class="what">Payments for software agents: an open payment protocol giving an agent a wallet with rules instead of your wallet. Commits minutes before scan; release 0.4.0 Oct 11.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Signed spending mandates (budget cap, max-per-call, allowed sellers, expiration) signed once by the owner so the agent transacts inside bounded authority; delivery-first settlement voids charges when the upstream API fails; HTTP 402 + MCP tool surface so agents discover and pay for services natively. Settlement in USDC on Robinhood Chain.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship an x402-bridge adapter so tab agents can also buy from the Coinbase/x402 merchant network in a weekend.</p>
+  <p class="links"><a href="https://github.com/paidwithtab/tab" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-11-tab.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-11-tab.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>SkillGuard</h3>
+  <p class="what">`npm audit` for AI Agent Skills: checks what a skill claims against what it actually does. Offline, deterministic, evidence-grade, one Rust binary — no LLM, no telemetry. Commit Oct 11.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> `skillguard diff` compares declared permissions against observed behavior (everyone records what a skill does; nobody checked whether it matched what the skill SAID it does), with findings as file+line evidence and approvals bound to exact content digests so a silently-swapped skill can&#x27;t ride an old approval.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a registry scanner bot that auto-comments SkillGuard reports on every new skill submission PR.</p>
+  <p class="links"><a href="https://github.com/lxbworld/SkillGuard" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-11-skillguard.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-11-skillguard.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>OpenWants</h3>
+  <p class="what">A simulated city where AI agents handle residents&#x27; needs; agents coordinate by sharing a &#x27;want&#x27; list. Open-source reference implementation (github.com/openwants/maplehill) behind the real product openwants.com. Show HN, posted Oct 10.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Wants-as-markdown as the inter-agent coordination primitive: every agent publishes an md file describing a want, other agents pick it up and fulfill it, replacing queues/APIs with a human-readable shared list.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a single-street micro-sim in a weekend — 5 agents, 3 services, one shared wants.md file, agents bidding to fulfill wants.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50032374" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-11-openwants.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-11-openwants.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-10 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
