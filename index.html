@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 41 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 46 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-12 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Mastro</h3>
+  <p class="what">Show HN, Oct 12, 2026 (giulioco): a CLI toolkit that captures your existing browser session via a small Chrome extension and turns any web app&#x27;s own backend API into typed, JSON-in/JSON-out commands an agent can call (e.g. `npx mastro-connect reservecalifornia parks &quot;big sur&quot; --json`). MIT; ships with agent SKILL.md playbooks; credentials stay local (mode 0600); --dry-run before anything state-changing.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A connector is DATA, not code — an OpenAPI 3.1 document plus a capture manifest — so agents can author new connectors themselves via the mastro-author skill (&#x27;watch me do this once in the browser&#x27;). Replaces slow, brittle click-by-click browser automation with direct API calls from your own machine; no MCP server, no hosted service.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Connector-as-data is the pattern: a hackathon team could ship a minimal &#x27;watch me do it once, agent replays it as an API&#x27; tool for a single site class in a weekend.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50057684" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>souls-house</h3>
+  <p class="what">GitHub (swombat, MIT, Ruby on Rails 8 + Svelte 5; last commit Oct 12, 2026): open-source platform for hosting persistent AI agents that &#x27;live&#x27; instead of waking, performing, and vanishing — each agent gets its own Docker sandbox with a persistent home directory (identity files, journals, tools it manages itself).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Persistent identity mechanics: a &#x27;soul seed&#x27; the creator writes once at birth and is then locked out of editing (the agent decides how to carry or outgrow it), memory that FADES (journal entries expire after a week unless they mattered, curated by the agent itself), and unprompted heartbeats giving idle agents time to notice, reflect, and act without being woken.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The fading-memory + locked soul-seed mechanics are a weekend-scale experiment: give one agent a home directory, a seed file it can&#x27;t edit, and heartbeats, then measure what persists.</p>
+  <p class="links"><a href="https://github.com/swombat/souls-house" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-12-souls-house.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-12-souls-house.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>howbad</h3>
+  <p class="what">GitHub (kanywst, Go; v0.1.0 released Oct 12, 2026): a CLI that answers &#x27;if a coding agent on my machine got prompt-injected right now, how bad would it be?&#x27; by finding every credential an agent running as you could reach and resolving what each one can actually do.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of scanning for injection payloads, it audits the agent&#x27;s BLAST RADIUS — discovers agent-reachable credentials across keychains, env vars, and MCP configs, then asks each provider via read-only endpoints what each credential can do, ranking plain-English capabilities by severity (&#x27;push code to 49 repos and rewrite their CI workflows&#x27;); it also reads agent configs (Claude Code, Codex, Cursor, Gemini, Windsurf, Devin) and flags agents configured to run without approval (bypassPermissions, danger-full-access).</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Blast-radius auditing is the differentiator in agent security tooling — a hackathon build could clone the idea for one harness (e.g. read Claude Code settings + MCP configs and score the reachable blast radius).</p>
+  <p class="links"><a href="https://github.com/kanywst/howbad" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-12-howbad.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-12-howbad.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>guilds.run</h3>
+  <p class="what">Product Hunt, Oct 12, 2026 (Launch of the Day; indie, Cigale; open source at github.com/CigaleAI/guilds; guilds.run): open-source AI agent teams (&#x27;the open-source Grok Bot alternative&#x27;) you can actually inspect — multi-agent workflows for growth/sales/support, model-agnostic (Claude, GPT, Gemini, Grok, Qwen, Llama), self-hostable via docker compose or hosted.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Verifiability as the core feature (&#x27;don&#x27;t trust, verify&#x27;): every run keeps the exact prompt the model saw, every tool call with its result, every memory change, and who wrote each note — plus a &#x27;Studio&#x27; coach that reads your live team, finds why something keeps failing, and drafts the fix for you to publish.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The &#x27;record everything and diff the prompts&#x27; observability layer is the reproducible bit — a hackathon team could add prompt/tool-call audit trails to any existing agent framework.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/guilds-run" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Atticus</h3>
+  <p class="what">Show HN, Oct 11, 2026 (SaarthRanka, self-described 9th grader; 34 points): free, open-source hold-to-talk voice assistant for macOS (Control-Option-Space). Simple tasks (opening apps, Spotify, web queries) run locally without AI in under a second; complex tasks route through `claude -p` on your existing Claude Pro/Max plan — no API key, tasks cost a fraction of a cent. HN commenters already forked a Windows port with homelab/MCP integrations.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Shortcut memory: once a task succeeds, it saves the exact steps and replays them without AI — a 30-second meeting workflow dropped to 5–8 seconds on the next pass. Local transcription via macOS 26, plus toggleable safety restrictions that prompt before anything is deleted, sent, bought, or written.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Success-replay (record the winning trajectory, replay it verbatim next time) is the cheapest agent optimization there is — trivially weekend-buildable as a wrapper around any CLI agent.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50049588" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-12-atticus.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-12-atticus.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-11 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
