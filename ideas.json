@@ -422,6 +422,101 @@
           "screenshot": "screenshots/2026-10-12-atticus.png"
         }
       ]
+    },
+    {
+      "date": "2026-10-13",
+      "items": [
+        {
+          "name": "SolidCraft",
+          "rank": 1,
+          "category": "Visual tools",
+          "what": "Featured on Show HN Oct 13. Open-source parametric CAD in Rust. It exposes the same typed sketch, feature and parameter commands to people in the desktop editor, scripts in a headless CLI, and AI agents through MCP. An agent can create geometry, inspect topology, measure a part, modify a parameter and export editable STEP models.",
+          "innovative": "The shared command engine writes a constrained parametric design, not pixels or a one-off mesh. A solver rejects conflicting sketch constraints; a feature timeline rebuilds downstream geometry after a dimension change. This gives agents a structured spatial world with measurable output.",
+          "hackathon": "Build a small constraint-aware robot-part generator. Give an agent fasteners, clearance and size limits; let it edit a bracket or enclosure, then verify hole spacing, collisions and volume with a geometric checker. Show that changing one parameter rebuilds all related parts.",
+          "caveat": "Early-stage CAD. Repository reports 75 of 76 public reference parts matching analytic or FreeCAD geometry measurements; this is not an independent validation of complete CAD workflows.",
+          "link": "https://github.com/bherbruck/solidcraft",
+          "screenshot": "https://raw.githubusercontent.com/bherbruck/solidcraft/main/docs/screenshots/demo-0.8.gif",
+          "diagram": [
+            "Agent / editor",
+            "Typed CAD operations",
+            "Constraint solver",
+            "Feature timeline",
+            "Measured 3D part"
+          ]
+        },
+        {
+          "name": "sota-anchor",
+          "rank": 2,
+          "category": "Agent reliability",
+          "what": "Show HN Oct 13. A coding-agent MCP server and Claude Code plugin that catches plans based on the premise that some library, model capability or file-format reader does not exist. It searches recent packages, repositories and papers before the agent implements a workaround.",
+          "innovative": "It inverts a design assumption into a falsifiable search. The model names what would make a workaround unnecessary; a dated multi-source retrieval step checks that claim; the agent then chooses reuse, new implementation or inconclusive. A maker-recorded example found an official Xcode-format library and avoided writing a custom parser.",
+          "hackathon": "Build an 'assumption firewall' for autonomous developers. Require evidence for statements such as 'no package supports X' before creating a new subsystem. Compare implementation time, duplicate code and license compliance across 10 held-out tasks with and without the gate.",
+          "caveat": "The published before/after is a case demonstration, not a controlled success-rate study. Discovery can miss obscure packages and is sensitive to search quality.",
+          "link": "https://github.com/luckmanqasim/sota-anchor",
+          "screenshot": "https://raw.githubusercontent.com/luckmanqasim/sota-anchor/main/docs/images/hero-light.svg",
+          "diagram": [
+            "Agent proposal",
+            "Invert missing-tool assumption",
+            "Dated source search",
+            "Evidence verdict",
+            "Reuse / build"
+          ]
+        },
+        {
+          "name": "Blokkily",
+          "rank": 3,
+          "category": "Creative workflows",
+          "what": "Show HN Oct 13. An experimental music workstation where a pattern has synchronized tracker, piano-roll and step-grid views. Agents can write music to the live application using MCP while people adjust the same arrangement, instruments and mixing controls.",
+          "innovative": "Music is a structured, editable state rather than a generated audio blob. An agent can modify patterns and tracks, then the same audio engine used for live playback renders the final WAV. Suggested phrases are reviewable and each edit is undoable.",
+          "hackathon": "Create an agent-directed adaptive soundtrack editor. A game event stream asks the agent to edit note patterns and transitions, while a human adjusts chords live. Verify that the exported stems follow the edited arrangement and that changes stay synchronized.",
+          "caveat": "The DAW is experimental; recording, plugins and timing have stated platform limitations. An MCP-driven demo does not establish high musical quality.",
+          "link": "https://github.com/andrewfader/blokkily",
+          "screenshot": "https://raw.githubusercontent.com/andrewfader/blokkily/main/docs/images/blokkily-session.png",
+          "diagram": [
+            "Musical intent",
+            "Agent MCP commands",
+            "Shared pattern model",
+            "Live editor + playback",
+            "Exported audio"
+          ]
+        },
+        {
+          "name": "RooQL",
+          "rank": 4,
+          "category": "Structured data",
+          "what": "Show HN Oct 13. RooQL is a small browser-side compiler that turns structured metric queries into SQL using an Apache Ossie semantic model. It supports DuckDB, Snowflake and BigQuery without running its own query server or handling data credentials.",
+          "innovative": "The AI builds a dashboard by asking for named metrics rather than inventing a new SQL definition for each chart. The metric definition is stored once, compiled deterministically, and its model hash travels with the generated query. Changes to a metric propagate across views using the same model.",
+          "hackathon": "Build an agent-generated robotics scouting dashboard with a signed metric catalog. Have separate agents create different charts, then redefine a metric once; both charts update and reveal the exact SQL that was used. Test conflicting definitions and access restrictions.",
+          "caveat": "RooQL does not run SQL or replace warehouse permissions. It is an early open-source compiler; changing a model still requires correct data assumptions and schema governance.",
+          "link": "https://rooql.com/",
+          "screenshot": null,
+          "diagram": [
+            "Human metric contract",
+            "Agent metric request",
+            "RooQL compiler",
+            "Warehouse permissioned query",
+            "Consistent charts"
+          ]
+        },
+        {
+          "name": "shadowclone",
+          "rank": 5,
+          "category": "Agent memory",
+          "what": "Show HN Oct 13. A learning and distribution layer for coding-agent preferences. With consent, it extracts engineering rules from session corrections and deploys them as native skills to several local coding agents and to a GitHub cloud bot.",
+          "innovative": "It keeps the behavioral contract outside any one model: explicit corrections can form rules, inferred patterns require three independent sessions, and skills remain readable, editable and reversible. The same instructions follow a task across Claude Code, Codex, Cursor and a cloud runner.",
+          "hackathon": "Make a cross-agent preference test bench. Correct one agent's design decision, turn the correction into an inspectable skill, and check whether a second vendor's agent obeys it on unseen tasks. Measure false rule learning as well as preference adherence.",
+          "caveat": "The maker reports gains on 24 synthetic preference tasks, not independently verified performance on real software projects. Rules may overfit a particular user's habits.",
+          "link": "https://github.com/theonly1me/shadowclone",
+          "screenshot": "https://raw.githubusercontent.com/theonly1me/shadowclone/main/docs/assets/agent-builds.jpg",
+          "diagram": [
+            "Consented sessions",
+            "Redacted rule learner",
+            "Reviewed skills",
+            "Local agents + cloud bot",
+            "Held-out adherence test"
+          ]
+        }
+      ]
     }
   ]
 }
