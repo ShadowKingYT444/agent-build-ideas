@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 46 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 51 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-13 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>keel</h3>
+  <p class="what">A tiny build123d-style Python language on top of NVIDIA&#x27;s new open-source USD-BRep CAD kernel (SMLIB), so agents — already great at writing Python — can produce exact B-rep geometry in USD instead of meshes. Repo: github.com/amywork777/keel.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Exploits the fact that agents already write good Python: instead of training models on CAD, she built a minimal Python DSL over an exact-geometry kernel, so any coding agent does parametric CAD with zero model changes.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Highly weekend-buildable — wrap any deterministic kernel (CAD, physics, layout) in a tiny Python DSL and you get an agent-native interface for free.</p>
+  <p class="links"><a href="https://x.com/amypretzel/status/2109729131667804646" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-13-keel.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-13-keel.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>shadowclone</h3>
+  <p class="what">A tool by qguv that turns corrections you give coding agents into persistent SKILL.md files, so future agent sessions load them automatically.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Automates the &#x27;remember this&#x27; habit — when you correct the agent, it proposes a SKILL.md, you approve it, and the agent&#x27;s memory improves via normal conversation instead of manual skill curation.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Prototype-able as a weekend CLI wrapper around any skills-supporting coding agent; mines the training data you&#x27;re already producing daily.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50069498" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-13-shadowclone.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-13-shadowclone.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>treering</h3>
+  <p class="what">A least-knowledge security layer for LLM agents: prompt-injection isolation where the privileged planner never sees untrusted data, provenance-tagged values, human-in-the-loop approval, and a tamper-evident hash-chained audit log. Apache-2.0.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Capability-based information-flow control for agents — the planner is architecturally isolated from untrusted tool data, plus a hash-chained, tamper-evident audit log of agent actions.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a demo that lets agents touch untrusted web/API inputs without the usual prompt-injection liability story.</p>
+  <p class="links"><a href="https://github.com/jiwoomap/treering" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-13-treering.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-13-treering.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>create-verification-skill</h3>
+  <p class="what">An installable agent skill (npx skills add tester-army/e2e --skill create-verification-skill) for the open-source e2e agentic testing framework, letting your agent verify its own work and return evidence.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Self-verifying agents: rather than a human writing tests, the skill turns the agent&#x27;s own output into a verified artifact with evidence, closing the loop between generation and validation inside the agent workflow.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a verification-skill pattern for any domain (UI checks, data pipelines) — wrap a test runner as an agent skill that returns pass/fail evidence.</p>
+  <p class="links"><a href="https://x.com/o_kwasniewski/status/2109694443410399543" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-13-create-verification-skill.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-13-create-verification-skill.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>InfernoSIM</h3>
+  <p class="what">A local reliability-testing tool for tool-using agents: it records sanitized model and tool traffic, then replays it with injected failures.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Chaos-Monkey specifically for agentic tool calls — record real agent traffic once, then replay deterministically under failure injection to test resilience.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Hardens demos against live flakiness — test your agent against failing tools before the judges do.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1x43jc6/i_built_a_failure_simulator_for_ai_agents/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-13-infernosim.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-13-infernosim.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-12 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
