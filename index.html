@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 51 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 56 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-14 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Chiplab</h3>
+  <p class="what">Show HN (Oct 14): an MCP server giving coding agents (Claude Code, Cursor, OpenCode, Codex) virtual instances of real microcontrollers — the agent flashes firmware onto a virtual STM32/Nordic chip, runs it, reads output, and iterates with no physical boards (C/C++/Rust, bare-metal through Zephyr/FreeRTOS).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Hardware-in-the-loop for AI agents — closes the write→flash→run→observe→fix loop for embedded work on virtual hardware, so the agent can debug firmware and run test suites in CI without a single physical board.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Live agent firmware-debug on a virtual STM32 makes a strong demo; stretch = more chip families.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50084365" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>iFixAi</h3>
+  <p class="what">Open-source audit harness (commits Oct 14) that runs 60 adversarial &#x27;inspections&#x27; against a live agent, grading business KPIs via a CLI with a scorecard. Apache-2.0.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A score is only citable when graded by an independent second-model judge (different vendor), explicitly separating red-teaming from operational assurance — and the default fixture ships seeded defects so a first run visibly fails.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Bolt an iFixAi-style independent-judge audit gate onto any agent pipeline and show a live A–F governance scorecard next to the agent&#x27;s output.</p>
+  <p class="links"><a href="https://github.com/ifixai-ai/iFixAi" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>context-mode</h3>
+  <p class="what">MCP server + hooks (commits Oct 14) that keep raw tool output out of the context window, with a per-project SQLite/FTS5 knowledge base and BM25 retrieval so sessions survive compaction.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Forces a &#x27;think in code&#x27; paradigm — the agent writes a sandbox script that computes locally and only stdout enters context (47x Read() = 700KB → 1x ctx_execute = 3.6KB), flipping tool output from context-dump to local compute.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a &#x27;context saved per session&#x27; leaderboard dashboard — the per-call cost tracking could score agent efficiency in eval benchmarks.</p>
+  <p class="links"><a href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Tiden</h3>
+  <p class="what">Intent verification for coding agents (Product Hunt launch Oct 14): a session hook captures intent before the first edit, intent becomes specs that branch/merge like code, selected tests run in the user&#x27;s own environment, and the verdict comes from those tests — never from an LLM grading the diff.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The judge sits OUTSIDE the agent loop — intent is a separate versioned record, breaking the trap where the agent&#x27;s code, tests, and docs all agree &#x27;by construction&#x27;; production errors trace back to the release, the change, and the originating prompt.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Pre-edit intent-capture hooks + spec-branch diffing is a hackable pattern for trust-gated agent PR pipelines.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/tiden" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Escaping the maze (tldraw)</h3>
+  <p class="what">@tldraw demo/eval (Oct 13) where LLM agents (Haiku, Sonnet, Opus) race heuristic approaches through drawn mazes with only a limited line-of-sight radius — no wall-penetrating vision — across 240 races in cave-like and classical mazes.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The smallest model (Haiku) won 68% of races — not by better planning, but by making far more cheap planning calls per run: speed of wrong-turn-and-course-correct beats quality of reasoning under partial observability, an eval insight that changes how you&#x27;d budget agent calls.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Very weekend-shippable: a maze env with a line-of-sight mask + a trivial agent loop + a scoreboard; the clever part is the model-size vs context-radius ablation, not the infra.</p>
+  <p class="links"><a href="https://x.com/tldraw/status/2110045020921246132" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-13 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
