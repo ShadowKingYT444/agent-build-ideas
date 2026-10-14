@@ -509,7 +509,7 @@
      "innovative": "The smallest model (Haiku) won 68% of races — not by better planning, but by making far more cheap planning calls per run: speed of wrong-turn-and-course-correct beats quality of reasoning under partial observability, an eval insight that changes how you'd budget agent calls.",
      "link": "https://x.com/tldraw/status/2110045020921246132",
      "hackathon": "Very weekend-shippable: a maze env with a line-of-sight mask + a trivial agent loop + a scoreboard; the clever part is the model-size vs context-radius ablation, not the infra.",
-     "screenshot": null
+     "screenshot": "screenshots/2026-10-14-escaping-the-maze.png"
     }
    ]
   }
