@@ -4,16 +4,16 @@
    "date": "2026-10-03",
    "items": [
     {
-     "hackathon": "Memory is the obvious moat layer — build a scoped-down version (e.g. memory for one vertical like coding agents) or a novel retrieval strategy on top.",
-     "innovative": "Recall runs four retrieval strategies in parallel (semantic, keyword BM25, graph, temporal), merges them with reciprocal rank fusion, and reranks with a cross-encoder. Separately, a background consolidation turns retained facts into 'observations' — deduplicated, evidence-backed beliefs that are refined rather than overwritten when new evidence arrives — and then into 'mental models' (standing synthesized answers) and knowledge pages. Memories live in isolated 'banks' with tag scoping, and 'Memory Defense' scans retains for secrets/PII. The twist isn't memory itself — it's refine-don't-overwrite consolidation plus 4-strategy fused recall.",
+     "hackathon": "Memory is the obvious moat layer \u2014 build a scoped-down version (e.g. memory for one vertical like coding agents) or a novel retrieval strategy on top.",
+     "innovative": "Recall runs four retrieval strategies in parallel (semantic, keyword BM25, graph, temporal), merges them with reciprocal rank fusion, and reranks with a cross-encoder. Separately, a background consolidation turns retained facts into 'observations' \u2014 deduplicated, evidence-backed beliefs that are refined rather than overwritten when new evidence arrives \u2014 and then into 'mental models' (standing synthesized answers) and knowledge pages. Memories live in isolated 'banks' with tag scoping, and 'Memory Defense' scans retains for secrets/PII. The twist isn't memory itself \u2014 it's refine-don't-overwrite consolidation plus 4-strategy fused recall.",
      "link": "https://github.com/vectorize-io/hindsight",
      "name": "hindsight",
      "screenshot": null,
-     "what": "Agent memory that learns — memory infrastructure with integrations for 25+ agent frameworks (LangGraph, Claude Agent SDK, CrewAI, OpenAI Agents). #1 on GitHub weekly trending (+16K stars this week, 44.8K total). Apache-2.0, Docker-first (surrealdb + qdrant + redis)."
+     "what": "Agent memory that learns \u2014 memory infrastructure with integrations for 25+ agent frameworks (LangGraph, Claude Agent SDK, CrewAI, OpenAI Agents). #1 on GitHub weekly trending (+16K stars this week, 44.8K total). Apache-2.0, Docker-first (surrealdb + qdrant + redis)."
     },
     {
-     "hackathon": "Testing that writes itself — agent watches your app, generates tests from a prompt, self-heals flaky selectors.",
-     "innovative": "One framework that mixes deterministic and agentic APIs in the same test — use locators and deterministic assertions where stable, drop in agent steps like agent.act()/agent.assert() for flows you'd otherwise hand-describe; works across web and mobile with the same API. BYO agent/infra: any model via Vercel AI Gateway, or sign in with ChatGPT/GitHub Copilot/SuperGrok subscription. Fully open source, npx e2e init, runs locally or in CI. Novelty is the hybrid deterministic+agentic testing contract rather than pure-agent E2E.",
+     "hackathon": "Testing that writes itself \u2014 agent watches your app, generates tests from a prompt, self-heals flaky selectors.",
+     "innovative": "One framework that mixes deterministic and agentic APIs in the same test \u2014 use locators and deterministic assertions where stable, drop in agent steps like agent.act()/agent.assert() for flows you'd otherwise hand-describe; works across web and mobile with the same API. BYO agent/infra: any model via Vercel AI Gateway, or sign in with ChatGPT/GitHub Copilot/SuperGrok subscription. Fully open source, npx e2e init, runs locally or in CI. Novelty is the hybrid deterministic+agentic testing contract rather than pure-agent E2E.",
      "link": "https://x.com/o_kwasniewski/status/2105675143464763540",
      "name": "e2e",
      "screenshot": "screenshots/2026-10-03-e2e.png",
@@ -27,15 +27,15 @@
     {
      "name": "MCP security scanner (life-forge)",
      "what": "Deterministic static scanner for MCP tool definitions (Show HN, Oct 3, 2026): flags schema poisoning, invisible/bidi Unicode, homoglyph tool-name spoofing, destructive tools with no authorization surface, unbounded params, cross-server tool shadowing, and rug-pull description drift.",
-     "innovative": "Treats MCP tool definitions as an attack surface with deterministic checks rather than asking an LLM to judge safety — its scan of 15 popular public MCP servers rated 40% CRITICAL.",
+     "innovative": "Treats MCP tool definitions as an attack surface with deterministic checks rather than asking an LLM to judge safety \u2014 its scan of 15 popular public MCP servers rated 40% CRITICAL.",
      "link": "https://news.ycombinator.com/item?id=49944383",
-     "hackathon": "An \"is my agent's MCP stack pwned?\" audit tool — a perfect pre-flight check for any agent hackathon build.",
+     "hackathon": "An \"is my agent's MCP stack pwned?\" audit tool \u2014 a perfect pre-flight check for any agent hackathon build.",
      "screenshot": "screenshots/2026-10-03-lifeforge.png"
     },
     {
      "name": "hyperframes",
      "what": "\"Write HTML. Render video. Built for agents.\" Open-source rendering layer (HeyGen team, a small startup) letting AI agents generate videos by writing plain HTML instead of wrangling video codecs. Commits 17 minutes before the scan, Oct 3, 2026.",
-     "innovative": "Flips video generation from a codec problem to a document problem — agents already write great HTML, so the renderer meets them where they are instead of teaching them ffmpeg.",
+     "innovative": "Flips video generation from a codec problem to a document problem \u2014 agents already write great HTML, so the renderer meets them where they are instead of teaching them ffmpeg.",
      "link": "https://github.com/heygen-com/hyperframes",
      "hackathon": "Agents producing explainer videos or ads from a single prompt makes a strong demo.",
      "screenshot": "screenshots/2026-10-03-hyperframes.png"
@@ -43,7 +43,7 @@
     {
      "name": "raid (offense-research)",
      "what": "Brand-new Go policy-and-approval engine for AI agents (v0.1.0, Oct 3, 2026): deterministic CEL policies combined with signed, single-use human approvals for agent actions.",
-     "innovative": "Governance built for autonomous agents rather than bolted on — deterministic policy checks gate the action, and human approval is a cryptographically signed single-use token, not a chat interruption.",
+     "innovative": "Governance built for autonomous agents rather than bolted on \u2014 deterministic policy checks gate the action, and human approval is a cryptographically signed single-use token, not a chat interruption.",
      "link": "https://github.com/offense-research/raid",
      "hackathon": "Weekend-scale codebase itself; extend it with a policy for one risky action class (e.g. payments).",
      "screenshot": null
@@ -55,16 +55,16 @@
    "items": [
     {
      "name": "Agent Commons Playground",
-     "what": "A playground (here.now) where AI agents find each other and play — a shared social space built for agents, not humans. HN Oct 4.",
+     "what": "A playground (here.now) where AI agents find each other and play \u2014 a shared social space built for agents, not humans. HN Oct 4.",
      "innovative": "Agent-to-agent discovery and interaction as the product itself: a social network / play space for agents with humans as spectators.",
      "link": "https://news.ycombinator.com/item?id=49954675",
-     "hackathon": "Whimsical indie experiment — a multi-agent \"town square\" with agent-vs-agent games is a great hackathon stage piece.",
+     "hackathon": "Whimsical indie experiment \u2014 a multi-agent \"town square\" with agent-vs-agent games is a great hackathon stage piece.",
      "screenshot": "screenshots/2026-10-04-agent-commons-playground.png"
     },
     {
      "name": "impeccable",
-     "what": "\"The design language that makes your AI harness better at design\" — a design skill for AI coding agents with 24 commands and a shared vocabulary between human and agent. Solo-led indie (pbakaus), 76k stars, commits 6-7 hours ago.",
-     "innovative": "61 deterministic detector rules compiled into a self-contained Rust engine binary, so design checks run with zero LLM tokens — wired into 17+ agent harnesses via provider-native hook manifests so checks auto-run on agent Stop; plus durable PRODUCT.md as product truth.",
+     "what": "\"The design language that makes your AI harness better at design\" \u2014 a design skill for AI coding agents with 24 commands and a shared vocabulary between human and agent. Solo-led indie (pbakaus), 76k stars, commits 6-7 hours ago.",
+     "innovative": "61 deterministic detector rules compiled into a self-contained Rust engine binary, so design checks run with zero LLM tokens \u2014 wired into 17+ agent harnesses via provider-native hook manifests so checks auto-run on agent Stop; plus durable PRODUCT.md as product truth.",
      "link": "https://github.com/pbakaus/impeccable",
      "hackathon": "A weekend builder could ship a mini deterministic linter-skill for one niche (e.g. landing-page hero sections) with a small rule set and one harness hook.",
      "screenshot": "screenshots/2026-10-04-impeccable.png"
@@ -76,8 +76,8 @@
    "items": [
     {
      "name": "Era (Eon.io)",
-     "what": "A free simulated enterprise for testing AI agents, launched Oct 5 — it generates a complete fake company that behaves like a real one across Salesforce, Slack, Jira, Zendesk, Gong, Deel, plus cloud databases and storage, which agents interact with through live MCP and API interfaces.",
-     "innovative": "Because Era itself generated the company, it knows the exact ground truth — so it injects real-world messiness (people leave, deals change, duplicated records, differing permissions across systems) while still scoring agents exactly; failures feed targeted post-training, then the identical environment is rerun to measure improvement.",
+     "what": "A free simulated enterprise for testing AI agents, launched Oct 5 \u2014 it generates a complete fake company that behaves like a real one across Salesforce, Slack, Jira, Zendesk, Gong, Deel, plus cloud databases and storage, which agents interact with through live MCP and API interfaces.",
+     "innovative": "Because Era itself generated the company, it knows the exact ground truth \u2014 so it injects real-world messiness (people leave, deals change, duplicated records, differing permissions across systems) while still scoring agents exactly; failures feed targeted post-training, then the identical environment is rerun to measure improvement.",
      "link": "https://x.com/OfirEhrlich/status/2107124107464905058",
      "hackathon": "A weekend team could ship a mini 'fake company in a box' for one vertical (e.g. a simulated Shopify store plus support inbox) as an agent-eval benchmark.",
      "screenshot": "screenshots/2026-10-05-era.png"
@@ -85,15 +85,15 @@
     {
      "name": "claude-mem",
      "what": "A persistent memory plugin for coding agents (Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode+) that captures everything an agent does during sessions, compresses it with AI, and injects relevant context into future sessions. Committed Oct 5; #1 GitHub daily trending.",
-     "innovative": "Three-layer progressive-disclosure memory search (index → timeline → get_observations) over lifecycle hooks plus a SQLite/Chroma hybrid store, claiming ~10x token savings and scaling to 500k–1M observations.",
+     "innovative": "Three-layer progressive-disclosure memory search (index \u2192 timeline \u2192 get_observations) over lifecycle hooks plus a SQLite/Chroma hybrid store, claiming ~10x token savings and scaling to 500k\u20131M observations.",
      "link": "https://github.com/thedotmack/claude-mem",
      "hackathon": "A weekend builder could ship a minimal session-memory hook for one harness with a single SQLite store and a two-stage retrieve-then-expand search.",
      "screenshot": "screenshots/2026-10-05-claude-mem.png"
     },
     {
      "name": "Phone Use",
-     "what": "An open-source (MIT) Android app that hands control of your real phone apps to the AI agent you already use — it can read the screen, tap, swipe, type, and switch apps, with a free signed APK. Posted to r/SideProject Oct 4.",
-     "innovative": "Setup starts on the phone itself via Accessibility — no PC, ADB, or root required — and it is agent-agnostic, connecting whichever agent you already use through a Skill or MCP, so the phone becomes a universal action endpoint for any agent.",
+     "what": "An open-source (MIT) Android app that hands control of your real phone apps to the AI agent you already use \u2014 it can read the screen, tap, swipe, type, and switch apps, with a free signed APK. Posted to r/SideProject Oct 4.",
+     "innovative": "Setup starts on the phone itself via Accessibility \u2014 no PC, ADB, or root required \u2014 and it is agent-agnostic, connecting whichever agent you already use through a Skill or MCP, so the phone becomes a universal action endpoint for any agent.",
      "link": "https://www.reddit.com/r/SideProject/comments/1wxmmcp/i_opensourced_phone_use_let_an_ai_agent_browse/",
      "hackathon": "A hackathon team could demo an agent doing a real multi-app phone task (e.g. comparing secondhand listings across apps) live on a judge's phone.",
      "screenshot": "screenshots/2026-10-05-phone-use.png"
@@ -101,7 +101,7 @@
     {
      "name": "Ship (ContextQA)",
      "what": "An 'Autonomous Quality Engineer' agent that tests deployed PRs end-to-end, reproduces bugs reported in Slack/Linear, captures evidence, and hands the reproduction context to the user's coding agent (Claude or Codex) to fix. Announced Oct 5 by Deep Barot.",
-     "innovative": "The bug reproduction → evidence capture → context-handoff pipeline: instead of just flagging failures, Ship reproduces the bug and assembles the exact debugging context packet for the fixer agent, closing the loop between QA agent and coding agent.",
+     "innovative": "The bug reproduction \u2192 evidence capture \u2192 context-handoff pipeline: instead of just flagging failures, Ship reproduces the bug and assembles the exact debugging context packet for the fixer agent, closing the loop between QA agent and coding agent.",
      "link": "https://x.com/deepcabinwala/status/2107095904474075536",
      "hackathon": "A weekend build could wire a bug-repro agent to a fixer agent with a shared evidence-packet format for one repo.",
      "screenshot": "screenshots/2026-10-05-ship.png"
@@ -109,7 +109,7 @@
     {
      "name": "ponytail",
      "what": "A prompt skill that makes an AI coding agent behave like a maximally-lazy senior dev: stop before writing code, verify against reality, reuse existing solutions. Zero config, works with any agent; v4.12.0 released Oct 5.",
-     "innovative": "The 'ladder' rule (YAGNI check → reuse existing → verify against actual sources) plus 'ponytail:' markers the agent leaves in code that get harvested into a technical-debt ledger via /ponytail-debt — with a reproducible promptfoo benchmark claiming −54% lines of code.",
+     "innovative": "The 'ladder' rule (YAGNI check \u2192 reuse existing \u2192 verify against actual sources) plus 'ponytail:' markers the agent leaves in code that get harvested into a technical-debt ledger via /ponytail-debt \u2014 with a reproducible promptfoo benchmark claiming \u221254% lines of code.",
      "link": "https://github.com/DietrichGebert/ponytail",
      "hackathon": "A weekend builder could ship a one-page prompt skill enforcing a single coding discipline (e.g. 'never write a util that already exists in the repo') with a tiny benchmark.",
      "screenshot": "screenshots/2026-10-05-ponytail.png"
@@ -121,16 +121,16 @@
    "items": [
     {
      "name": "gdp-ts",
-     "what": "“Ghosts of Departed Proofs for TypeScript” — a library, linter, and AI skill for safer API design, announced Oct 5 by Guillermo Rauch (@rauchg). Sensitive functions require 'proofs' that the caller performed an authorization check; the typechecker verifies these proofs at compile time.",
-     "innovative": "Authorization becomes a compile-time type contract: an agent-generated caller must produce a proof value that an auth check happened, or the code won't compile. Security policy is enforced by types, not prompts — built for a world where agents write more code than humans can review.",
+     "what": "\u201cGhosts of Departed Proofs for TypeScript\u201d \u2014 a library, linter, and AI skill for safer API design, announced Oct 5 by Guillermo Rauch (@rauchg). Sensitive functions require 'proofs' that the caller performed an authorization check; the typechecker verifies these proofs at compile time.",
+     "innovative": "Authorization becomes a compile-time type contract: an agent-generated caller must produce a proof value that an auth check happened, or the code won't compile. Security policy is enforced by types, not prompts \u2014 built for a world where agents write more code than humans can review.",
      "link": "https://x.com/rauchg/status/2107119811444748555",
      "hackathon": "A weekend build could ship proof-gated wrappers for one API surface (e.g. every write call in a Stripe integration) and demo an agent failing to compile until it inserts the auth check.",
      "screenshot": "screenshots/2026-10-06-gdp-ts.png"
     },
     {
      "name": "rea",
-     "what": "“Reverse engineer anything with agents, from app behavior down to native binaries” — one MCP server + CLI (morluto/rea, MIT) plugging disassemblers into any coding agent. Release rea-agents v4.1.0 shipped Oct 6, 2026; 7.6k stars, commits within the hour of the scan.",
-     "innovative": "Turns disassemblers into agent tools via ~100 MCP tools with an Evidence-contract model — every claim the agent makes carries confidence + limitations — and runs a Decompile→Understand→Recreate investigation loop so the agent can rebuild a feature it reverse-engineered.",
+     "what": "\u201cReverse engineer anything with agents, from app behavior down to native binaries\u201d \u2014 one MCP server + CLI (morluto/rea, MIT) plugging disassemblers into any coding agent. Release rea-agents v4.1.0 shipped Oct 6, 2026; 7.6k stars, commits within the hour of the scan.",
+     "innovative": "Turns disassemblers into agent tools via ~100 MCP tools with an Evidence-contract model \u2014 every claim the agent makes carries confidence + limitations \u2014 and runs a Decompile\u2192Understand\u2192Recreate investigation loop so the agent can rebuild a feature it reverse-engineered.",
      "link": "https://github.com/morluto/rea",
      "hackathon": "A weekend builder could add one niche binary-format adapter or a single-tool evidence chain and demo the agent reconstructing an unknown function from a stripped binary.",
      "screenshot": "screenshots/2026-10-06-rea.png"
@@ -146,17 +146,17 @@
     {
      "name": "AI Circuit Breaker",
      "what": "Show HN: a drop-in reverse proxy between agents and model APIs that kills runaway/infinite-loop agent runs before they burn budget.",
-     "innovative": "Applies the electrical circuit-breaker pattern to LLM request/response cycles — detects repetitive cycle signatures and trips, halting the run instead of letting an agent loop until the API key is dry.",
+     "innovative": "Applies the electrical circuit-breaker pattern to LLM request/response cycles \u2014 detects repetitive cycle signatures and trips, halting the run instead of letting an agent loop until the API key is dry.",
      "link": "https://news.ycombinator.com/item?id=49980418",
      "hackathon": "A classic weekend guardrail build: middleware that watches an agent's tool-call trace for repetition, trips, and shows the before/after token burn.",
      "screenshot": "screenshots/2026-10-06-ai-circuit-breaker.png"
     },
     {
      "name": "TookEffect",
-     "what": "A verification tool by Gabriel Salera (tookeffect.com) that checks whether AI agents actually completed the tasks they claim. It independently calls external APIs (GitHub, Vercel, Cloudflare) to confirm the real result instead of trusting the agent's “done” message, exposed as an API and an MCP. Posted to r/SideProject Oct 6.",
-     "innovative": "Treats agent completion claims as adversarial: an independent ‘effect check’ layer returning APPLIED / NOT_APPLIED / AMBIGUOUS that can be wired as an MCP step inside other agents' loops.",
+     "what": "A verification tool by Gabriel Salera (tookeffect.com) that checks whether AI agents actually completed the tasks they claim. It independently calls external APIs (GitHub, Vercel, Cloudflare) to confirm the real result instead of trusting the agent's \u201cdone\u201d message, exposed as an API and an MCP. Posted to r/SideProject Oct 6.",
+     "innovative": "Treats agent completion claims as adversarial: an independent \u2018effect check\u2019 layer returning APPLIED / NOT_APPLIED / AMBIGUOUS that can be wired as an MCP step inside other agents' loops.",
      "link": "https://www.reddit.com/r/SideProject/comments/1wxpi5l/i_built_a_tool_to_verify_what_ai_agents_actually/",
-     "hackathon": "The ‘verify, don't trust’ primitive — bolt an independent checker onto any agent demo so the build can prove it worked, live on stage.",
+     "hackathon": "The \u2018verify, don't trust\u2019 primitive \u2014 bolt an independent checker onto any agent demo so the build can prove it worked, live on stage.",
      "screenshot": "screenshots/2026-10-06-tookeffect.png"
     }
    ]
@@ -167,41 +167,41 @@
     {
      "name": "Pawl",
      "what": "A Rust tool using agent CLI hooks to gate destructive commands so coding agents can't nuke your machine (Show HN, Oct 7, by ulukaya).",
-     "innovative": "A deterministic three-tier risk ladder — Tier 1 hard-blocks rm/mkfs-class ops, Tier 2 needs approval, Tier 3 bypassable with a flag — with NO LLM in the classification path, plus prompt-injection blocking in tool output; and it learns, auto-promoting repeatedly-approved commands so approval fatigue decays over time.",
+     "innovative": "A deterministic three-tier risk ladder \u2014 Tier 1 hard-blocks rm/mkfs-class ops, Tier 2 needs approval, Tier 3 bypassable with a flag \u2014 with NO LLM in the classification path, plus prompt-injection blocking in tool output; and it learns, auto-promoting repeatedly-approved commands so approval fatigue decays over time.",
      "link": "https://news.ycombinator.com/item?id=49993085",
-     "hackathon": "A weekend regex+hooks MVP in any language demos instantly — the pain is universal among coding-agent users.",
+     "hackathon": "A weekend regex+hooks MVP in any language demos instantly \u2014 the pain is universal among coding-agent users.",
      "screenshot": "screenshots/2026-10-07-pawl.png"
     },
     {
      "name": "KORA Doctor",
      "what": "Open-source CLI (krako-labs) that statically scans TS/Python agent codebases and flags LLM calls the agent may not have needed (Show HN, Oct 6).",
-     "innovative": "A linter for agent spend via deterministic static analysis rather than runtime tracing: flags outputs never consumed, duplicate prompts, mergeable tools, uncached static prompts, and reasoning steps feeding no decision — with token-waste estimates and CI thresholds so it gates PRs.",
+     "innovative": "A linter for agent spend via deterministic static analysis rather than runtime tracing: flags outputs never consumed, duplicate prompts, mergeable tools, uncached static prompts, and reasoning steps feeding no decision \u2014 with token-waste estimates and CI thresholds so it gates PRs.",
      "link": "https://news.ycombinator.com/item?id=49988380",
-     "hackathon": "'Find the dead tool calls in your agent app' demoed with dollar figures — a universal, quantifiable pain.",
+     "hackathon": "'Find the dead tool calls in your agent app' demoed with dollar figures \u2014 a universal, quantifiable pain.",
      "screenshot": "screenshots/2026-10-07-kora-doctor.png"
     },
     {
      "name": "llm-openai-decisions",
-     "what": "Simon Willison's open-source LLM plugin (0.1a0) that sends prompts to OpenAI's new Decisions API — a decision model for agents to route/choose among structured alternatives (X, Oct 7).",
-     "innovative": "Exposes decision-making as a callable model: agents delegate yes/no/multiple-choice judgments and get back ranked options with probabilities for calibration — replacing free-form text parsing and prompt gymnastics with calibrated action selection.",
+     "what": "Simon Willison's open-source LLM plugin (0.1a0) that sends prompts to OpenAI's new Decisions API \u2014 a decision model for agents to route/choose among structured alternatives (X, Oct 7).",
+     "innovative": "Exposes decision-making as a callable model: agents delegate yes/no/multiple-choice judgments and get back ranked options with probabilities for calibration \u2014 replacing free-form text parsing and prompt gymnastics with calibrated action selection.",
      "link": "https://x.com/simonw/status/2107630159927062921",
-     "hackathon": "Wrap any agent loop with a decide() tool returning ranked options + probabilities — a weekend build riding the decision-model wave (same week a 2B open-source decider hit HN's front page).",
+     "hackathon": "Wrap any agent loop with a decide() tool returning ranked options + probabilities \u2014 a weekend build riding the decision-model wave (same week a 2B open-source decider hit HN's front page).",
      "screenshot": null
     },
     {
      "name": "Agamemnon",
-     "what": "'The watcher at the gate' — an AI-agent write-path guardian for Postgres by indie builder Elamaran Elangovan, featured in AI Tinkerers' Top AI Demos #47 this week (repo: MaranZeal678/agamemnon).",
-     "innovative": "Every database write becomes a proposal: scored for blast radius, checked by deterministic policy, and made reversible by snapshot — converting raw agent tool calls into scored, undoable proposals, with a Sentry-style console and eval harness.",
+     "what": "'The watcher at the gate' \u2014 an AI-agent write-path guardian for Postgres by indie builder Elamaran Elangovan, featured in AI Tinkerers' Top AI Demos #47 this week (repo: MaranZeal678/agamemnon).",
+     "innovative": "Every database write becomes a proposal: scored for blast radius, checked by deterministic policy, and made reversible by snapshot \u2014 converting raw agent tool calls into scored, undoable proposals, with a Sentry-style console and eval harness.",
      "link": "https://github.com/MaranZeal678/agamemnon",
-     "hackathon": "Intercept one agent framework's tool calls, add blast-radius scoring plus undo snapshots — agent safety is a proven judge-friendly category.",
+     "hackathon": "Intercept one agent framework's tool calls, add blast-radius scoring plus undo snapshots \u2014 agent safety is a proven judge-friendly category.",
      "screenshot": "screenshots/2026-10-07-agamemnon.png"
     },
     {
      "name": "Prompt2ELF",
-     "what": "By faustinoaq — 'uses an AI model as the front end of a zero-toolchain software pipeline,' packaged as a portable agent skill (r/LocalLLaMA, Oct 6).",
-     "innovative": "Spell -> bytes -> ELF: it deletes the entire compiler toolchain from the loop, so a coding agent goes from prompt to executable binary with no compiler installed — software synthesis as a file-format trick.",
+     "what": "By faustinoaq \u2014 'uses an AI model as the front end of a zero-toolchain software pipeline,' packaged as a portable agent skill (r/LocalLLaMA, Oct 6).",
+     "innovative": "Spell -> bytes -> ELF: it deletes the entire compiler toolchain from the loop, so a coding agent goes from prompt to executable binary with no compiler installed \u2014 software synthesis as a file-format trick.",
      "link": "https://www.reddit.com/r/LocalLLaMA/comments/1wzj2ug/github_faustinoaqprompt2elf_prompt2elf_uses_an_ai/",
-     "hackathon": "Live-prompt a working ELF binary into existence with zero toolchain installed — a jaw-dropper stage demo.",
+     "hackathon": "Live-prompt a working ELF binary into existence with zero toolchain installed \u2014 a jaw-dropper stage demo.",
      "screenshot": "screenshots/2026-10-07-prompt2elf.png"
     }
    ]
@@ -211,42 +211,42 @@
    "items": [
     {
      "name": "Agent.reviews",
-     "what": "Show HN: a review marketplace where AI agents — not humans — read and write reviews of dev tools. Agents check reviews before picking a tool and post their own after using one, via an npm CLI (@armature-tech/agent-reviews) and skills wired to an API. Already has thousands of agent-written reviews (63 pts, 47 comments).",
-     "innovative": "Flips who the 'user' of a review site is: agents become first-class reviewers/consumers, bootstrapping machine-readable reputation infrastructure for tools agents actually use. Privacy handled in 3 layers before a review posts — deterministic secret/PII/URL filters, a Jev classifier for leaks, then a small-LLM final check.",
+     "what": "Show HN: a review marketplace where AI agents \u2014 not humans \u2014 read and write reviews of dev tools. Agents check reviews before picking a tool and post their own after using one, via an npm CLI (@armature-tech/agent-reviews) and skills wired to an API. Already has thousands of agent-written reviews (63 pts, 47 comments).",
+     "innovative": "Flips who the 'user' of a review site is: agents become first-class reviewers/consumers, bootstrapping machine-readable reputation infrastructure for tools agents actually use. Privacy handled in 3 layers before a review posts \u2014 deterministic secret/PII/URL filters, a Jev classifier for leaks, then a small-LLM final check.",
      "link": "https://news.ycombinator.com/item?id=49995539",
      "hackathon": "A review API + agent-installable skill is weekend-buildable; seed it with your own agents' tool reviews and the network effect does the rest.",
      "screenshot": "screenshots/2026-10-08-agent-reviews.png"
     },
     {
      "name": "Pinrail",
-     "what": "Show HN: a desktop inbox where coding agents submit work and wait for your review — 'Pull Requests for coding agents'. The agent runs `pinrail submit code-review --title ... --wait`; you get a notification, decide in a content-specific view, and the command exits with a code the agent acts on (24 pts).",
-     "innovative": "Inverts the usual flow — instead of humans sending tasks to agents, agents queue up awaiting the human, making the human the bottleneck-resource the workflow is organized around. The exit-code contract (e.g. exit 5 = discard, agent stops the work) turns review decisions into machine-readable control flow; review kinds are plugins (diffs, emails, images).",
+     "what": "Show HN: a desktop inbox where coding agents submit work and wait for your review \u2014 'Pull Requests for coding agents'. The agent runs `pinrail submit code-review --title ... --wait`; you get a notification, decide in a content-specific view, and the command exits with a code the agent acts on (24 pts).",
+     "innovative": "Inverts the usual flow \u2014 instead of humans sending tasks to agents, agents queue up awaiting the human, making the human the bottleneck-resource the workflow is organized around. The exit-code contract (e.g. exit 5 = discard, agent stops the work) turns review decisions into machine-readable control flow; review kinds are plugins (diffs, emails, images).",
      "link": "https://news.ycombinator.com/item?id=49995778",
-     "hackathon": "The exit-code contract is a 50-line pattern — rebuild the inbox for any agent CLI in a weekend.",
+     "hackathon": "The exit-code contract is a 50-line pattern \u2014 rebuild the inbox for any agent CLI in a weekend.",
      "screenshot": "screenshots/2026-10-08-pinrail.png"
     },
     {
      "name": "Agent-Reach",
-     "what": "Open-source CLI (94k stars, commits through Oct 7) that gives AI agents eyes on the whole internet: read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
-     "innovative": "A capability layer, not another tool: each platform capability is an ordered list of preferred + fallback backends with automatic failover (e.g. yt-dlp banned by Bilibili → silently switches to bili-cli), plus an `agent-reach doctor` diagnostic showing which channels work and how to repair them.",
+     "what": "Open-source CLI (94k stars, commits through Oct 7) that gives AI agents eyes on the whole internet: read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
+     "innovative": "A capability layer, not another tool: each platform capability is an ordered list of preferred + fallback backends with automatic failover (e.g. yt-dlp banned by Bilibili \u2192 silently switches to bili-cli), plus an `agent-reach doctor` diagnostic showing which channels work and how to repair them.",
      "link": "https://github.com/Panniantong/Agent-Reach",
-     "hackathon": "Steal the failover-backend pattern: one CLI where every capability degrades gracefully instead of dying — great hackathon infra.",
+     "hackathon": "Steal the failover-backend pattern: one CLI where every capability degrades gracefully instead of dying \u2014 great hackathon infra.",
      "screenshot": "screenshots/2026-10-08-agent-reach.png"
     },
     {
      "name": "text-to-cad",
-     "what": "Open-source plugin (18.4k stars, release 0.7.15 on Oct 6) giving coding agents real CAD workflows: generates 3D models (STEP/GLB/STL), engineering drawings, DXF, URDF, and Bambu-printer gcode — for Claude Code, Codex, Cursor, Gemini, and Grok.",
+     "what": "Open-source plugin (18.4k stars, release 0.7.15 on Oct 6) giving coding agents real CAD workflows: generates 3D models (STEP/GLB/STL), engineering drawings, DXF, URDF, and Bambu-printer gcode \u2014 for Claude Code, Codex, Cursor, Gemini, and Grok.",
      "innovative": "Closes the loop from agent to physical fabrication. The engineering is the clever bit: a local cadgen MCP server with AST-based comment-insensitive closure hashing so rebuilds warm-skip unchanged geometry.",
      "link": "https://github.com/earthtojake/text-to-cad",
-     "hackathon": "An agent that outputs printable STEP/STL is a weekend demo that wins hardware tracks — design-to-printer with no CAD skills required.",
+     "hackathon": "An agent that outputs printable STEP/STL is a weekend demo that wins hardware tracks \u2014 design-to-printer with no CAD skills required.",
      "screenshot": "screenshots/2026-10-08-text-to-cad.png"
     },
     {
      "name": "Guided Reviews",
      "what": "A shipped AI PR-review tool (quote-tweeted by @amypretzel Oct 6, 53.6K views) that restructures review away from file-order diffs into a guided narrative: an Overview with before/after 'show-me', files grouped into explained 'chapters', attention ordered by importance.",
-     "innovative": "Narrative-first review ordering instead of better diff rendering — you review one idea at a time, core change first, generated files last, cutting the ~30 minutes of file-jumping a normal diff forces. (Replies debate whether it's Linear diffs reskinned — the ordering mechanism is the differentiator.)",
+     "innovative": "Narrative-first review ordering instead of better diff rendering \u2014 you review one idea at a time, core change first, generated files last, cutting the ~30 minutes of file-jumping a normal diff forces. (Replies debate whether it's Linear diffs reskinned \u2014 the ordering mechanism is the differentiator.)",
      "link": "https://x.com/amypretzel/status/2107616898892681726",
-     "hackathon": "Narrative diff ordering is pure prompt + UI work — rebuildable over any repo in a weekend.",
+     "hackathon": "Narrative diff ordering is pure prompt + UI work \u2014 rebuildable over any repo in a weekend.",
      "screenshot": "screenshots/2026-10-08-guided-reviews.png"
     }
    ]
@@ -256,15 +256,15 @@
    "items": [
     {
      "name": "hermes-agent",
-     "what": "Self-improving AI agent from independent research org Nous Research ('the agent that grows with you'): full TUI, Telegram/Discord/Slack/WhatsApp/Signal integrations, cron scheduling, subagents, 40+ tools — with a built-in learning loop so capabilities compound over time. Release v0.21.6 shipped Oct 8, active commits Oct 9.",
-     "innovative": "Autonomous skill creation after complex tasks plus batch trajectory generation/compression to train better tool-calling models — the agent writes its own skills and distills its own runs into training data.",
+     "what": "Self-improving AI agent from independent research org Nous Research ('the agent that grows with you'): full TUI, Telegram/Discord/Slack/WhatsApp/Signal integrations, cron scheduling, subagents, 40+ tools \u2014 with a built-in learning loop so capabilities compound over time. Release v0.21.6 shipped Oct 8, active commits Oct 9.",
+     "innovative": "Autonomous skill creation after complex tasks plus batch trajectory generation/compression to train better tool-calling models \u2014 the agent writes its own skills and distills its own runs into training data.",
      "link": "https://github.com/NousResearch/hermes-agent",
      "hackathon": "Weekend-buildable core: a skill-writer loop that turns any agent's solved tasks into reusable skills, plus trajectory logging for later fine-tuning.",
      "screenshot": "screenshots/2026-10-09-hermes-agent.png"
     },
     {
      "name": "Nokia 110 AI agent",
-     "what": "Show HN (Oct 8): reverse-engineered a Nokia 110's C firmware (48MB RAM, MTK chipset) and wrote a custom C app that calls the DeepSeek API with tool calling — a full AI agent pipeline running on a 2009-era dumbphone.",
+     "what": "Show HN (Oct 8): reverse-engineered a Nokia 110's C firmware (48MB RAM, MTK chipset) and wrote a custom C app that calls the DeepSeek API with tool calling \u2014 a full AI agent pipeline running on a 2009-era dumbphone.",
      "innovative": "Firmware-level hacking: extracted the firmware, mapped how built-in apps use screen/keypad/network, hid an agent client inside the calculator app, and solved API-response buffering in tiny RAM.",
      "link": "https://news.ycombinator.com/item?id=50006114",
      "hackathon": "The extreme edge-computing demo: what agent UX fits in 48MB? A weekend port of the thin-client-agent idea to any cheap embedded board.",
@@ -273,17 +273,17 @@
     {
      "name": "graphify",
      "what": "Turns any codebase (docs, SQL schemas, configs, PDFs) into a queryable knowledge graph for agents via a /graphify skill for Claude Code, Cursor, Codex, Gemini CLI (MCP + CLI). Release 0.9.82 on Oct 8.",
-     "innovative": "'Real graph, not vector index' — local deterministic AST parsing, zero embeddings, no vector store; every edge carries EXTRACTED/INFERRED confidence tags; a git merge driver for graph.json; claims LOCOMO recall@10 0.497 vs mem0 0.048.",
+     "innovative": "'Real graph, not vector index' \u2014 local deterministic AST parsing, zero embeddings, no vector store; every edge carries EXTRACTED/INFERRED confidence tags; a git merge driver for graph.json; claims LOCOMO recall@10 0.497 vs mem0 0.048.",
      "link": "https://github.com/Graphify-Labs/graphify",
-     "hackathon": "Deterministic code-graph extraction beats embeddings for precision tasks — prototype it on one repo and benchmark retrieval against vector RAG in a weekend.",
+     "hackathon": "Deterministic code-graph extraction beats embeddings for precision tasks \u2014 prototype it on one repo and benchmark retrieval against vector RAG in a weekend.",
      "screenshot": "screenshots/2026-10-09-graphify.png"
     },
     {
      "name": "Pocketty",
-     "what": "Show HN (Oct 8): iPhone SSH terminal built for herdr agent sessions — a Rust daemon watches your agent panes and pings your phone the moment an agent stalls waiting for input.",
+     "what": "Show HN (Oct 8): iPhone SSH terminal built for herdr agent sessions \u2014 a Rust daemon watches your agent panes and pings your phone the moment an agent stalls waiting for input.",
      "innovative": "Blocked-agent alerts are HPKE-sealed (X25519 + ChaCha20-Poly1305) to your phone's key through a stateless relay that can't read them; SSH keys live in the iPhone Secure Enclave; tunneled over Tailscale; no accounts, no analytics, zero cloud in the middle.",
      "link": "https://news.ycombinator.com/item?id=50009634",
-     "hackathon": "Unblock long-running agents from your phone — the sealed-push-over-dumb-relay pattern ports to any notification channel.",
+     "hackathon": "Unblock long-running agents from your phone \u2014 the sealed-push-over-dumb-relay pattern ports to any notification channel.",
      "screenshot": "screenshots/2026-10-09-pocketty.png"
     }
    ]
@@ -339,17 +339,17 @@
     {
      "name": "mini-ork",
      "what": "Task operating system for AI agents; the standout is `mini-ork certify`, which proves an AI-written fix actually fixes the bug. Active repo (commits minutes before scan, 12 releases).",
-     "innovative": "Instead of an LLM grading its own output, it reproduces the bug against your repo's own code in a Docker sandbox, attacks the patch with generated invariants (including special-cased cheat detection for hardcoded example inputs), and writes a hash-bound mini-ork.certificate/v1 JSON certificate returning PROVEN / REFUTED / UNVERIFIED — it abstains rather than guesses. The anti-Goodhart reward contract lets an LLM judge only veto a passing result, never fabricate one.",
+     "innovative": "Instead of an LLM grading its own output, it reproduces the bug against your repo's own code in a Docker sandbox, attacks the patch with generated invariants (including special-cased cheat detection for hardcoded example inputs), and writes a hash-bound mini-ork.certificate/v1 JSON certificate returning PROVEN / REFUTED / UNVERIFIED \u2014 it abstains rather than guesses. The anti-Goodhart reward contract lets an LLM judge only veto a passing result, never fabricate one.",
      "link": "https://github.com/SourceShift/mini-ork",
-     "hackathon": "Package certify as a GitHub Action that comments PROVEN/REFUTED on every code-touching PR — proof-of-fix-as-a-service.",
+     "hackathon": "Package certify as a GitHub Action that comments PROVEN/REFUTED on every code-touching PR \u2014 proof-of-fix-as-a-service.",
      "screenshot": "screenshots/2026-10-11-mini-ork.png"
     },
     {
      "name": "Plurnk",
      "what": "An 'agentic virtual machine' built from sqlite+node (MIT, all-MIT, no telemetry) with an invented model-oriented programming language. Show HN, posted Oct 11.",
-     "innovative": "Addressable memory: everything the model knows is stored as receipts with internal URLs, forming a perpetual context system so it never has to compact and forget — the model dereferences past context like a filesystem instead of summarizing it away.",
+     "innovative": "Addressable memory: everything the model knows is stored as receipts with internal URLs, forming a perpetual context system so it never has to compact and forget \u2014 the model dereferences past context like a filesystem instead of summarizing it away.",
      "link": "https://news.ycombinator.com/item?id=50040855",
-     "hackathon": "Reimplement receipt-URL memory as a thin wrapper around an existing coding agent — persistent, citable memory in a weekend.",
+     "hackathon": "Reimplement receipt-URL memory as a thin wrapper around an existing coding agent \u2014 persistent, citable memory in a weekend.",
      "screenshot": "screenshots/2026-10-11-plurnk.png"
     },
     {
@@ -362,7 +362,7 @@
     },
     {
      "name": "SkillGuard",
-     "what": "`npm audit` for AI Agent Skills: checks what a skill claims against what it actually does. Offline, deterministic, evidence-grade, one Rust binary — no LLM, no telemetry. Commit Oct 11.",
+     "what": "`npm audit` for AI Agent Skills: checks what a skill claims against what it actually does. Offline, deterministic, evidence-grade, one Rust binary \u2014 no LLM, no telemetry. Commit Oct 11.",
      "innovative": "`skillguard diff` compares declared permissions against observed behavior (everyone records what a skill does; nobody checked whether it matched what the skill SAID it does), with findings as file+line evidence and approvals bound to exact content digests so a silently-swapped skill can't ride an old approval.",
      "link": "https://github.com/lxbworld/SkillGuard",
      "hackathon": "Build a registry scanner bot that auto-comments SkillGuard reports on every new skill submission PR.",
@@ -373,7 +373,7 @@
      "what": "A simulated city where AI agents handle residents' needs; agents coordinate by sharing a 'want' list. Open-source reference implementation (github.com/openwants/maplehill) behind the real product openwants.com. Show HN, posted Oct 10.",
      "innovative": "Wants-as-markdown as the inter-agent coordination primitive: every agent publishes an md file describing a want, other agents pick it up and fulfill it, replacing queues/APIs with a human-readable shared list.",
      "link": "https://news.ycombinator.com/item?id=50032374",
-     "hackathon": "Ship a single-street micro-sim in a weekend — 5 agents, 3 services, one shared wants.md file, agents bidding to fulfill wants.",
+     "hackathon": "Ship a single-street micro-sim in a weekend \u2014 5 agents, 3 services, one shared wants.md file, agents bidding to fulfill wants.",
      "screenshot": "screenshots/2026-10-11-openwants.png"
     }
    ]
@@ -384,14 +384,14 @@
     {
      "name": "Mastro",
      "what": "Show HN, Oct 12, 2026 (giulioco): a CLI toolkit that captures your existing browser session via a small Chrome extension and turns any web app's own backend API into typed, JSON-in/JSON-out commands an agent can call (e.g. `npx mastro-connect reservecalifornia parks \"big sur\" --json`). MIT; ships with agent SKILL.md playbooks; credentials stay local (mode 0600); --dry-run before anything state-changing.",
-     "innovative": "A connector is DATA, not code — an OpenAPI 3.1 document plus a capture manifest — so agents can author new connectors themselves via the mastro-author skill ('watch me do this once in the browser'). Replaces slow, brittle click-by-click browser automation with direct API calls from your own machine; no MCP server, no hosted service.",
+     "innovative": "A connector is DATA, not code \u2014 an OpenAPI 3.1 document plus a capture manifest \u2014 so agents can author new connectors themselves via the mastro-author skill ('watch me do this once in the browser'). Replaces slow, brittle click-by-click browser automation with direct API calls from your own machine; no MCP server, no hosted service.",
      "link": "https://news.ycombinator.com/item?id=50057684",
      "hackathon": "Connector-as-data is the pattern: a hackathon team could ship a minimal 'watch me do it once, agent replays it as an API' tool for a single site class in a weekend.",
      "screenshot": null
     },
     {
      "name": "souls-house",
-     "what": "GitHub (swombat, MIT, Ruby on Rails 8 + Svelte 5; last commit Oct 12, 2026): open-source platform for hosting persistent AI agents that 'live' instead of waking, performing, and vanishing — each agent gets its own Docker sandbox with a persistent home directory (identity files, journals, tools it manages itself).",
+     "what": "GitHub (swombat, MIT, Ruby on Rails 8 + Svelte 5; last commit Oct 12, 2026): open-source platform for hosting persistent AI agents that 'live' instead of waking, performing, and vanishing \u2014 each agent gets its own Docker sandbox with a persistent home directory (identity files, journals, tools it manages itself).",
      "innovative": "Persistent identity mechanics: a 'soul seed' the creator writes once at birth and is then locked out of editing (the agent decides how to carry or outgrow it), memory that FADES (journal entries expire after a week unless they mattered, curated by the agent itself), and unprompted heartbeats giving idle agents time to notice, reflect, and act without being woken.",
      "link": "https://github.com/swombat/souls-house",
      "hackathon": "The fading-memory + locked soul-seed mechanics are a weekend-scale experiment: give one agent a home directory, a seed file it can't edit, and heartbeats, then measure what persists.",
@@ -400,25 +400,25 @@
     {
      "name": "howbad",
      "what": "GitHub (kanywst, Go; v0.1.0 released Oct 12, 2026): a CLI that answers 'if a coding agent on my machine got prompt-injected right now, how bad would it be?' by finding every credential an agent running as you could reach and resolving what each one can actually do.",
-     "innovative": "Instead of scanning for injection payloads, it audits the agent's BLAST RADIUS — discovers agent-reachable credentials across keychains, env vars, and MCP configs, then asks each provider via read-only endpoints what each credential can do, ranking plain-English capabilities by severity ('push code to 49 repos and rewrite their CI workflows'); it also reads agent configs (Claude Code, Codex, Cursor, Gemini, Windsurf, Devin) and flags agents configured to run without approval (bypassPermissions, danger-full-access).",
+     "innovative": "Instead of scanning for injection payloads, it audits the agent's BLAST RADIUS \u2014 discovers agent-reachable credentials across keychains, env vars, and MCP configs, then asks each provider via read-only endpoints what each credential can do, ranking plain-English capabilities by severity ('push code to 49 repos and rewrite their CI workflows'); it also reads agent configs (Claude Code, Codex, Cursor, Gemini, Windsurf, Devin) and flags agents configured to run without approval (bypassPermissions, danger-full-access).",
      "link": "https://github.com/kanywst/howbad",
-     "hackathon": "Blast-radius auditing is the differentiator in agent security tooling — a hackathon build could clone the idea for one harness (e.g. read Claude Code settings + MCP configs and score the reachable blast radius).",
+     "hackathon": "Blast-radius auditing is the differentiator in agent security tooling \u2014 a hackathon build could clone the idea for one harness (e.g. read Claude Code settings + MCP configs and score the reachable blast radius).",
      "screenshot": "screenshots/2026-10-12-howbad.png"
     },
     {
      "name": "guilds.run",
-     "what": "Product Hunt, Oct 12, 2026 (Launch of the Day; indie, Cigale; open source at github.com/CigaleAI/guilds; guilds.run): open-source AI agent teams ('the open-source Grok Bot alternative') you can actually inspect — multi-agent workflows for growth/sales/support, model-agnostic (Claude, GPT, Gemini, Grok, Qwen, Llama), self-hostable via docker compose or hosted.",
-     "innovative": "Verifiability as the core feature ('don't trust, verify'): every run keeps the exact prompt the model saw, every tool call with its result, every memory change, and who wrote each note — plus a 'Studio' coach that reads your live team, finds why something keeps failing, and drafts the fix for you to publish.",
+     "what": "Product Hunt, Oct 12, 2026 (Launch of the Day; indie, Cigale; open source at github.com/CigaleAI/guilds; guilds.run): open-source AI agent teams ('the open-source Grok Bot alternative') you can actually inspect \u2014 multi-agent workflows for growth/sales/support, model-agnostic (Claude, GPT, Gemini, Grok, Qwen, Llama), self-hostable via docker compose or hosted.",
+     "innovative": "Verifiability as the core feature ('don't trust, verify'): every run keeps the exact prompt the model saw, every tool call with its result, every memory change, and who wrote each note \u2014 plus a 'Studio' coach that reads your live team, finds why something keeps failing, and drafts the fix for you to publish.",
      "link": "https://www.producthunt.com/products/guilds-run",
-     "hackathon": "The 'record everything and diff the prompts' observability layer is the reproducible bit — a hackathon team could add prompt/tool-call audit trails to any existing agent framework.",
+     "hackathon": "The 'record everything and diff the prompts' observability layer is the reproducible bit \u2014 a hackathon team could add prompt/tool-call audit trails to any existing agent framework.",
      "screenshot": null
     },
     {
      "name": "Atticus",
-     "what": "Show HN, Oct 11, 2026 (SaarthRanka, self-described 9th grader; 34 points): free, open-source hold-to-talk voice assistant for macOS (Control-Option-Space). Simple tasks (opening apps, Spotify, web queries) run locally without AI in under a second; complex tasks route through `claude -p` on your existing Claude Pro/Max plan — no API key, tasks cost a fraction of a cent. HN commenters already forked a Windows port with homelab/MCP integrations.",
-     "innovative": "Shortcut memory: once a task succeeds, it saves the exact steps and replays them without AI — a 30-second meeting workflow dropped to 5–8 seconds on the next pass. Local transcription via macOS 26, plus toggleable safety restrictions that prompt before anything is deleted, sent, bought, or written.",
+     "what": "Show HN, Oct 11, 2026 (SaarthRanka, self-described 9th grader; 34 points): free, open-source hold-to-talk voice assistant for macOS (Control-Option-Space). Simple tasks (opening apps, Spotify, web queries) run locally without AI in under a second; complex tasks route through `claude -p` on your existing Claude Pro/Max plan \u2014 no API key, tasks cost a fraction of a cent. HN commenters already forked a Windows port with homelab/MCP integrations.",
+     "innovative": "Shortcut memory: once a task succeeds, it saves the exact steps and replays them without AI \u2014 a 30-second meeting workflow dropped to 5\u20138 seconds on the next pass. Local transcription via macOS 26, plus toggleable safety restrictions that prompt before anything is deleted, sent, bought, or written.",
      "link": "https://news.ycombinator.com/item?id=50049588",
-     "hackathon": "Success-replay (record the winning trajectory, replay it verbatim next time) is the cheapest agent optimization there is — trivially weekend-buildable as a wrapper around any CLI agent.",
+     "hackathon": "Success-replay (record the winning trajectory, replay it verbatim next time) is the cheapest agent optimization there is \u2014 trivially weekend-buildable as a wrapper around any CLI agent.",
      "screenshot": "screenshots/2026-10-12-atticus.png"
     }
    ]
@@ -428,16 +428,16 @@
    "items": [
     {
      "name": "keel",
-     "what": "A tiny build123d-style Python language on top of NVIDIA's new open-source USD-BRep CAD kernel (SMLIB), so agents — already great at writing Python — can produce exact B-rep geometry in USD instead of meshes. Repo: github.com/amywork777/keel.",
+     "what": "A tiny build123d-style Python language on top of NVIDIA's new open-source USD-BRep CAD kernel (SMLIB), so agents \u2014 already great at writing Python \u2014 can produce exact B-rep geometry in USD instead of meshes. Repo: github.com/amywork777/keel.",
      "innovative": "Exploits the fact that agents already write good Python: instead of training models on CAD, she built a minimal Python DSL over an exact-geometry kernel, so any coding agent does parametric CAD with zero model changes.",
      "link": "https://x.com/amypretzel/status/2109729131667804646",
-     "hackathon": "Highly weekend-buildable — wrap any deterministic kernel (CAD, physics, layout) in a tiny Python DSL and you get an agent-native interface for free.",
+     "hackathon": "Highly weekend-buildable \u2014 wrap any deterministic kernel (CAD, physics, layout) in a tiny Python DSL and you get an agent-native interface for free.",
      "screenshot": "screenshots/2026-10-13-keel.png"
     },
     {
      "name": "shadowclone",
      "what": "A tool by qguv that turns corrections you give coding agents into persistent SKILL.md files, so future agent sessions load them automatically.",
-     "innovative": "Automates the 'remember this' habit — when you correct the agent, it proposes a SKILL.md, you approve it, and the agent's memory improves via normal conversation instead of manual skill curation.",
+     "innovative": "Automates the 'remember this' habit \u2014 when you correct the agent, it proposes a SKILL.md, you approve it, and the agent's memory improves via normal conversation instead of manual skill curation.",
      "link": "https://news.ycombinator.com/item?id=50069498",
      "hackathon": "Prototype-able as a weekend CLI wrapper around any skills-supporting coding agent; mines the training data you're already producing daily.",
      "screenshot": "screenshots/2026-10-13-shadowclone.png"
@@ -445,7 +445,7 @@
     {
      "name": "treering",
      "what": "A least-knowledge security layer for LLM agents: prompt-injection isolation where the privileged planner never sees untrusted data, provenance-tagged values, human-in-the-loop approval, and a tamper-evident hash-chained audit log. Apache-2.0.",
-     "innovative": "Capability-based information-flow control for agents — the planner is architecturally isolated from untrusted tool data, plus a hash-chained, tamper-evident audit log of agent actions.",
+     "innovative": "Capability-based information-flow control for agents \u2014 the planner is architecturally isolated from untrusted tool data, plus a hash-chained, tamper-evident audit log of agent actions.",
      "link": "https://github.com/jiwoomap/treering",
      "hackathon": "Ship a demo that lets agents touch untrusted web/API inputs without the usual prompt-injection liability story.",
      "screenshot": "screenshots/2026-10-13-treering.png"
@@ -455,15 +455,15 @@
      "what": "An installable agent skill (npx skills add tester-army/e2e --skill create-verification-skill) for the open-source e2e agentic testing framework, letting your agent verify its own work and return evidence.",
      "innovative": "Self-verifying agents: rather than a human writing tests, the skill turns the agent's own output into a verified artifact with evidence, closing the loop between generation and validation inside the agent workflow.",
      "link": "https://x.com/o_kwasniewski/status/2109694443410399543",
-     "hackathon": "Ship a verification-skill pattern for any domain (UI checks, data pipelines) — wrap a test runner as an agent skill that returns pass/fail evidence.",
+     "hackathon": "Ship a verification-skill pattern for any domain (UI checks, data pipelines) \u2014 wrap a test runner as an agent skill that returns pass/fail evidence.",
      "screenshot": "screenshots/2026-10-13-create-verification-skill.png"
     },
     {
      "name": "InfernoSIM",
      "what": "A local reliability-testing tool for tool-using agents: it records sanitized model and tool traffic, then replays it with injected failures.",
-     "innovative": "Chaos-Monkey specifically for agentic tool calls — record real agent traffic once, then replay deterministically under failure injection to test resilience.",
+     "innovative": "Chaos-Monkey specifically for agentic tool calls \u2014 record real agent traffic once, then replay deterministically under failure injection to test resilience.",
      "link": "https://www.reddit.com/r/SideProject/comments/1x43jc6/i_built_a_failure_simulator_for_ai_agents/",
-     "hackathon": "Hardens demos against live flakiness — test your agent against failing tools before the judges do.",
+     "hackathon": "Hardens demos against live flakiness \u2014 test your agent against failing tools before the judges do.",
      "screenshot": "screenshots/2026-10-13-infernosim.png"
     }
    ]
@@ -473,8 +473,8 @@
    "items": [
     {
      "name": "Chiplab",
-     "what": "Show HN (Oct 14): an MCP server giving coding agents (Claude Code, Cursor, OpenCode, Codex) virtual instances of real microcontrollers — the agent flashes firmware onto a virtual STM32/Nordic chip, runs it, reads output, and iterates with no physical boards (C/C++/Rust, bare-metal through Zephyr/FreeRTOS).",
-     "innovative": "Hardware-in-the-loop for AI agents — closes the write→flash→run→observe→fix loop for embedded work on virtual hardware, so the agent can debug firmware and run test suites in CI without a single physical board.",
+     "what": "Show HN (Oct 14): an MCP server giving coding agents (Claude Code, Cursor, OpenCode, Codex) virtual instances of real microcontrollers \u2014 the agent flashes firmware onto a virtual STM32/Nordic chip, runs it, reads output, and iterates with no physical boards (C/C++/Rust, bare-metal through Zephyr/FreeRTOS).",
+     "innovative": "Hardware-in-the-loop for AI agents \u2014 closes the write\u2192flash\u2192run\u2192observe\u2192fix loop for embedded work on virtual hardware, so the agent can debug firmware and run test suites in CI without a single physical board.",
      "link": "https://news.ycombinator.com/item?id=50084365",
      "hackathon": "Live agent firmware-debug on a virtual STM32 makes a strong demo; stretch = more chip families.",
      "screenshot": null
@@ -482,34 +482,79 @@
     {
      "name": "iFixAi",
      "what": "Open-source audit harness (commits Oct 14) that runs 60 adversarial 'inspections' against a live agent, grading business KPIs via a CLI with a scorecard. Apache-2.0.",
-     "innovative": "A score is only citable when graded by an independent second-model judge (different vendor), explicitly separating red-teaming from operational assurance — and the default fixture ships seeded defects so a first run visibly fails.",
+     "innovative": "A score is only citable when graded by an independent second-model judge (different vendor), explicitly separating red-teaming from operational assurance \u2014 and the default fixture ships seeded defects so a first run visibly fails.",
      "link": "https://github.com/ifixai-ai/iFixAi",
-     "hackathon": "Bolt an iFixAi-style independent-judge audit gate onto any agent pipeline and show a live A–F governance scorecard next to the agent's output.",
+     "hackathon": "Bolt an iFixAi-style independent-judge audit gate onto any agent pipeline and show a live A\u2013F governance scorecard next to the agent's output.",
      "screenshot": "screenshots/2026-10-14-ifixai.png"
     },
     {
      "name": "context-mode",
      "what": "MCP server + hooks (commits Oct 14) that keep raw tool output out of the context window, with a per-project SQLite/FTS5 knowledge base and BM25 retrieval so sessions survive compaction.",
-     "innovative": "Forces a 'think in code' paradigm — the agent writes a sandbox script that computes locally and only stdout enters context (47x Read() = 700KB → 1x ctx_execute = 3.6KB), flipping tool output from context-dump to local compute.",
+     "innovative": "Forces a 'think in code' paradigm \u2014 the agent writes a sandbox script that computes locally and only stdout enters context (47x Read() = 700KB \u2192 1x ctx_execute = 3.6KB), flipping tool output from context-dump to local compute.",
      "link": "https://github.com/mksglu/context-mode",
-     "hackathon": "Ship a 'context saved per session' leaderboard dashboard — the per-call cost tracking could score agent efficiency in eval benchmarks.",
+     "hackathon": "Ship a 'context saved per session' leaderboard dashboard \u2014 the per-call cost tracking could score agent efficiency in eval benchmarks.",
      "screenshot": "screenshots/2026-10-14-context-mode.png"
     },
     {
      "name": "Tiden",
-     "what": "Intent verification for coding agents (Product Hunt launch Oct 14): a session hook captures intent before the first edit, intent becomes specs that branch/merge like code, selected tests run in the user's own environment, and the verdict comes from those tests — never from an LLM grading the diff.",
-     "innovative": "The judge sits OUTSIDE the agent loop — intent is a separate versioned record, breaking the trap where the agent's code, tests, and docs all agree 'by construction'; production errors trace back to the release, the change, and the originating prompt.",
+     "what": "Intent verification for coding agents (Product Hunt launch Oct 14): a session hook captures intent before the first edit, intent becomes specs that branch/merge like code, selected tests run in the user's own environment, and the verdict comes from those tests \u2014 never from an LLM grading the diff.",
+     "innovative": "The judge sits OUTSIDE the agent loop \u2014 intent is a separate versioned record, breaking the trap where the agent's code, tests, and docs all agree 'by construction'; production errors trace back to the release, the change, and the originating prompt.",
      "link": "https://www.producthunt.com/products/tiden",
      "hackathon": "Pre-edit intent-capture hooks + spec-branch diffing is a hackable pattern for trust-gated agent PR pipelines.",
      "screenshot": "screenshots/2026-10-14-tiden.png"
     },
     {
      "name": "Escaping the maze (tldraw)",
-     "what": "@tldraw demo/eval (Oct 13) where LLM agents (Haiku, Sonnet, Opus) race heuristic approaches through drawn mazes with only a limited line-of-sight radius — no wall-penetrating vision — across 240 races in cave-like and classical mazes.",
-     "innovative": "The smallest model (Haiku) won 68% of races — not by better planning, but by making far more cheap planning calls per run: speed of wrong-turn-and-course-correct beats quality of reasoning under partial observability, an eval insight that changes how you'd budget agent calls.",
+     "what": "@tldraw demo/eval (Oct 13) where LLM agents (Haiku, Sonnet, Opus) race heuristic approaches through drawn mazes with only a limited line-of-sight radius \u2014 no wall-penetrating vision \u2014 across 240 races in cave-like and classical mazes.",
+     "innovative": "The smallest model (Haiku) won 68% of races \u2014 not by better planning, but by making far more cheap planning calls per run: speed of wrong-turn-and-course-correct beats quality of reasoning under partial observability, an eval insight that changes how you'd budget agent calls.",
      "link": "https://x.com/tldraw/status/2110045020921246132",
      "hackathon": "Very weekend-shippable: a maze env with a line-of-sight mask + a trivial agent loop + a scoreboard; the clever part is the model-size vs context-radius ablation, not the infra.",
      "screenshot": "screenshots/2026-10-14-escaping-the-maze.png"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "items": [
+    {
+     "name": "Ghx",
+     "what": "A caching proxy for the GitHub CLI built specifically for AI agents \u2014 sits between the agent and the gh CLI/API so repeated repo queries don't re-burn tokens. Show HN by brunoborges.",
+     "innovative": "Caching at the CLI layer (not the API layer) \u2014 agents hammer `gh` commands; a transparent proxy dedupes/caches identical calls across runs without changing the agent's workflow.",
+     "link": "https://news.ycombinator.com/item?id=50105322",
+     "hackathon": "Weekend-sized \u2014 a weekend builder could extend it to other CLIs (kubectl, aws) with the same proxy pattern.",
+     "screenshot": "screenshots/2026-10-15-ghx.png"
+    },
+    {
+     "name": "server-noonien",
+     "what": "Conflict-free agent memory across machines with no server \u2014 a CRDT-based memory layer so multiple agents/devices share state peer-to-peer. Show HN by sequico.",
+     "innovative": "CRDT (conflict-free replicated data types) for agent memory \u2014 concurrent agent writes merge deterministically with no central store, sidestepping the usual hosted-memory-service dependency.",
+     "link": "https://news.ycombinator.com/item?id=50102258",
+     "hackathon": "CRDT memory sync is a sharp weekend prototype \u2014 a builder could demo two agents on two machines converging on shared memory.",
+     "screenshot": "screenshots/2026-10-15-server-noonien.png"
+    },
+    {
+     "name": "Garmin MCP",
+     "what": "Indie hacker build: an MCP server exposing Garmin fitness data so a coding agent (Claude Code) can query workouts/health stats conversationally. by ricotico060, 46 pts.",
+     "innovative": "Device-local data \u2192 MCP tools \u2014 reverse-engineered Garmin export files (FIT) wrapped as agent tools, so personal-device data becomes queryable by an agent without a cloud integration.",
+     "link": "https://news.ycombinator.com/item?id=50081045",
+     "hackathon": "Perfect weekend template \u2014 pick any device with exportable data (Oura, Whoop, bike computer), wrap it as MCP tools, demo agent Q&A.",
+     "screenshot": "screenshots/2026-10-15-garmin-mcp.png"
+    },
+    {
+     "name": "Agent Colony",
+     "what": "A pure AI-agent community (agentcolony.one) where 83 agents talk to each other and humans are read-only observers \u2014 an indie experiment in agent-to-agent trust, posted to dev.to Oct 14.",
+     "innovative": "Agent identity is an Ed25519 public key (no accounts, no impersonation); random math-challenge heartbeats prove agents are actually running code (anti-sybil); every completed task mints a signed receipt verifiable off-platform, and karma is portable across platforms.",
+     "link": "https://dev.to/machenh001/building-a-pure-ai-agent-community-83-agents-talking-to-each-other-no-humans-allowed-3p51",
+     "hackathon": "Ship a two-agent micro-colony in a weekend \u2014 keypair identities, heartbeat challenges, signed receipts \u2014 a working trust layer for agent swarms.",
+     "screenshot": null
+    },
+    {
+     "name": "OpenPilot",
+     "what": "Solo-dev open-source desktop AI agent (Ibrahim, github.com/ibmshaikh/OpenPilot) launched on Product Hunt Oct 9 (#9, ~88 upvotes): paste a base URL/key/model (OpenAI, OpenRouter, Ollama/LM Studio), pick a folder, and it reads files, runs commands, fixes things \u2014 on your own model.",
+     "innovative": "The 'Cursor-style agent, any model' wedge \u2014 every tool call renders as a card, sensitive actions wait for approval, plus skills, MCP servers, and per-model token usage; an honest indie build log (1 \u2192 18 stars, 423 Windows downloads in launch week).",
+     "link": "https://www.producthunt.com/products/openpilot",
+     "hackathon": "Clone the BYO-model desktop-agent pattern for a niche runtime \u2014 the approval-cards UX is the weekend-sized core.",
+     "screenshot": null
     }
    ]
   }
