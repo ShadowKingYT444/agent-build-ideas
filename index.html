@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 56 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 61 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-15 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Ghx</h3>
+  <p class="what">A caching proxy for the GitHub CLI built specifically for AI agents — sits between the agent and the gh CLI/API so repeated repo queries don&#x27;t re-burn tokens. Show HN by brunoborges.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Caching at the CLI layer (not the API layer) — agents hammer `gh` commands; a transparent proxy dedupes/caches identical calls across runs without changing the agent&#x27;s workflow.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Weekend-sized — a weekend builder could extend it to other CLIs (kubectl, aws) with the same proxy pattern.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50105322" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-15-ghx.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-15-ghx.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>server-noonien</h3>
+  <p class="what">Conflict-free agent memory across machines with no server — a CRDT-based memory layer so multiple agents/devices share state peer-to-peer. Show HN by sequico.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> CRDT (conflict-free replicated data types) for agent memory — concurrent agent writes merge deterministically with no central store, sidestepping the usual hosted-memory-service dependency.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> CRDT memory sync is a sharp weekend prototype — a builder could demo two agents on two machines converging on shared memory.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50102258" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-15-server-noonien.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-15-server-noonien.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Garmin MCP</h3>
+  <p class="what">Indie hacker build: an MCP server exposing Garmin fitness data so a coding agent (Claude Code) can query workouts/health stats conversationally. by ricotico060, 46 pts.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Device-local data → MCP tools — reverse-engineered Garmin export files (FIT) wrapped as agent tools, so personal-device data becomes queryable by an agent without a cloud integration.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Perfect weekend template — pick any device with exportable data (Oura, Whoop, bike computer), wrap it as MCP tools, demo agent Q&amp;A.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50081045" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-15-garmin-mcp.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-15-garmin-mcp.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Agent Colony</h3>
+  <p class="what">A pure AI-agent community (agentcolony.one) where 83 agents talk to each other and humans are read-only observers — an indie experiment in agent-to-agent trust, posted to dev.to Oct 14.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agent identity is an Ed25519 public key (no accounts, no impersonation); random math-challenge heartbeats prove agents are actually running code (anti-sybil); every completed task mints a signed receipt verifiable off-platform, and karma is portable across platforms.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a two-agent micro-colony in a weekend — keypair identities, heartbeat challenges, signed receipts — a working trust layer for agent swarms.</p>
+  <p class="links"><a href="https://dev.to/machenh001/building-a-pure-ai-agent-community-83-agents-talking-to-each-other-no-humans-allowed-3p51" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>OpenPilot</h3>
+  <p class="what">Solo-dev open-source desktop AI agent (Ibrahim, github.com/ibmshaikh/OpenPilot) launched on Product Hunt Oct 9 (#9, ~88 upvotes): paste a base URL/key/model (OpenAI, OpenRouter, Ollama/LM Studio), pick a folder, and it reads files, runs commands, fixes things — on your own model.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The &#x27;Cursor-style agent, any model&#x27; wedge — every tool call renders as a card, sensitive actions wait for approval, plus skills, MCP servers, and per-model token usage; an honest indie build log (1 → 18 stars, 423 Windows downloads in launch week).</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Clone the BYO-model desktop-agent pattern for a niche runtime — the approval-cards UX is the weekend-sized core.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/openpilot" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-14 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
