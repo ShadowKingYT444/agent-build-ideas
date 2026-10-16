@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 61 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 66 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-16 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>rStation</h3>
+  <p class="what">A live research community for AI agents: Reddit-style problem boards (r/riemann_hypothesis, r/hodge_conjecture) where agents discuss open problems and publish papers that accumulate into shared literature; 72 agents, 243 papers live. Joining is just a prompt you hand your own Codex/Claude Code.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> An incentive layer (prizes + citation leaderboards) on top of shared, versioned scientific literature where agents are first-class citizens; papers are auto-reviewed, and discovery credit goes to contributing agents/operators — arXiv meets Reddit for agents.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Clone the pattern for another domain: a forum + submission pipeline + review agent (e.g. coding agents publishing reusable skills with auto-evals and bounties) is very shippable in a weekend.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50118876" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-16-rstation.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-16-rstation.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>StarSkirmish Bench v0.2</h3>
+  <p class="what">An independent benchmark by Kai McPheeters where each LLM gets one hour to write a C++ StarCraft: Brood War bot, then bots play ladder matches against other LLMs&#x27; bots and human-written bots; the hillclimb harness is open source (140 pts, 67 comments on Show HN).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Evaluates agents end-to-end as coding agents in a long-horizon adversarial environment — write code, play practice games, hillclimb — instead of static Q&amp;A; each model runs in its own lab&#x27;s CLI harness for fair comparison.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a mini version for another game or add a new ladder division — the &#x27;write bot, play, hillclimb&#x27; loop is directly reusable from the open-source harness.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50118688" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-16-starskirmish.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-16-starskirmish.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Pomerado</h3>
+  <p class="what">An open-source, YC F26-backed tool that turns any website — even Google Flights, Zillow, Instacart, legacy portals — into an MCP server or API an agent can call directly. It builds, hosts, authenticates, and maintains the integrations.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of agents doing brittle browser automation and &#x27;clicking around like a lost tourist,&#x27; Pomerado translates existing websites into agent-callable interfaces, making the web itself agent-ready.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship the same pattern per vertical in a weekend: pick one data-rich site, hand-author its site-to-MCP translation layer, and expose it natively as an MCP server any agent can call.</p>
+  <p class="links"><a href="https://x.com/ProductHunt/status/2111144928504156329" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-16-pomerado.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-16-pomerado.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Heldkeys</h3>
+  <p class="what">A Rust CLI by hugomn that lists which credentials an AI agent can reach on your laptop, in a sandbox, or in CI, and flags risky AI-agent steps in GitHub workflows; ships with a Claude skill (skill/heldkeys).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It answers the concrete security question &#x27;what keys is my agent holding?&#x27; by enumerating reachable credentials across local, sandbox, and CI contexts — turning agent credential hygiene into a runnable pre-flight scan.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A credential-visibility scanner is a tight, shippable weekend scope: pick one surface (e.g. devcontainers or GitHub Actions) and enumerate everything an agent could exfiltrate.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50118028" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-16-heldkeys.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-16-heldkeys.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Neophyte</h3>
+  <p class="what">Point it at a product URL and an AI agent onboards from scratch — creates identity, signs up, verifies email, navigates setup, attempts activation — then you get the captured product flow plus a friction report.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Onboarding testing for an era where agents, not humans, sign up for products: the agent&#x27;s own signup friction becomes the metric.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend version could script one signup flow end-to-end with screenshots and a friction checklist.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/neophyte" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-15 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
