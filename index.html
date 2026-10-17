@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 66 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 71 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-17 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>fx v0.0.14 (libfx durable agents)</h3>
+  <p class="what">@fazxes (Vercel Labs) made durability a primitive in fx, a tiny 6.3MB native (Zig) coding-agent harness with 10µs cold start: createFxAgent() sessions now survive crashes, redeploys and timeouts, and multiple libfx agents can run inside one app with the same API on local, Vercel, and DIY hosting.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Durability as a primitive — agent sessions persist across restarts through swappable backends (files, Postgres); plus two clever twists in the same release: powering cloud agents with consumer ChatGPT/Grok subscriptions (a cost hack) and a 6.3MB embeddable native binary.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build multi-day autonomous agents that survive crashes/deploys instead of faking persistence — or embed a 6MB agent binary into any app/device; durability unlocks the long-running agent workflows hackathon demos usually fake.</p>
+  <p class="links"><a href="https://x.com/fazxes/status/2111203466882245119" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Agentfork</h3>
+  <p class="what">Show HN today: records every LLM/tool step of an agent run locally; `agentfork fork &lt;id&gt; --step N` re-runs from any step with one change (earlier steps replay from cache); `sweep` tries many variants of one step and reports pass rates, tokens and cost estimates; `save-test` writes a pytest regression test that replays from cache with no API key. Local web UI; supports OpenAI, Anthropic, LangGraph.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Turns agent debugging into experiments — cached prefixes mean you only pay for the step that matters; the headline example showed a bigger model didn&#x27;t fix a cents-vs-dollars refund bug while one prompt sentence did.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Every hackathon agent team needs this: a time-travel debugger + A/B testing harness for agent trajectories that makes &#x27;why did it do that?&#x27; answerable in one command.</p>
+  <p class="links"><a href="https://github.com/bimal1023/agentfork" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>HECANO</h3>
+  <p class="what">A phone-number/email-style address for your AI agent (e.g. hecano:maya) so assistants can negotiate multi-person plans across users&#x27; different assistants: &#x27;find a night for dinner with Mike and Jen&#x27; — assistants compare notes, offer options, and lock calendars. Works with Meta Muse, Dots, OpenClaw, Grok Bot.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Cross-assistant coordination as a networked protocol with an &#x27;answers, not data&#x27; privacy model — other assistants hear &#x27;Thursday works,&#x27; never your actual calendar — plus single-check human approval.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Agents as networked peers: build a cross-agent messaging/negotiation layer for any multi-user workflow (scheduling, bargaining, group purchases).</p>
+  <p class="links"><a href="https://www.reddit.com/r/learnAIAgents/comments/1x80wng/i_built_an_address_for_your_ai_agent_so_it_can/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>ADTL v0.4 (Agent Data Trust Labels)</h3>
+  <p class="what">A personal open-source MCP gateway that labels everything an agent reads with integrity (trusted/unknown/untrusted) and confidentiality (public/private/secret) tags; the session label only ever gets stricter, and a policy checks it against each tool&#x27;s data-egress before every call — prompt-injection protection that doesn&#x27;t depend on the model noticing the attack. v0.4 adds a label ledger: text a tainted session writes anywhere gets content-hashed into a hash-chained SQLite ledger, so labels follow the text into future sessions (kills the Monday-reads-webpage/Tuesday-reads-notes attack).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Labels follow the text, not the process — paragraph/line-level content hashing means a note copied into another file still carries its untrusted label days later; clean sessions record nothing so the ledger stays small; built on MCP&#x27;s draft trust-annotations format, with a Claude Code hook closing the gap on built-in tools (WebFetch/Bash/Read).</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Agent security is an open lane: build the ledger/labeling layer for one agent vertical (coding agents, browser agents) or demo a red-team win against a popular agent setup.</p>
+  <p class="links"><a href="https://github.com/probita-ai/adtl" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Offscreen</h3>
+  <p class="what">Show HN today by markphelps: runs UI tests, the iOS Simulator and GUI apps for coding agents inside fresh macOS VMs (Tart-based) via `offscreen run &lt;project&gt; &lt;task&gt;` — jobs are queued by a daemon plus menu-bar app, a &#x27;host lane&#x27; runs only when the user is idle, and screenshots + .xcresult artifacts are collected per job.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Per-job VM lanes plus an AGENTS.md/skill contract that teaches the agent to never run xcodebuild directly — the agent routes all UI work through offscreen instead of hijacking the user&#x27;s desktop.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The sandbox pattern for computer-use agents: give each agent its own disposable desktop — a scoped-down version (one job queue + one VM template) is very shippable.</p>
+  <p class="links"><a href="https://github.com/markphelps/offscreen" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-16 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
