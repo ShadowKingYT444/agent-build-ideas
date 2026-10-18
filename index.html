@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 71 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 76 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-18 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Secret Guard</h3>
+  <p class="what">A lightweight local LLM gateway (Rust, MIT) for agent harnesses (Claude Code, OpenCode, etc.): point your agent tool&#x27;s API base_url at the local gateway and it handles multi-provider routing (OpenAI/Anthropic/Gemini/Ollama/Responses) with cross-protocol translation. The harness holds a dummy key; the real key lives only in local secret-guard.toml and is injected upstream by the gateway.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Outbound redaction with equal-length, same-charset realistic mocks — secrets in requests are replaced with structurally similar fakes (PEM→fake PEM, JWT→three-segment, API keys keep public prefixes like sk-/ghp_/AKIA) so the vendor never sees real values; on return, mocks are restored locally, even inside tool-call arguments. Deterministic mocks preserve prefix-cache hits (no extra token cost). Per-secret strategies: redact/restore, reject (503), placeholder canary.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The core redact/restore proxy is a weekend build in Python — regex/entropy secret detection plus a small reverse proxy that swaps values on the way out and back.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50141886" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>CallSitter</h3>
+  <p class="what">An AI that answers the author&#x27;s phone and wastes scammers&#x27; time: calls divert to a Telnyx number where an OpenAI gpt-live-1 voice agent answers; a TypeSafe Jev classifier labels the growing transcript (scam/spam/genuine/urgent); scams get their time wasted, sales calls get a polite decline, genuine callers leave a message, urgent calls alert the owner. Steerable mid-call from Telegram, owner takeover via SIP REFER, cost tracking, evals, and a &#x27;scam the bot from your browser&#x27; demo. TypeScript, Apache 2.0.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The classifier + deterministic-state-machine sandwich — an LLM classifies the call, but a YAML state machine decides what happens next, keeping the agent on-script; plus the adversarial &#x27;waste their time&#x27; persona (the demo has the bot accusing the scammer of being an AI).</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Very weekend-able — Telnyx/Twilio plus a realtime voice API, one classifier prompt, and a state machine. The adversarial persona is the differentiator.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50140472" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>bentossell&#x27;s email-native agent OS</h3>
+  <p class="what">bentossell&#x27;s personal vibe-coded build: a Superhuman-style email client plus todos plus a Linear-style interface as his agent control plane. His @bot agent emails him politely, he tags the bot in comments to steer it, the bot opens threads in @get_bb_app for &#x27;proper&#x27; coding work, and each thread emails updates while updating a shared task list and work log. Built on Rhys Sullivan&#x27;s Executor (executor.sh).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Email threads AS the agent chat medium — the thread is the shared state: steering happens by tagging the bot in comments, and updates flow back as emails plus task-list/work-log entries. No bespoke chat UI needed.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> This is literally a vibe-coded weekend-scale build; email-as-agent-chat with comment-tagging steering is highly replicable with any email API.</p>
+  <p class="links"><a href="https://x.com/bentossell/status/2111443109175308616" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Sphinx</h3>
+  <p class="what">FOSS (MIT) git hook for agent-assisted development: before your agent&#x27;s code ships, it quizzes YOU on what the code does. Install with npm install -g sphinx-understand; works with Codex, Claude Code, Cursor, OpenCode, Pi, plain Git. Show HN, 201 points.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The quiz axis — a separate reviewer model (your coding agent, OpenRouter, or any OpenAI-compatible endpoint) that never saw your chat reads only the diff and asks scenario questions (&#x27;Stripe times out and sends the same event again — what happens on retry?&#x27;). Right answer: push continues. Wrong answer: it teaches you. Answers never reach the coding agent; .env/keys never opened; &#x27;sphinx yolo&#x27; bypasses with every skip logged.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Git hook + diff → LLM quiz generator + terminal Q&amp;A is a classic weekend build.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50137950" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Pay-per-Crawl</h3>
+  <p class="what">ForgeMesh Labs&#x27; infrastructure for the autonomous agent economy: paid APIs that AI agents pay per call via the x402 (HTTP 402) payment rail and MPP, in USDC. Pay-per-Crawl lets publishers charge AI crawlers per page — WordPress plugin plus middleware for Python/JavaScript/Go/PHP, live &#x27;Rail Pulse&#x27; telemetry, plus BotBoard (agents post to a public wall for $0.001 USDC).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Repurposing HTTP 402 as a machine-native payment rail — turning the bot-blocking problem into a pricing problem. Agent calls an endpoint → 402 Payment Required with price → agent signs payment auth in one X-PAYMENT header → settlement on-rail, result in the same response. No accounts, no API keys.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Extremely weekend-able — an Express middleware that returns 402 with a price and verifies a payment signature is a classic hackathon build.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50133559" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-17 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
