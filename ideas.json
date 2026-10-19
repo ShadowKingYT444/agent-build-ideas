@@ -692,6 +692,51 @@
           "screenshot": null
         }
       ]
+    },
+    {
+      "date": "2026-10-19",
+      "items": [
+        {
+          "name": "Buddylist",
+          "what": "An MSN-style messenger where coding agents (Claude Code, Codex, Gemini, OpenCode) appear as contacts; agents @mention each other in group chats, each working in its own git worktree+branch, with PR status tags and tool calls arriving as chat invitations.",
+          "innovative": "Agents self-assign effort badges before answering (@Claude(high) @Codex(low)) and take turns so two never edit the same file; permissions, PRs, and progress all live in the chat window — a social-messenger metaphor for multi-agent orchestration.",
+          "link": "https://buddylist.dev/",
+          "hackathon": "A 2-agent weekend MVP of 'agents as chat contacts' is highly demoable.",
+          "screenshot": null
+        },
+        {
+          "name": "Strot",
+          "what": "The open decision compiler: an LLM runs once at compile time to build a frozen, self-contained Python decision artifact (144M CPU model, ~60ms/record, $0 marginal cost) that classifies, scores, and routes records as type-safe JSON forever after.",
+          "innovative": "'Agents at compile time, never at runtime' — teacher-labeled golden gates plus temperature scaling and split conformal prediction with abstention instead of guessing; 0% structural hallucination, 92.5% vs 74.8% naive on 398 records.",
+          "link": "https://github.com/strot-ai/Project-STROT",
+          "hackathon": "Compile any expensive LLM-judge step in a hackathon demo into a free local classifier in an afternoon.",
+          "screenshot": null
+        },
+        {
+          "name": "Gsearch",
+          "what": "Self-hosted MCP server giving agents Google's real results page as typed JSON (real URLs resolved from /goto redirects, AI Overview, People Also Ask, related searches).",
+          "innovative": "Runs a hardened Firefox (Camoufox) with a real-device fingerprint — plain HTTP hits a JS wall and automated Chrome got CAPTCHA'd 2/2, while gsearch was served 24/24 on a home IP at 1.2s/search; blocks return as structured errors with retry_after_s and every string is flagged untrusted_content. Built because Google's Custom Search API shuts down Jan 2027.",
+          "link": "https://github.com/RayenMlayeh/gsearch",
+          "hackathon": "Drop-in real-Google search tool for any agent hack — no API key, works with Claude Code/Cursor/Desktop.",
+          "screenshot": null
+        },
+        {
+          "name": "WhatsApp MCP",
+          "what": "A read-only MCP server that lets your AI agent search and read your own WhatsApp messages, running entirely in your own Cloudflare account.",
+          "innovative": "Links your phone once (WhatsApp Web protocol via Baileys), then pull-on-demand syncs into SQLite inside a Cloudflare Durable Object; ships three documented workerd shims (WebSocket, WASM bridge, timer polyfill) to run Baileys on Workers; deliberately read-only as a safety stance — 256 stars in under 24h.",
+          "link": "https://github.com/finereli/whatsapp-mcp",
+          "hackathon": "Give your hackathon agent real personal context ('what did the team decide in the group chat?').",
+          "screenshot": null
+        },
+        {
+          "name": "shim-cli",
+          "what": "Open-source hook + local proxy for Claude Code, Codex, Copilot CLI, and VS Code that masks secrets and PII (API keys, emails, IBANs, national IDs) in tool results before the model reads them; 'shim watch' shows where input tokens went, session cost, and which sensitive values were in requests/responses. No account, no telemetry.",
+          "innovative": "Hooks the client's own tool calls (an MCP server can't see built-in Read/Bash) and launched with a brutally honest 'what it can't do' list — e.g. typed prompts can't be masked in Claude Code, so it reports or blocks instead. #3 on Product Hunt Oct 18.",
+          "link": "https://www.producthunt.com/products/shim-cli",
+          "hackathon": "A weekend-buildable agent safety layer; extend masking to a new client.",
+          "screenshot": null
+        }
+      ]
     }
   ]
 }
