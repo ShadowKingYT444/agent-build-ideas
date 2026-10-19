@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 76 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 81 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-19 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Buddylist</h3>
+  <p class="what">An MSN-style messenger where coding agents (Claude Code, Codex, Gemini, OpenCode) appear as contacts; agents @mention each other in group chats, each working in its own git worktree+branch, with PR status tags and tool calls arriving as chat invitations.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agents self-assign effort badges before answering (@Claude(high) @Codex(low)) and take turns so two never edit the same file; permissions, PRs, and progress all live in the chat window — a social-messenger metaphor for multi-agent orchestration.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A 2-agent weekend MVP of &#x27;agents as chat contacts&#x27; is highly demoable.</p>
+  <p class="links"><a href="https://buddylist.dev/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Strot</h3>
+  <p class="what">The open decision compiler: an LLM runs once at compile time to build a frozen, self-contained Python decision artifact (144M CPU model, ~60ms/record, $0 marginal cost) that classifies, scores, and routes records as type-safe JSON forever after.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> &#x27;Agents at compile time, never at runtime&#x27; — teacher-labeled golden gates plus temperature scaling and split conformal prediction with abstention instead of guessing; 0% structural hallucination, 92.5% vs 74.8% naive on 398 records.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Compile any expensive LLM-judge step in a hackathon demo into a free local classifier in an afternoon.</p>
+  <p class="links"><a href="https://github.com/strot-ai/Project-STROT" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Gsearch</h3>
+  <p class="what">Self-hosted MCP server giving agents Google&#x27;s real results page as typed JSON (real URLs resolved from /goto redirects, AI Overview, People Also Ask, related searches).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Runs a hardened Firefox (Camoufox) with a real-device fingerprint — plain HTTP hits a JS wall and automated Chrome got CAPTCHA&#x27;d 2/2, while gsearch was served 24/24 on a home IP at 1.2s/search; blocks return as structured errors with retry_after_s and every string is flagged untrusted_content. Built because Google&#x27;s Custom Search API shuts down Jan 2027.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Drop-in real-Google search tool for any agent hack — no API key, works with Claude Code/Cursor/Desktop.</p>
+  <p class="links"><a href="https://github.com/RayenMlayeh/gsearch" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>WhatsApp MCP</h3>
+  <p class="what">A read-only MCP server that lets your AI agent search and read your own WhatsApp messages, running entirely in your own Cloudflare account.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Links your phone once (WhatsApp Web protocol via Baileys), then pull-on-demand syncs into SQLite inside a Cloudflare Durable Object; ships three documented workerd shims (WebSocket, WASM bridge, timer polyfill) to run Baileys on Workers; deliberately read-only as a safety stance — 256 stars in under 24h.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Give your hackathon agent real personal context (&#x27;what did the team decide in the group chat?&#x27;).</p>
+  <p class="links"><a href="https://github.com/finereli/whatsapp-mcp" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>shim-cli</h3>
+  <p class="what">Open-source hook + local proxy for Claude Code, Codex, Copilot CLI, and VS Code that masks secrets and PII (API keys, emails, IBANs, national IDs) in tool results before the model reads them; &#x27;shim watch&#x27; shows where input tokens went, session cost, and which sensitive values were in requests/responses. No account, no telemetry.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Hooks the client&#x27;s own tool calls (an MCP server can&#x27;t see built-in Read/Bash) and launched with a brutally honest &#x27;what it can&#x27;t do&#x27; list — e.g. typed prompts can&#x27;t be masked in Claude Code, so it reports or blocks instead. #3 on Product Hunt Oct 18.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend-buildable agent safety layer; extend masking to a new client.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/shim-cli" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-18 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
