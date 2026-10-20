@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 81 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 86 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-20 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Superlite</h3>
+  <p class="what">A Claude Code plugin for autonomous builds: one approval and one batch of questions, then the plan compiles into a parallel task graph where each task declares the files it owns and the interfaces it consumes/produces. Benchmarked at 16.1 min wall-clock, 177/177 hidden tests, up to 18 agents at once, zero human gates — ~52% faster than stock Superpowers. Open source (iha2/superlite).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Roles are enforced structurally, not by prompt: the coordinating Opus is gated from touching code, a fresh Opus final-reviewer may only return findings (never fix), fixes go to tiered fix-only agents, tests run in the background so they never block, and per-agent hooks record tokens/cost/time to feed the next run&#x27;s schedule and a soft budget.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The plugin is open source; a weekend builder could reimplement the task-graph plus role-gated dispatch for a narrower domain.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50147492" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-20-superlite.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-20-superlite.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>bilinc</h3>
+  <p class="what">An MCP-server agent memory tool (works with Claude, Claude Code, any MCP client; free tier 2,000 ops/month) that stores memory with per-fact provenance: every entry records where it came from, and you can roll back individual facts to a named checkpoint (&#x27;roll it back to the planning call checkpoint&#x27;) without touching the rest. In the demo, Claude itself refused to overwrite a conflicting launch date and asked which source was right.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A &#x27;git for agent memory&#x27; — versioned, source-attributed facts with named checkpoints and per-fact rollback, so memory conflicts surface with their evidence instead of silently overwriting.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> An MCP server with a versioned SQLite fact store and a rollback command is very shippable in a weekend.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xatpm2/launched_my_agent_memory_tool_on_product_hunt/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-20-bilinc.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-20-bilinc.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>call4me</h3>
+  <p class="what">An MCP server/API that gives Claude, Codex, ChatGPT and any MCP agent one new tool: placing and receiving phone calls. It navigates phone trees and hold music, asks the human when stuck, takes callbacks, and returns transcript + recording. Indie maker Nick K; launched on Product Hunt today.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Telephony as an agent tool primitive — the IVR phone tree and hold music become an interface the agent itself navigates, with human-in-the-loop escalation when it gets stuck.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Twilio plus a voice-agent loop exposed as an MCP tool is a genuinely weekend-sized build.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/call4me" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-20-call4me.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-20-call4me.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Agent City</h3>
+  <p class="what">Tayler Erbe runs 28 AI agents on her own machine as a hobby — they clear her inbox, write news reports, do personal research, update knowledge bases, each with defined roles. She built a 3D world to manage them: each agent has its own office in a town modeled on places she loves, and she walks into buildings, sits down with agents to review work, holds board meetings, picks which model each agent runs, and chooses when to spend on tokens vs. local models.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agent operations as a walkable simulation — cost governance (token spend vs. local models) and per-agent model routing become spatial, game-like actions instead of dashboard rows.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A 3D agent-world MVP (one map, a few agent avatars, a chat overlay, a per-agent model selector) is a strong weekend demo with Three.js plus any agent framework.</p>
+  <p class="links"><a href="https://www.linkedin.com/posts/tayler-erbe-194374141_ive-been-running-28-ai-agents-on-my-own-share-7517814447613153280-5mRM/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-20-agent-city.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-20-agent-city.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Composio Instant</h3>
+  <p class="what">One wallet that lets an AI agent pay per use for tools — web search, scraping, voiceovers, transcription — with no subscriptions or signups; works with Claude, ChatGPT, Cursor, Codex and other MCP clients; $2 free credit; spend visible in logs. Launched on Product Hunt today, #2 of the day.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A micropayments wallet primitive for agents: pay per tool call instead of per-API-key subscriptions, with automatic lowest-cost/most-reliable tool selection when duplicate tools exist.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A minimal version — metered MCP server plus ledger plus Stripe for one or two tools — is weekend-shippable.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/composio" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-20-composio-instant.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-20-composio-instant.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-19 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
