@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 86 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 91 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-21 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>The Brains</h3>
+  <p class="what">Open-source project (github.com/VicPitic/the-brains, by Victor Giurgiu) that packages founders and investors as MCP servers built from their public talks, essays, interviews and posts — you ask your agent a question and get an answer in, say, Paul Graham&#x27;s voice, with every answer cited to a source link. Launched on Product Hunt Oct 21.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> People-as-MCP-servers: expertise embedded as tool servers with provenance links rather than chat personas, so source and date are visible and mind-changing over time is handled.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a &#x27;brain&#x27; of any public corpus (a researcher, a judge, a docs set) as an MCP server in a weekend — scrape, chunk, cite.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/the-brains" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-21-the-brains-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-21-the-brains-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Beacon (agent-beacon)</h3>
+  <p class="what">Open-source, cross-harness memory for AI agents (github.com/Asymptote-Labs/agent-beacon, by two founders). It hooks into 20+ agent harnesses, captures session telemetry (prompts, tool calls, command executions) in one normalized format, distills it into repeatable workflows with a human-approval step, then serves that compounded knowledge to any future agent via skills/MCP. Posted on HN Oct 21.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Memory as a portable, harness-independent layer — telemetry normalization plus human-gated distillation, with the explicit stance that agent data belongs to the user, not the frontier lab&#x27;s ecosystem.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build the distillation layer: a weekend MVP that turns your Claude Code session logs into reusable skills.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50182883" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-21-beacon-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-21-beacon-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Mouse-1</h3>
+  <p class="what">A small decision model (by Pete McGrath) that drops into your agent harness to handle the hundreds of micro-decisions per task — claimed 163x cheaper and 65x faster than GPT-6 Sol. Launched on Product Hunt Oct 21.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Two-tier agent architecture: a specialist &#x27;cheap decisions&#x27; model sits between the main model and tools (propose/harness/execute split), cutting the cost and latency agents burn on frontier models for trivial choices.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Replicate the cascade: route your harness&#x27;s tool-call decisions through a small local model and benchmark the savings.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/mouse-1" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-21-mouse-1-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-21-mouse-1-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Kinfold</h3>
+  <p class="what">A solo-built open arena (demo at kinfold-two.vercel.app) where AI agents duel and spectators judge the bouts — posted on r/SideProject Oct 21 by u/Aadi_sharma1949, backend (accounts, agent keys, event log) already done.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Crowd-judged agent duels become training data — spectators watch agents compete and their judgments feed a training loop for the next model (RLHF via entertainment).</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Clone the arena pattern for any eval you care about: duels are cheaper and more engaging than benchmarks.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xbqts1/kinfold_an_open_arena_where_ai_agents_duel_and/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-21-kinfold-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-21-kinfold-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>LayerFS</h3>
+  <p class="what">A filesystem purpose-built for AI coding agents (layerfs.ai) — ephemeral, append-only, with instant bootstrap of disposable layered workspaces per agent run. Hit the HN front page Oct 21.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agent coding sessions as first-class filesystem semantics: instead of bolting agent workflows onto a general-purpose filesystem, disposability and layering are built into the FS itself.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A FUSE prototype giving each agent run a copy-on-write sandbox layer is very buildable in 48h.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50179857" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-10-21-layerfs-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-10-21-layerfs-1.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-20 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
