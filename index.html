@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 91 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 96 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-22 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Agentic CleanSlop</h3>
+  <p class="what">Paste one line into Claude Code, Codex, Cursor, Grok Bot or Muse and your agent authenticates via Stripe&#x27;s Link Agent Identity (no sign-up, no password), scans your vibe-coded TypeScript/Node app for what breaks with real users, fixes it, then rescans to verify. Ships as CLI + MCP server; payments also approved in-agent. Built by two people (Swaroop Hegde, Anomit), 2nd CleanSlop launch.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The scan -&gt; fix -&gt; re-scan verification loop runs entirely inside the user&#x27;s existing agent, with agent identity handled by Stripe Link so there&#x27;s no signup friction — plus in-agent payment approval as a first-class action.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Steal the one-line agent-install pattern: package any linter/fixer/checker as a skill + MCP server that runs inside the judge&#x27;s own agent.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/cleanslop" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>figlens</h3>
+  <p class="what">Open-source MIT tool that extracts a Figma frame into a zip bundle (layout/text data, variables, original assets, reference render) plus a CLI, an agent skill, and a local MCP server — so cloud/headless coding agents can implement designs with no Figma install, login, or API key. Shipped with a demo video of Pi building an HTML/CSS page from a Figma frame (github.com/runkids/figlens).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It freezes the design into a self-contained offline bundle (.fig + structured data + render) and serves it to headless agents over a local MCP server — removing the design-tool auth wall entirely instead of integrating with it.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Clone the freeze-a-closed-format pattern: bundle any inaccessible source (PDFs, slides, CAD) into an agent-digestible package served over MCP.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xcmcma/i_built_an_opensource_tool_so_cloud_coding_agents/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Agent Pets</h3>
+  <p class="what">Chrome extension that turns every coding-agent session into a virtual pet that walks along the bottom of Chrome — it shows what the agent is doing and bounces when it&#x27;s stuck on a prompt. &#x27;Your own cat can be the thing that tells you Claude Code needs permission.&#x27;</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agent state and permission gates are mapped onto a pet&#x27;s body language — ambient, glanceable agent monitoring that replaces terminal output with something you notice peripherally.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Novel observability UX wins hackathons: build an ambient agent-status surface for multi-agent orchestration dashboards in dev-tool categories.</p>
+  <p class="links"><a href="https://x.com/ProductHunt/status/2112891152542413035" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Fraud Arcade</h3>
+  <p class="what">Victor Dubeux (Growth Engineer @ Extend) built the open demo for Extend&#x27;s fraud detection API as a game your AI agent can play: designed agent-first with an MCP surface limited to 7 tools, realism-first (zoom in / poke around submitted documents), and he ran a benchmark of Anthropic vs OpenAI vs xAI models on the game.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Gamified agentic evals: a playable game with a tight MCP tool surface that doubles as a reproducible cross-model benchmark — measuring agent reliability through play, not test suites.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a playable benchmark game for any agent domain (form-filling, research, shopping) — red-team games are cheap to build and memorable to demo.</p>
+  <p class="links"><a href="https://www.linkedin.com/posts/victordubeux_i-built-a-fraud-detection-game-your-ai-agent-ugcPost-7518378749080358914-n3al/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>heal.dev</h3>
+  <p class="what">Agentic runtime QA: instead of scanning diffs, Heal learns how to run your application, builds a production-like sandbox with external services stubbed, then proactively hunts edge cases at runtime — each bug is reproduced against the sandbox with repro steps and proof, and only defects on real user paths are flagged (claims 70% of its defects no code reviewer catches). Coding agents can query it via MCP. Small team, ranked #4 of the day on Product Hunt.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> QA that tests runtime behavior instead of diffs — learns the app, stubs externals, hunts edge cases live with repro proofs, and exposes itself as an MCP tool so coding agents can query it directly.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Runtime-behavior testing beats diff-scanning for demo impact: build a domain-specific runtime QA agent (e.g. for agent-built web apps) with MCP query access.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/heal-dev" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-21 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
