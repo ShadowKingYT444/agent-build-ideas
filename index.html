@@ -25,8 +25,62 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 101 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 106 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-24 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>MCPtoCodeMode</h3>
+  <p class="what">MCP proxy that replaces many tool definitions with three calls and a sandboxed JavaScript program.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Discovers upstream MCP signatures as needed and executes bulk tool chains in isolated QuickJS/WASM. Intermediate results stay outside the model context; binary data passes by handles. On nine author-run evaluations, input tokens fell from 531,480 to 94,002 with 9/9 accuracy in each condition.</p>
+  <div style="padding:6px 0"><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Task</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Discover signatures</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Sandbox JS</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">MCP calls</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Small result</span></div>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a code-mode gateway for robot logs; compare token use, task correctness and latency with standard MCP tool calls.</p>
+  <p class="hack"><span class="lbl">Limitation:</span> Nine tests are limited. Code Mode predates this repository; upstream tool read-only hints are not a security guarantee.</p>
+  <p class="links"><a href="https://github.com/minkaworks/mcptocodemode" target="_blank" rel="noopener">Original project ↗</a></p>
+  
+</article>
+<article class="card">
+  <h3>machine</h3>
+  <p class="what">External finite-state workflow runtime that checks coding-agent progress instead of trusting prompt instructions.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Workflow JSON defines typed task, decision, wait and final states. An MCP server rejects unlisted transitions, bad preflight and unbound credential slots; it records accepted and rejected events and supports human-controlled restart.</p>
+  <div style="padding:6px 0"><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Workflow</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Preflight</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Agent step</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Server transition gate</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Human review</span></div>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a coding-agent pipeline with enforced reproduce → repair → tests → human review states, then try to prompt the agent to skip its checks.</p>
+  <p class="hack"><span class="lbl">Limitation:</span> Workflow order is enforced, but reported tests need independent verification. Credential handling needs security review.</p>
+  <p class="links"><a href="https://github.com/backnotprop/machine" target="_blank" rel="noopener">Original project ↗</a></p>
+  
+</article>
+<article class="card">
+  <h3>Aseprite MCP Live</h3>
+  <p class="what">Lets agents edit an open unsaved Aseprite pixel-art canvas, preserving real layers, history and human edits.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Python MCP server and local Lua/WebSocket extension bind operations to a document and revision, allow previews and undo/redo, and optionally edit animation frames. File saving remains explicit.</p>
+  <div style="padding:6px 0"><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Art brief</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">MCP</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Lua bridge</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Live editable layers</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Review + undo</span></div>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Generate an editable sprite animation in Aseprite, have a human change a pixel, then let an agent revise the animation without overwriting the new revision.</p>
+  <p class="hack"><span class="lbl">Limitation:</span> Windows/Aseprite 1.3+ tested. Depends on prior Aseprite MCP work and omits some layer types.</p>
+  <p class="links"><a href="https://github.com/greenlogs/aseprite-mcp-live" target="_blank" rel="noopener">Original project ↗</a></p>
+  <a class="shot" href="https://raw.githubusercontent.com/greenlogs/aseprite-mcp-live/main/assets/preview1.gif" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/greenlogs/aseprite-mcp-live/main/assets/preview1.gif" alt="Aseprite MCP Live project preview" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>OmniDR-Bench</h3>
+  <p class="what">New evaluation suite for agents producing time-linked, evidence-backed HTML investigations from videos.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> 50 bilingual tasks with 6,414 binary rubric leaves across a three-level evaluation tree. Criteria arise from independently gathered video and web evidence, and both model judges and deterministic browser probes grade outputs.</p>
+  <div style="padding:6px 0"><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Video+query</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">HTML report</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Timestamp evidence</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Atomic rubric</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Browser checks</span></div>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Create ten robotics-match video research tasks requiring timestamped assertions and cited frames; grade with browser checks and human audit.</p>
+  <p class="hack"><span class="lbl">Limitation:</span> An evaluation benchmark rather than a working research agent. Some judgments still depend on a multimodal model.</p>
+  <p class="links"><a href="https://github.com/Multimedia-Semantic-Analytics-Lab/OmniDR-Bench" target="_blank" rel="noopener">Original project ↗</a></p>
+  <a class="shot" href="https://raw.githubusercontent.com/Multimedia-Semantic-Analytics-Lab/OmniDR-Bench/main/assets/report_example.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Multimedia-Semantic-Analytics-Lab/OmniDR-Bench/main/assets/report_example.png" alt="OmniDR-Bench project preview" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Vestigium</h3>
+  <p class="what">Local, source-linked navigator for long PDF documents with exact page, section, table and footnote addresses.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Docling OCR builds a structured graph of sections, figures, printed/PDF page numbers, cross-references and terms. Six MCP tools let agents search and read only needed addresses and retain page citations.</p>
+  <div style="padding:6px 0"><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">PDF/OCR</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Address graph</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">MCP selective reads</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Answer</span><span style="color:#8b949e">→</span><span style="display:inline-block;border:1px solid #3c4555;border-radius:6px;padding:3px 6px;margin:2px;font-size:11px">Page audit</span></div>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a cited VEX rulebook assistant and compare citation accuracy and cost against entire-PDF ingestion.</p>
+  <p class="hack"><span class="lbl">Limitation:</span> Developer-run accuracy tests were graded by AI, not humans. Similar hierarchical retrieval exists; other clients largely untested.</p>
+  <p class="links"><a href="https://github.com/Yonagi043/vestigium" target="_blank" rel="noopener">Original project ↗</a></p>
+  <a class="shot" href="https://raw.githubusercontent.com/Yonagi043/vestigium/main/docs/img/demo.svg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Yonagi043/vestigium/main/docs/img/demo.svg" alt="Vestigium project preview" loading="lazy"></a>
+</article></div>
+  <p><a href="days/2026-10-24.md" style="color:#58a6ff">Read today's full research digest →</a></p>
+</section>
 <section class="day">
   <h2>2026-10-23 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
