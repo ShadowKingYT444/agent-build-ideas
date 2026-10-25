@@ -962,6 +962,96 @@
           "screenshot": "https://raw.githubusercontent.com/Yonagi043/vestigium/main/docs/img/demo.svg"
         }
       ]
+    },
+    {
+      "date": "2026-10-25",
+      "items": [
+        {
+          "name": "WorldScape R²SI",
+          "link": "https://github.com/manifoldai-research/R2SI",
+          "what": "Two-layer robot agent: an inner controller acts through reusable Skills; an outer agent turns evaluated episodes into better Skills and sometimes new reactive-policy weights.",
+          "innovative": "The outer loop studies scored rollouts, proposes targeted Skill and memory revisions, and runs paired simulator tests before promoting a version. Model retraining is a separate path. The project's October 17 RoboDojo results report 46.58 score and 39.35% in-budget success versus 28.97 and 22.48% for a reference agent with the same VLM; these figures need independent replication.",
+          "hackathon": "In a 2D robot pushing simulator, compare an execution-only agent with a second agent that revises a versioned Skill after each failure. Test on both fixed layouts and hidden layouts; measure success and native action count.",
+          "screenshot": null,
+          "flow": [
+            "Robot observations",
+            "Actor + Skills",
+            "Scored episodes",
+            "Improver proposes change",
+            "Paired gate",
+            "Promote revision"
+          ],
+          "limit": "Large simulator and model dependencies; testing repeatedly on fixed layouts risks overfitting."
+        },
+        {
+          "name": "WorldAgent",
+          "link": "https://github.com/PhysAI-Lab/WorldAgent",
+          "what": "An agent plugin that builds Blender physics scenes and verifies each requested behavior using independent, numeric checks.",
+          "innovative": "A frozen world specification produces per-requirement verifiers. Each verifier runs in a fresh Blender process; passing results are bound to hashes of the scene, caches and checking code. A changed file makes proof stale. The final scene can be promoted only after every requirement passes again.",
+          "hackathon": "Build a 2D physics animator that creates a scene from a written request and checks collision timing, object motion and final positions before publication. Show a failing scene and the targeted repair.",
+          "screenshot": null,
+          "flow": [
+            "Scene request",
+            "Freeze numeric spec",
+            "Build scene",
+            "Independent measurement",
+            "Repair",
+            "Recheck final"
+          ],
+          "limit": "Success depends on the validity of the checks. Advanced fluids need a separate licensed add-on."
+        },
+        {
+          "name": "Lockjaw",
+          "link": "https://github.com/joelhooks/lockjaw",
+          "what": "A trusted outbound HTTPS gateway that lets agents use API credentials without exposing plaintext secrets to the agent runtime.",
+          "innovative": "The worker sends a placeholder and signed one-use request; a separate cell checks caller identity, host and header placement, decrypts the secret, sends HTTPS and redacts credential echoes. Scoped delegation and revocation permit temporary worker access.",
+          "hackathon": "Build a scoped secret broker for three mock APIs. Show that one worker can access its approved host but cannot read its credential, contact another host or continue after revocation.",
+          "screenshot": null,
+          "flow": [
+            "Agent holds reference",
+            "Sign request",
+            "Verify scope + host",
+            "Inject key at egress",
+            "HTTPS call",
+            "Return redacted output"
+          ],
+          "limit": "An explicit gateway is not a complete network firewall; the server hosting the keys remains trusted. No independent security audit established."
+        },
+        {
+          "name": "Open iPhone Use",
+          "link": "https://github.com/semsturgut/open-iphone-use",
+          "what": "An MCP bridge gives an AI agent screenshot and input control of a real iPhone without installing a phone automation app.",
+          "innovative": "Safari screen sharing streams frames over local Wi-Fi to an Apple Silicon Mac. The Mac emulates a Bluetooth HID keyboard and pointer, exposing the observation and gesture tools through MCP. The agent observes a fresh screenshot after each action.",
+          "hackathon": "Create a physical iPhone UI regression agent for one app. Change a button position and evaluate whether screenshot-guided recovery succeeds where a fixed macro fails.",
+          "screenshot": "https://raw.githubusercontent.com/semsturgut/open-iphone-use/main/docs/media/app-connected.png",
+          "flow": [
+            "iPhone shares screen",
+            "Mac screenshot bridge",
+            "Agent observes",
+            "Choose action",
+            "Bluetooth HID input",
+            "Verify screen"
+          ],
+          "limit": "Experimental macOS/Apple Silicon release. A remote model might receive private screenshots."
+        },
+        {
+          "name": "broll-mcp",
+          "link": "https://github.com/edigeh/broll-mcp",
+          "what": "An archive-footage MCP server finds public-domain films, shows scene previews, cuts exact segments and records source provenance.",
+          "innovative": "Internet Archive queries return compact ranked items and per-item rights. Scene detection supplies visual keyframes before the agent selects a cut. FFmpeg re-encodes, ffprobe validates duration and decoding, and every clip receives structured attribution plus its source identifier.",
+          "hackathon": "Build an agent that assembles a 20-second history video using archive footage and generates a shot-level attribution sheet. Flag unknown licenses before export.",
+          "screenshot": "https://archive.org/services/img/AboutBan1935",
+          "flow": [
+            "Footage brief",
+            "Search + rights",
+            "Inspect keyframes",
+            "Choose timestamps",
+            "Verify video cut",
+            "Output clip + provenance"
+          ],
+          "limit": "Archive metadata is not a legal clearance. Reuse conditions may be unknown."
+        }
+      ]
     }
   ]
 }
