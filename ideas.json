@@ -1052,6 +1052,101 @@
           "limit": "Archive metadata is not a legal clearance. Reuse conditions may be unknown."
         }
       ]
+    },
+    {
+      "date": "2026-10-26",
+      "items": [
+        {
+          "name": "World to World Mapping — Gaussian Splat to Blender Nodes",
+          "what": "Agent-guided reconstruction of a Gaussian-splat scene as native, editable Blender geometry and materials.",
+          "innovative": "A coding agent uses measured cameras to identify semantic scene parts, constructs Geometry Nodes and Shader Nodes, compares matched camera views with the original scan, audits that its native asset works without the scan, and optionally projects captured textures onto selected surfaces. Some hybrid results are baked meshes, not pure nodes.",
+          "why": "Turns a static visual capture into an editable, parameterized world. Multi-view visual comparison and a native-object audit give judges stronger evidence than a pretty render.",
+          "hackathon": "Scan a tabletop scene, reconstruct three objects into editable nodes, expose dimension controls and evaluate five unseen viewpoints. Report geometry error and editability separately.",
+          "link": "https://github.com/gokayfem/gaussian-splat-to-blender-nodes",
+          "screenshot": "https://raw.githubusercontent.com/gokayfem/gaussian-splat-to-blender-nodes/main/gallery/world-to-world-mapping.jpg",
+          "flow": [
+            "Splat + calibrated views",
+            "Agent separates objects",
+            "Build geometry nodes",
+            "Compare renders",
+            "Audit native assets",
+            "Editable Blender scene"
+          ],
+          "limit": "Not a one-click splat-to-mesh converter; the demonstration scan, fitted assets and .blend file are not included. Visual fidelity is approximate."
+        },
+        {
+          "name": "Moli — Structure-First Browser Engine for Agents",
+          "what": "A Rust browser engine built for agent workloads, launched on Product Hunt on October 25.",
+          "innovative": "Moli answers DOM queries, scripts and network inspection directly from native runtime state, skipping layout and paint. It performs temporary layout only when geometry or screenshots are necessary, retaining compact frozen geometry, and exposes CDP and WebDriver automation interfaces.",
+          "why": "Avoids expensive browser rendering for agents that mostly need page structure. This is a novel systems-level optimization with measurable latency, memory, and web-compatibility tradeoffs.",
+          "hackathon": "Create a browser benchmark that routes 20 tasks through structure-first execution, falls back on Chromium for incompatible pages, and measures memory, latency, and task accuracy.",
+          "link": "https://github.com/lexmount/moli",
+          "screenshot": null,
+          "flow": [
+            "Agent browser request",
+            "Read DOM/JS state",
+            "Is layout required?",
+            "Lazy layout or skip",
+            "Automation action",
+            "Compare with Chromium"
+          ],
+          "limit": "The code was public since August; the fresh event is the October 25 Product Hunt launch. Speed and memory comparisons come from the developer; broader compatibility tests show failures relative to Chromium."
+        },
+        {
+          "name": "SAM3 Segmentation Agent Skill",
+          "what": "An agent skill that finds, counts and reviews small objects in images with locally run SAM 3.",
+          "innovative": "The workflow crops high-resolution regions with overlap, runs candidate-mask segmentation, deduplicates proposals, records checks and reversible review decisions, refines boundaries, and exports auditable COCO masks. It explicitly labels predictions as unverified until checked.",
+          "why": "Adds a practical perception and review loop rather than asking an LLM to count by eye. Small parts, cells and inventory objects are measurable use cases.",
+          "hackathon": "Count parts in crowded bins. Keep every mask proposal, flag uncertain detections and test against human-labeled images for precision, recall and error recovery.",
+          "link": "https://github.com/lillyguisnet/sam3-segmentation",
+          "screenshot": "https://raw.githubusercontent.com/lillyguisnet/sam3-segmentation/main/docs/six-models/panel.jpg",
+          "flow": [
+            "Photo + object query",
+            "Overlapping crops",
+            "SAM 3 masks",
+            "Merge + score",
+            "Review uncertain masks",
+            "COCO export + trace"
+          ],
+          "limit": "Requires NVIDIA GPU and model access. Author says implementation is not broadly checked; six-run comparison is agreement, not ground truth, and the shown photo has separate rights."
+        },
+        {
+          "name": "AutoTavern — Deterministic Game Simulator for Agent Research",
+          "what": "Newly released Rust/Python Hearthstone Battlegrounds simulator and benchmark for agent strategic decisions.",
+          "innovative": "TavernGym can replay seeded eight-player games, enforce legal-action masks, save and restore states, and run batched simulations. TavernBench supplies 960 tasks from 40 scenarios for reasoning about combat, planning and economy. An agent can compare candidate decisions against executable game rules, not only an LLM judge.",
+          "why": "Creates repeatable counterfactual tests for agent planning and self-improvement; a hidden-state benchmark and simulator expose errors that persuasive explanations cannot conceal.",
+          "hackathon": "On held-out board states, let an agent simulate three legal candidate actions and compare win chance and token cost against one-shot decisions.",
+          "link": "https://github.com/MCG-NJU/AutoTavern",
+          "screenshot": "https://raw.githubusercontent.com/MCG-NJU/AutoTavern/main/docs/assets/autotavern-banner.png",
+          "flow": [
+            "Seeded game state",
+            "Generate action plans",
+            "Apply legal mask",
+            "Branch simulations",
+            "Score outcomes",
+            "Choose action"
+          ],
+          "limit": "The code release includes the simulator and benchmark, but not the paper's trained TavernAgent, weights, training scripts or task generators."
+        },
+        {
+          "name": "X-Ray — Refutable Agent Memory and Code Graph",
+          "what": "A typed memory substrate for coding and operations agents, with local or Kubernetes-native deployment.",
+          "innovative": "Facts, events, hypotheses and other MemoryCells carry scope, confidence, source and links. Human-authored facts resist model overwrites; refuting a wrong item retires dependent derived claims. A code graph from source, docs and Kubernetes manifests supports impact and risk queries through MCP.",
+          "why": "Memory corrections can retract chains of false assumptions instead of leaving stale beliefs in search results. Agents can use the same substrate for 'what do we know?' and 'what breaks if this file changes?'.",
+          "hackathon": "Seed a false root cause with three dependent diagnoses, then correct the source and show that subsequent agents no longer cite stale descendants. Compare stale-claim rate with simple vector memory.",
+          "link": "https://github.com/triageagent-dev/x-ray",
+          "screenshot": null,
+          "flow": [
+            "Facts + source code",
+            "Typed memory cells",
+            "Provenance links",
+            "Query dependency graph",
+            "Refute false source",
+            "Retire dependent memory"
+          ],
+          "limit": "The documented features are not an independent evaluation of task success; dependency graphs may be incomplete and require careful access controls."
+        }
+      ]
     }
   ]
 }
