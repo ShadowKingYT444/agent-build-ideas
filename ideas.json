@@ -1147,6 +1147,163 @@
           "limit": "The documented features are not an independent evaluation of task success; dependency graphs may be incomplete and require careful access controls."
         }
       ]
+    },
+    {
+      "date": "2026-10-27",
+      "items": [
+        {
+          "name": "VFS-Bench — Same Agent Task, Two Tool Interfaces",
+          "what": "A fresh benchmark runs 200 agent tasks through two interfaces: ordinary MCP tools and AgentVFS, where connected services appear as files and actions as virtual command-line tools.",
+          "innovative": "Each task runs through both arms with the same instruction, seeded service data, and evaluator. In the VFS arm, services such as email, Drive, Slack, GitHub, and Notion are described by VFS.md; the agent uses familiar shell operations such as ls, grep, jq, and pipes. The benchmark records task success and token use. The authors report 52% fewer tokens on average and pass@1 rising from 77.6% to 81.6%.",
+          "why": "This tests the interface as a cause of agent performance. Instead of changing the model or adding more tools, it gives the model a terminal-shaped interface that matches skills learned during coding. It is a strong research-style hackathon because the result can be compared on identical tasks. A third-party review notes that the published run used one trial per arm and has not been independently reproduced.",
+          "hackathon": "Build a small virtual filesystem adapter for two services, such as GitHub issues and local notes. Run 30 fixed tasks through MCP and the filesystem interface with the same model. Reset data between runs and publish task-level success, token use, tool errors, and failed cases.",
+          "link": "https://github.com/agentvfs/vfs-bench",
+          "screenshot": "https://raw.githubusercontent.com/agentvfs/vfs-bench/main/assets/vfs-bench-header-dark.png",
+          "flow": [
+            "200 fixed tasks",
+            "Clone identical task state",
+            "MCP tool-call arm",
+            "Virtual FS + CLI arm",
+            "Same evaluator",
+            "Compare success + tokens"
+          ],
+          "limit": "The benchmark and its implementation are early-stage, and the authors produced the reported results themselves. One trial per task/model/arm is not enough to establish a general advantage. The average may hide large differences across models and task types.",
+          "evidence": [
+            {
+              "label": "Official benchmark",
+              "url": "https://agentvfs.org/benchmark/vfs-bench-1"
+            },
+            {
+              "label": "Builder post (X mirror)",
+              "url": "https://nitter.rdrama.net/qijia_shen"
+            },
+            {
+              "label": "Methodology review",
+              "url": "https://www.anchorterminal.com/tools/agentvfs"
+            }
+          ],
+          "rank": 1
+        },
+        {
+          "name": "LayerFS — Ephemeral Workspaces, Durable Agent History",
+          "what": "LayerFS gives each agent a disposable writable workspace over shared committed history. Agents can branch, test alternatives, rewind, and publish changes without cloning the complete working tree for every attempt.",
+          "innovative": "Each filesystem-affecting tool call can mount a writable Workspace with its own copy-on-write overlay. Changes become immutable Commits in a SQLite-backed content-addressed Store. Content-addressed storage, content-defined chunking, and copy-on-write reuse unchanged data. Branches can fork from prior states; concurrent commits that change the same file are rejected as conflicts unless an explicit last-writer-wins rule applies. Unmount removes the temporary workspace but retains committed history.",
+          "why": "This treats agent execution as branchable state, not as a stream of terminal text. Several workers can test different patches, keep the exact state that produced a result, discard failed branches, and promote a passing one. It builds on known filesystem methods, but applies them to agent tool calls and parallel exploration.",
+          "hackathon": "Build a smaller coding-agent runner with isolated worktrees or overlayfs. Give each worker a branch, run tests, save an immutable checkpoint, and let a controller promote only passing changes. Measure storage growth, startup time, and same-file conflicts against ordinary cloned worktrees.",
+          "link": "https://github.com/Ephemeral-AI-Lab/layerfs",
+          "screenshot": "https://raw.githubusercontent.com/Ephemeral-AI-Lab/layerfs/main/docs/assets/readme/idea-03-coordination.svg",
+          "flow": [
+            "Shared committed Store",
+            "Fork branch without full copy",
+            "Ephemeral writable Workspace",
+            "Agent tool call + tests",
+            "Commit changed data",
+            "Promote, rewind, or discard"
+          ],
+          "limit": "The project labels the current release a developer preview. Its README says it does not guarantee crash or power-loss durability. Managed FUSE needs Linux/WSL and elevated capabilities, and the container runtime is not a complete hostile-code security boundary. Do not use it as the only copy of important data.",
+          "evidence": [
+            {
+              "label": "LayerFS 1.1.0 release",
+              "url": "https://github.com/Ephemeral-AI-Lab/layerfs/releases/tag/v1.1.0"
+            },
+            {
+              "label": "Product demo video",
+              "url": "https://layerfs.ai/video/layerfs-v1.0.0-release.mp4"
+            },
+            {
+              "label": "Technical docs",
+              "url": "https://layerfs.ai/docs/"
+            }
+          ],
+          "rank": 2
+        },
+        {
+          "name": "PageSift — Memory-Bounded Web and Document Extraction for Agents",
+          "what": "A new Rust extraction engine for agents and RAG pipelines converts websites, PDFs, office documents, e-books, RSS feeds, and archives into clean Markdown and structured data. It provides native SDKs and Firecrawl/Jina-compatible APIs.",
+          "innovative": "PageSift combines a native Rust fetch-and-parse engine with memory-bounded processing, incremental collections, isolated HTTP sessions, and media/archive handling. The goal is to make extraction a predictable preprocessing stage before an agent reasons over the material. The repository publishes per-domain benchmark reports and raw results rather than only a single speed claim.",
+          "why": "Agents often waste context on navigation chrome, repeated downloads, malformed files, and irrelevant page structure. A bounded extraction layer can reduce memory spikes and give the model cleaner evidence. The project is new and has active public development; its own benchmark suite makes the claims easier to inspect.",
+          "hackathon": "Build a research collector for 30 technical documentation sites and PDFs. Crawl incrementally, normalize results to Markdown, preserve URL/page provenance, and deduplicate assets. Evaluate evidence recall on 20 held-out questions while enforcing a fixed memory cap.",
+          "link": "https://github.com/YOLOW92/pagesift",
+          "screenshot": "https://raw.githubusercontent.com/YOLOW92/pagesift/main/assets/logo.png",
+          "flow": [
+            "URLs, PDFs, Office, RSS",
+            "Rust fetch + parse",
+            "Bounded incremental extraction",
+            "Markdown + structured records",
+            "Agent retrieves cited evidence"
+          ],
+          "limit": "The published benchmark numbers are maintainer-reported and have not been independently reproduced. Secondary project notes say dynamic rendering and DOM-repair tests are not best-in-class in every case. The repository uses AGPL-3.0 and lists a separate commercial license option.",
+          "evidence": [
+            {
+              "label": "Project activity",
+              "url": "https://upstar.dev/r/YOLOW92/pagesift"
+            },
+            {
+              "label": "Oct 27 benchmark report",
+              "url": "https://github.com/YOLOW92/pagesift/blob/main/benchmarks/mix/results/report-2026-10-27.md"
+            }
+          ],
+          "rank": 3
+        },
+        {
+          "name": "Phone-MCP — Real Android Control with a Separate Display",
+          "what": "Phone-MCP connects an AI client to a real Android phone. The agent can inspect app interfaces, tap, type, swipe, read or reply to notifications, transfer files, and install APKs. Its separate-display mode lets an agent work without always taking over the screen the person is using.",
+          "innovative": "The Android companion connects outward to a personal relay over WebSocket; an MCP client uses HTTPS and OAuth to call tools. The system distinguishes foreground control from a separate virtual display, ties actions to recent snapshots, and returns fresh observations after actions. The repository also documents conditional plans that can branch on device state. The user starts and can stop each session; this is a device-control bridge, not a background model service.",
+          "why": "Many mobile workflows have no stable public API. This provides an inspectable path to automate the real interface, while separate-display control reduces disruption to the human. The device and screenshots make a clear live demo.",
+          "hackathon": "Build a mobile QA agent for one Android app. Run it on a separate display, capture a snapshot after each action, and recover when a button moves or a dialog appears. Compare completion and recovery across ten UI perturbations against a fixed-coordinate script.",
+          "link": "https://github.com/Mirochill/Phone-MCP",
+          "screenshot": "https://raw.githubusercontent.com/Mirochill/Phone-MCP/main/docs/images/android-session.png",
+          "flow": [
+            "Agent client + OAuth",
+            "Personal MCP relay",
+            "Android app over WebSocket",
+            "Accessibility / separate display",
+            "Fresh observation",
+            "Next action or recovery"
+          ],
+          "limit": "It requires Android permissions and Shizuku for some separate-display and file features; device and app compatibility vary. The relay can see tool payloads and responses, so self-host it if that matters. The project does not independently judge whether a requested purchase, message, or deletion matches user intent.",
+          "evidence": [
+            {
+              "label": "Conditional plans",
+              "url": "https://github.com/Mirochill/Phone-MCP/blob/main/docs/conditional-plans.md"
+            },
+            {
+              "label": "Verification and limits",
+              "url": "https://github.com/Mirochill/Phone-MCP/blob/main/docs/verification.md"
+            }
+          ],
+          "rank": 4
+        },
+        {
+          "name": "veil — Reversible Secret Masking for Agent Debugging",
+          "what": "A one-file Python CLI masks known secrets in logs before an LLM or coding agent reads them, then restores the secrets in the response. It supports streamed replies and uses only the Python standard library.",
+          "innovative": "The tool replaces recognized secrets with placeholders that include a type and a short HMAC-SHA256-derived identifier. The same value gets the same placeholder across runs, so the model can correlate repeated failures without seeing the real credential. A local, permission-restricted mapping allows unmask to restore values after the response arrives; the streaming parser handles chunk boundaries and some placeholder edits.",
+          "why": "Ordinary redaction often breaks the links between log lines. Stable placeholders preserve those links while reducing the chance that a secret reaches the model provider. It is a small, concrete security layer that can sit in front of an existing debugging workflow.",
+          "hackathon": "Wrap a log-triage agent in a mask → model → unmask pipeline. Seed logs with known tokens and private keys. Measure detection recall, false positives, streaming correctness, and diagnostic accuracy against raw logs.",
+          "link": "https://github.com/Sanexxxx777/veil",
+          "screenshot": null,
+          "flow": [
+            "Raw log",
+            "Local secret detector",
+            "Stable HMAC placeholders",
+            "LLM / coding agent",
+            "Local unmask",
+            "Human reviews restored output"
+          ],
+          "limit": "The author says it has not been measured on a corpus of real logs. It misses unknown formats and personal data such as names, emails, and phone numbers; it can over-mask hashes. Unmasking can put a working secret into model-generated output, so review restored commands before execution.",
+          "evidence": [
+            {
+              "label": "Original Reddit post",
+              "url": "https://www.reddit.com/r/cicd/comments/1x6by6j/i_had_a_written_rule_that_agents_never_cat_env/"
+            },
+            {
+              "label": "Author's limitations and tests",
+              "url": "https://github.com/Sanexxxx777/veil"
+            }
+          ],
+          "rank": 5
+        }
+      ]
     }
   ]
 }
