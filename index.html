@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 121 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 126 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-28 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Dedica</h3>
+  <p class="what">Launched on Product Hunt Oct 27: a checker that tests your website the way AI agents actually use it — running 125 checks across Discovery, Access, Usability and Payments as Muse, Instinct or GrokBot would — then scores the site out of 100 and hands you the fixes.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It treats &#x27;agent-usable&#x27; as a measurable, fixable property: the free scan finds where agents silently fail (JS-only pricing pages, bot checks on signup), and the paid fix kit gives one instruction file per issue, written to drop straight into Claude Code, Codex, Cursor or Copilot — plus a public API and MCP server so an agent can check sites itself.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend team could ship an &#x27;agent-readiness&#x27; auditor for one vertical (e.g. docs sites or checkout flows) with a scored report and auto-generated fix prompts.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/dedica" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>AgenticBench</h3>
+  <p class="what">Show HN Oct 27: an independent security leaderboard that runs 9 planted-secret tests against 25 AI coding-agent harnesses (Claude Code, Codex, Cursor CLI, OpenCode, Pi, etc.), each in a fresh container with the harness&#x27;s own defaults, scored from syscall traces, model requests and network traffic.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It tests the harness, not the model: every harness runs the same model through a capture proxy, and verdicts come from recorded evidence — e.g. whether a planted instruction in a file the agent was asked to read actually exfiltrated a fake secret — with a disclosure register and re-tests on new versions.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend build could run one planted-secret test against two harnesses and publish the evidence trail — a tiny, reproducible slice of the same idea.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50262290" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>mcp-warden</h3>
+  <p class="what">A local-first credential broker for MCP (Rust, Apache-2.0, created Oct 25, v0.5.1 out this week): coding agents call APIs, SSH and databases through named, scoped presets while secrets stay in the OS keychain and never enter the agent&#x27;s context.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Three mechanisms in one small tool: presets with anchored-regex path allow-lists checked before the credential is touched, approvals via native dialog or a Telegram bot with a /lock kill switch from your phone, and scan/import commands that find plaintext keys sitting in MCP client configs and move them into the keychain.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A scoped secret broker for three mock APIs is a perfect weekend demo: show one worker reaching its approved host but unable to read its credential, touch another host, or continue after revocation.</p>
+  <p class="links"><a href="https://github.com/ermoluk/mcp-warden" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Aroha Protocol</h3>
+  <p class="what">Show HN Oct 27: verifiable identity and spending limits for AI agents — a human signs an IntentMandate (actions, spend cap, TTL) to an assistant, which can delegate a strict subset onward, with every link in the chain signed back to the human root.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Mandate attenuation: scope can only narrow, never widen, as work hops between agents and vendors — and verification is offline, because content-addressed did:aroha DIDs commit to their own public keys, so no registry lookup is needed; every allowed or refused action also produces a signed receipt, and revocation is pushed to verifiers.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a two-agent spending chain (planner delegates a capped budget to a buyer agent) and demo a widened-scope mandate failing verification offline.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50253316" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Hackerscad</h3>
+  <p class="what">Show HN Oct 28: a code-first parametric CAD tool (free, open source) where the model is a small sandboxed language — type and the 3D view follows, or round an edge with the mouse and the code is written for you — with an MCP server and a self-installing agent skill.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Two twists: the mouse writes code (every click lands in the file, readable and diffable), and parts carry unittest blocks asserting physical reality — e.g. &#x27;an AA cell does not fit&#x27; or an overlap-volume check — so `hcad check` validates a part in CI the way tests validate code, before anything reaches a printer.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> An agent that designs a printable part, runs `hcad check` on its own output, and iterates until the fit assertions pass is a demo judges can hold in their hands.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50270203" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-27 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
