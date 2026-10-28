@@ -1316,11 +1316,11 @@
      "screenshot": null
     },
     {
-     "name": "Hackerscad",
-     "what": "Show HN Oct 28: a code-first parametric CAD tool (free, open source) where the model is a small sandboxed language — type and the 3D view follows, or round an edge with the mouse and the code is written for you — with an MCP server and a self-installing agent skill.",
-     "innovative": "Two twists: the mouse writes code (every click lands in the file, readable and diffable), and parts carry unittest blocks asserting physical reality — e.g. 'an AA cell does not fit' or an overlap-volume check — so `hcad check` validates a part in CI the way tests validate code, before anything reaches a printer.",
-     "link": "https://news.ycombinator.com/item?id=50270203",
-     "hackathon": "An agent that designs a printable part, runs `hcad check` on its own output, and iterates until the fit assertions pass is a demo judges can hold in their hands.",
+     "name": "Tracekit",
+     "what": "Tamper-evident tracing, policy gates and cross-checks for AI agents (MIT, 353 stars, commits Oct 28): it checks every tool call before it runs, signs each call and decision into a hash chain, and emits one .tkb file per run that anyone can verify offline.",
+     "innovative": "Built like Certificate Transparency for agent runs: signed records in an append-only log that independent witnesses cosign, so an agent that edits its own log cannot hide the edit — the demo rewrites a denial as allowed and verification fails at exactly the changed record. Gates are pre-execution (allow/deny/hold bound to exact arguments), and a cross-check compares the calls the model asked for against the calls that actually ran, flagging skipped hooks or invented calls.",
+     "link": "https://github.com/Cygnux-Labs/Tracekit",
+     "hackathon": "A weekend team could ship a signed hash-chained run log for one agent framework, with a verify command that fails at the tampered record — the tamper-evidence demo alone sells it.",
      "screenshot": null
     }
    ]
