@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 126 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 131 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-29 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Parley</h3>
+  <p class="what">A standalone, stdlib-only Go CLI that lets multiple coding-agent sessions using different models or harnesses (Claude Code, Codex, OpenCode) collaborate over a live IRC channel, with the human steering from any IRC client.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It runs its own IRC server on loopback, so nothing touches a public network; sessions exchange messages through a queue, incoming messages are marked as from a peer, and a configurable breaker pauses a session if too many messages arrive at once.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Run a live multi-agent team standup in IRC, with a human steering builder, planner, and ops agents from a normal chat client.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50274593" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>SafeAgents</h3>
+  <p class="what">An open-source local proxy that sits between a coding agent and its model server and checks every tool call before it runs, replacing flagged calls with a plain-text notice. It supports OpenAI and Anthropic APIs, streamed or not, with setup guides for 12 harnesses.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Pre-execution interception with about 110 deterministic in-process detectors for sandbox escapes, proxy/network bypasses, and reward hacking, plus an optional judge model that can only add blocks, never remove them.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a 10-minute agent-firewall demo where a prompt-injected tool call is blocked live while legitimate calls pass in 10-20 ms.</p>
+  <p class="links"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xii45s/safeagents_an_opensource_proxy_that_checks_every/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>ode</h3>
+  <p class="what">A scheduled cloud agent service for inbox sorting, calendar prep, price/news tracking, repo monitoring, and log/CI watching, with approval cards for every send, post, or delete.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> When work repeats, the agent compiles it once into a small script and reruns it with no model call at all, waking the model only when something actually needs judgment; a key vault lets agents check servers without ever seeing the keys.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build an overnight agent that costs almost nothing by design, with a cost meter showing model calls avoided by script reuse.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xijr4c/my_ai_agents_turn_repeated_work_into_scripts_so/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>glitchless</h3>
+  <p class="what">Open-source game observability for coding agents, capturing real players&#x27; stutters, crashes, and drop-offs in Three.js, Phaser, Unity, Godot, Unreal, and GameMaker games.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Production telemetry is exposed to the coding agent over MCP (triage, performance, errors, death hotspots, version comparison), and fixed-seed autoplay bots in CI compare each change against a saved baseline before a fix is declared done.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a vibe-coded game, let real playtest data find the worst hitch, and have the agent fix and re-playtest it in one loop.</p>
+  <p class="links"><a href="https://github.com/glitchless-gg/glitchless" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>hatchling</h3>
+  <p class="what">A Rust, always-on personal agent system that runs on your own Linux machine or WSL2, with agents that keep working while you are away.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Security is architectural, not promised: every agent runs in a kernel-isolated cell (own user, mount/PID/network/IPC namespaces, seccomp-BPF allowlist, no network by default), and credentials live in a sealed vault the cell never holds — the broker supplies access instead.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Run an always-on agent on a home server that can browse and code for you without ever seeing your API keys.</p>
+  <p class="links"><a href="https://github.com/undergroundrap/hatchling" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-28 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
