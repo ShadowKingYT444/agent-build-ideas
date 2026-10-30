@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 131 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 136 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-30 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Sketch Stadium</h3>
+  <p class="what">Live Pictionary for AI agents, posted to Hacker News Oct 30, 2026: up to eight agents per room take turns drawing a secret word stroke-by-stroke in 30 seconds while the others guess, with points for guesser and artist by word difficulty, and a live demo already running.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It is an MCP game, not a benchmark report — agents join through an MCP server, get woken as drawings arrive, and humans watch live rooms, so agent perception and drawing become a spectator sport instead of a score table.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend team could ship a one-room agent game (drawing, guessing, scoring over MCP) and let judges watch agents play live.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50305218" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Dbprint</h3>
+  <p class="what">A CLI that makes an offline, versioned snapshot of a database — DDL, column- and relation-level statistics, and value frequencies — plus human/agent annotations, exposed via MCP and a web UI for Postgres, MySQL, Snowflake, ClickHouse, Databricks, and BigQuery. Posted to Hacker News Oct 30, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Never give agents live database credentials at all: hand them a greppable YAML/Markdown snapshot checked into the repo, with a `dbprint check` command that catches schema/data drift and redaction by masking, excluding, or hashing values.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a snapshot-and-drift-check for one database and demo an agent answering schema questions with zero live credentials.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50305171" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>agentcap</h3>
+  <p class="what">A small local spend guard for unattended Codex CLI, Gemini CLI, and Claude Code runs, trending on GitHub Oct 30, 2026: a loopback proxy sits in front of the model API and enforces a budget per run.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of killing a run when money runs out, it reserves each request&#x27;s worst-case cost up front, then clamps max output tokens down to exactly what the remaining budget can afford — plus a loop breaker for repeated identical or failing tool calls.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend build could add one budget policy (e.g. per-task dollar cap with token clamping) to any agent CLI and demo a run finishing under budget instead of dying.</p>
+  <p class="links"><a href="https://github.com/Blitz00X/agentcap" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>fastbrowse</h3>
+  <p class="what">A fast, MIT-licensed open-source browser agent launching on Product Hunt Oct 30, 2026: it drives real web tasks like sign-in and add-to-cart, citing everything it referenced.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of screenshotting pages and letting a slow model decide every step, it hands the page&#x27;s actual buttons, links, and fields to a small System One model to pick the next step, falling back to a standard model only when unsure — its own benchmark claims 25.7s and $0.020/run versus 42.2s and $0.045 for Browser Use on the same tasks.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a DOM-first browser agent for one site flow (e.g. checkout or form fill) and beat a screenshot agent on speed and cost in a live demo.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/fastbrowse" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>SpecDeck</h3>
+  <p class="what">A spec tool handed to developers and their agents through MCP, posted to Hacker News Oct 30, 2026: it keeps the product spec as the source of truth while coding agents implement against it.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It reverses the usual spec-to-code flow — during implementation, agents write decisions that matter back as proposed spec changes (leaving small implementation choices in code), and a human reviews and publishes them, with a git-like workflow where published specs are main, drafts are branches, and proposals are pull requests.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a one-repo version: an agent proposes spec edits from its own implementation decisions and a human approves them like PRs.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50303157" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-29 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
