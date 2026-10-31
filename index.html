@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 136 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 141 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-10-31 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Prospero</h3>
+  <p class="what">A bloat-free native coding harness in C++ with a Dear ImGui docking interface, announced Oct 31 by Chris Wellons (skeeto/nullprogram). It runs a single executable that can also go headless over SSH, with subagents, MCP, web search, and desktop control for GUI apps.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Its prime design principle is &#x27;never wait forever&#x27;: every operation has a deadline, so an unattended agent gets a denial by timeout instead of hanging overnight; shell timeouts promote to background tasks, the whole process tree lives and dies together so no stray builds survive, and passive rendering means it idles at ~100x fewer resources than web-stack harnesses.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend team could ship a minimal deadline-driven harness for one provider with timeout promotion and process-tree cleanup as the demo.</p>
+  <p class="links"><a href="https://github.com/skeeto/prospero" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>najda</h3>
+  <p class="what">A solo hackathon build (HUMAIN Future AI Builders, Oct 30-31) that acts as an on-call engineer for broken AI agents: it reads traces, metrics, config history and transcripts, then diagnoses, fixes and verifies the agent.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Code decides, the model proposes: a four-step investigate-hypothesize-fix-verify loop applies one guarded config patch at a time and proves it by replaying failed chats (canary, full, regression), rolling back anything unverified; a verified fix becomes a structured playbook signature (no free text) so repeat incidents are fixed with zero model calls, and money-at-risk incidents page a human with no changes. Held-out score 0.84 with zero dangerous actions.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Literally a hackathon build: replicate the loop for one agent type with a small fault-injection bench and replay-based verification.</p>
+  <p class="links"><a href="https://github.com/VedaLuka/najda" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>sandstorm</h3>
+  <p class="what">A self-hosted system for running thousands of AI agent sandboxes on cheap machines, with gVisor containers and Firecracker microVMs in one fleet, one binary (sandstormd) serving as master, node and console.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> An adaptive four-tier sandbox lifecycle built around agents spending most of their time waiting: hot, frozen (cold pages in zswap), snapshot-to-disk, detached (volume only), with wake-on-traffic - frozen wakes in ~0.1s and snapshot restores in ~0.2s, so idle agents stop eating memory. Fresh Oct 31 benchmark measurements back it.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend team could ship a mini freeze/thaw sandbox for one backend with wake-on-traffic as the demo.</p>
+  <p class="links"><a href="https://github.com/deeplethe/sandstorm" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>mobile-agent</h3>
+  <p class="what">A daemon plus CLI/MCP server that lets coding agents drive phones, emulators and iOS Simulators (physical iPhones via a built runner, Android via adb, booted simulators with nothing installed), following agent-browser&#x27;s command grammar so existing prompts and skills carry over.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of reading the device on every request, the daemon keeps a live mirror of each screen&#x27;s windows, accessibility tree and latest frame from platform change events, and answers snapshots, waits and settle checks from the mirror - measured 5x faster than Maestro on a login flow in its Oct 31 CI run.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend build could mirror one platform (e.g. Android emulator via adb) and demo an agent driving a real app from a mirror snapshot.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50316984" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Faylee</h3>
+  <p class="what">Bug reports your coding agent can fix from one link (Product Hunt, Oct 29). Whoever finds the bug records screen, voice, console, network requests and clicks - or hits a shortcut to save the last few minutes after the bug already happened - with sensitive data hidden before upload.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The report is consumed by the coding agent directly: connect Faylee&#x27;s MCP server, paste the link, say &#x27;fix it&#x27;, and the agent lines up what the person said and clicked with the console and network at that exact moment, fixes the bug and comments on the report - no more copy-pasting console errors into chat.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend build could do this for one stack: a capture format bundling screen + console + network on one timeline, served to the agent over MCP.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/faylee" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-30 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
