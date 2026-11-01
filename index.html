@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 141 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 146 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-01 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Relayvora</h3>
+  <p class="what">A local-only, open-source CLI that hands an unfinished coding session from Claude Code to Codex (or back) when an agent hits a limit, stalls, or goes cold.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Verified, evidence-labelled handoffs: it reads the session transcript, captures real uncommitted diffs and commits, runs the project&#x27;s own checks and records exit codes, then labels every fact [observed], [user], [agent-reported] or [inferred] within a 4,000-token budget, with automatic checkpoints on limit hits and compaction.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A CLI that snapshots git state, runs one test command, and renders a budgeted, labelled handoff is a classic weekend build.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50326987" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Governor</h3>
+  <p class="what">A small, dependency-free Node proxy that sits between agents and Anthropic/OpenAI-style APIs, giving each agent its own key with caps and rules, with a live demo showing calls allowed, denied, or held.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It inspects the tool calls inside each model reply before the agent ever sees them, so it can deny a dangerous call, hold an expensive or external action for human approval, and sign every decision into an audit log.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A proxy with per-key budgets, an ordered rule list, and a signed log is a focused, demo-ready weekend project.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50311974" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Cheap Agent</h3>
+  <p class="what">A free, open-source MCP server/plugin for Claude Code that splits coding work between a premium planner and a cheap executor, reporting 63% fewer Opus tokens on SWE-bench Verified.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Opus acts only as architect and never opens the code; DeepSeek V4.1 Flash does research and typing in isolated git worktrees, each change must include a test that fails before and passes after, and Opus receives only a ~10-line verdict instead of full outputs — most savings come from keeping code out of Opus&#x27;s context.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> An MCP wrapper with two tools (research/delegate), worktree isolation, and a test-gate loop, benchmarked on a few tasks.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xkpkb3/made_opus_the_principal_dev_and_deepseek_its_team/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>plan-auditor</h3>
+  <p class="what">An open-source, stdlib-only Python tool that checks a coding agent&#x27;s work against a JSON plan instead of trusting the agent&#x27;s own report, re-running each step&#x27;s verify checks itself in a fresh subprocess where only exit code 0 counts.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The agent&#x27;s prose is explicitly not evidence: verification is model-free and network-free, with a sealed request/plan contract that can only be strengthened, a SHA-256 evidence log plus HMAC-gated completion, and an UNKNOWN exit code that withholds completion instead of passing.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A small verifier, plan schema, and CLI/test gate demoed in a day with a deliberately lying agent.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xl2lkq/i_built_planauditor_because_my_coding_agent_kept/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>AC Bridge</h3>
+  <p class="what">A tool that turns smart lights and plugs already in a home into ambient status lights for Claude Code and Codex, showing at a glance whether an agent is working, blocked, or done.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It maps up to 29 agent states to colors and effects across 16 locally driven light brands, lets Claude Code and Codex share one light, restores lights when a session ends, and can even let an agent switch devices as a step in a task.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Hook one agent&#x27;s status events to one smart bulb with a small state-to-color map, in an afternoon.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/ac-bridge" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-10-31 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
