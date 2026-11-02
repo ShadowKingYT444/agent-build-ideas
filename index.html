@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 146 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 151 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-02 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Deedglass</h3>
+  <p class="what">Open-source, self-hosted safety layer that sits between AI agents and Postgres/FHIR systems, gating each tool call by policy and then checking what actually changed. Posted on Hacker News Nov 2.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It does not trust the agent&#x27;s own log: the &#x27;Proven&#x27; check reads Postgres&#x27;s own change log (logical decoding/WAL) for the committed transaction and compares it with the agent&#x27;s claim (e.g. 1 row claimed vs 301 actually changed), then seals the result as a signed, offline-verifiable &#x27;deed&#x27; with a one-step undo preview.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend version could do the core loop for one Postgres table: claim vs. WAL diff plus a mismatch report.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50337736" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Eshu Gateway</h3>
+  <p class="what">Self-hosted gateway between an AI agent and homelab/small-fleet infrastructure, auditing every command and holding unapproved ones for a human decision, with a live dashboard. Latest commit Nov 2.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A multi-stage policy engine (catastrophic blocklist, blacklist, allowlist, feature scripts, just-in-time approval) plus &#x27;Approved Windows&#x27; for time-boxed pre-approval, an &#x27;Emergency Freeze&#x27; global circuit breaker, and gateways that self-sync policy every 30 seconds with no inbound connectivity.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A single-host version (forced-command SSH user + allow/block/JIT queue + approve/deny dashboard) is very shippable in a weekend.</p>
+  <p class="links"><a href="https://github.com/fruitsky/eshu-gateway" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>limes</h3>
+  <p class="what">A Go library for handing agents scoped permissions instead of broad API keys, with signed tokens carrying scope, a spend ceiling, and lineage. Active on Nov 2.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Tokens can be narrowed offline with Biscuit, bound to keys with DPoP, and metered against the whole delegation chain, so a sub-agent cannot spend more than its parent&#x27;s budget and any single delegation can be revoked individually.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a weekend version: token mint/attenuate/revoke plus a spend meter for a single tool.</p>
+  <p class="links"><a href="https://github.com/oleg-tkachuk/limes" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Dotscope</h3>
+  <p class="what">A Rust structural compiler that maps a codebase so AI coding agents stop breaking large repositories, delivered over MCP to Cursor, Windsurf, and Claude Desktop. Commits on Nov 2.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It combines explicit imports with temporal coupling from Git history into a per-file &#x27;gravity&#x27; score, then silently injects a [DOTSCOPE_GRAVITY_WARNING] constraint into the MCP/JSON-RPC stream when gravity_score &gt; 50, forcing the agent to verify blast radius before editing a high-impact file instead of just giving it more context.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Score gravity for one repo (imports + co-change history) and inject the warning over MCP in a weekend.</p>
+  <p class="links"><a href="https://github.com/docxology/dotscope" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Better Together</h3>
+  <p class="what">A site where people&#x27;s personal AI agents team up on problems hard to solve alone; the first project is spam calls and texts. Posted on Hacker News Nov 2.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Onboarding is a single llms.txt instruction pasted into your own agent; agents report spam they can see, the system compares reports across users to spot the same message, link, or callback number as a campaign no single phone could see, and a human checks the AI-drafted escalation before anything goes out.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> An llms.txt hook, a shared report store, and cross-user pattern matching is almost literally a weekend project.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50331415" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-01 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
