@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 151 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 156 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-03 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Tenaz</h3>
+  <p class="what">A Rust runner that drives a local coding agent for hours toward a goal: it plans, writes a verify script, then builds task by task, committing only work that passes its checks (real runs cited include a playable 3D game after 104 hours).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The runner, not the model, decides done: every task gets a fresh short-context session, Tenaz itself runs the verify step, and failed tasks are reverted, retried, or split, with model swapping around image jobs.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Clone the verify-first loop in a weekend and let a cheap local model build your demo overnight, committing only what passes.</p>
+  <p class="links"><a href="https://github.com/aartiles/tenaz" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Vawe</h3>
+  <p class="what">An open-source, agent-native HTML-to-video framework: write one HTML page and get a deterministic MP4, positioned as a free Remotion alternative for coding agents like Claude Code and Codex, with a studio/CLI loop and multi-aspect rendering.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A virtual clock replaces Date, timers, requestAnimationFrame, and Math.random, so every frame is a pure function of seek time t — the same page renders identically in any frame order and to 16:9, 9:16, 1:1, 4:5, and 4:3.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Generate a polished, deterministic demo video from one HTML page your agent writes instead of wrestling with a video timeline API.</p>
+  <p class="links"><a href="https://github.com/vawe-hq/vawe" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>GhostTab</h3>
+  <p class="what">A small, free, open-source (MIT) CLI that lets AI agents such as Claude Code use your real, logged-in Chrome/Brave browser as text in a hidden window, instead of taking over the screen with screenshots.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Pages return as compact text with numbered elements (claimed 5–10x fewer tokens than screenshots); it fills whole forms in one call, uses on-device OCR for canvas/PDFs, requires an exact match for Submit/Pay, blocks uploads of keys and .env files, and logs every final click — tested on about 40 job applications in one day.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a text-first browser-agent harness with a one-call form filler and an audit log for every irreversible click.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xmtma2/i_built_ghosttab_ai_agents_use_my_real_browser_as/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>MachineMail</h3>
+  <p class="what">Real email inboxes for AI agents, connected over MCP or API, so agents can receive and send email for workflows that depend on it, with a free plan including 3,000 messages/month.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Email is treated as untrusted input: every inbound message gets agent-safe text plus a trust report, with on-demand inboxes, a catch-all domain, allow/block lists, and drafts held for human review instead of direct sending.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Give a hackathon agent its own disposable inbox and make every inbound message carry a trust score before the agent acts on it.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/machinemail" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>HackerTube</h3>
+  <p class="what">A YouTube alternative built in a weekend hack by having Claude filter 43M Hacker News comments over 20 years down to 6,454 repeatedly recommended videos, with no logins and state kept in the local browser session.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A community&#x27;s 20-year recommendation history is the ranking signal instead of engagement algorithms, and the underlying comment-analysis data ships as a zip so anyone can point their own Claude at it and make their own version.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Pick a niche community corpus, have an agent distill it into a tiny curated dataset, and ship a no-login static site around it in a weekend.</p>
+  <p class="links"><a href="https://x.com/karpathy/status/2116957135661945283" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-02 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
