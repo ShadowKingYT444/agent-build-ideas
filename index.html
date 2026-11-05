@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 161 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 166 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-05 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Diffo</h3>
+  <p class="what">A live diff in the browser for reviewing code a coding agent wrote; you comment on a line and the same agent session that wrote it answers right there. Free and open source, runs locally with no account, works with Claude Code, Cursor, Codex and more, and also works on GitHub PRs.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Comments are answered by the original agent session, which still knows why it wrote the code — not a fresh context that has to re-read the diff. Big changes are split into layers with a reading order.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The most directly cloneable idea of the day — a diff viewer wired to the agent session&#x27;s transcript, with inline comments sent back as follow-up prompts.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xonm0o/diffo_a_diff_where_you_comment_on_your_coding/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-05-diffo-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-05-diffo-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Stroq</h3>
+  <p class="what">Open-source, local security platform for AI coding agents (Claude Code, Codex, Cursor and others) with no account and no telemetry. It reads agent sessions, finds known secrets, and guards the next session with local hooks.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of only blocking commands, it traces a risky command back to the content that dictated it, replays past sessions (including pre-install ones), scores them, and runs a 36-attack suite against your policy in a throwaway home.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship secret-scan plus provenance replay for one agent&#x27;s transcripts, with a small attack test suite and a local allow/ask/deny console.</p>
+  <p class="links"><a href="https://github.com/AGGIB/Stroq" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-05-stroq-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-05-stroq-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Glasshand</h3>
+  <p class="what">Gives an AI agent a real iPhone and Mac in a datacenter, rented with a single prompt, so the agent can use apps, files and real accounts exactly as a person would. #1 on Product Hunt today.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Real hardware instead of emulators or browser automation — a genuine device fingerprint and session that never gets blocked, letting agents use apps that block bots.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Fake the core with one spare phone/Mac, screen-sharing plus an agent driving it, and a simple rental/queue API.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/glasshand" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-05-glasshand-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-05-glasshand-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>OpenMail</h3>
+  <p class="what">Gives each AI agent its own email inbox on your domain, so agents can sign up for tools, receive verification codes and reply to customers. Free for 3 inboxes, built/hosted in the EU.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Per-agent identity and sending reputation instead of a shared Gmail or sending pool where one bad actor gets everyone flagged; inbound mail reaches code via webhook/WebSocket, attachments arrive as text, plus a hosted MCP server.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Very weekend-sized — one inbox per agent via a mail API/webhook, a verification-code forwarder and an MCP tool for reading/sending mail.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/openmail" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-05-openmail-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-05-openmail-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Papilot</h3>
+  <p class="what">A free, open-source (MIT) LaTeX editor, v0.9.0, for macOS/Linux and via npm, that lets coding agents (Codex, Claude, Cursor, Copilot, Grok, Kimi, DeepSeek, Qwen, OpenCode and more) edit papers.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Review happens on the typeset PDF, not on source diffs: you select a sentence or box an equation/figure on the PDF and write what should change, then decide every change one by one on the rendered page. Each task runs in its own Git worktree.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship PDF-annotation to agent prompt plus per-change accept/reject on the rendered PDF, one Git worktree per task.</p>
+  <p class="links"><a href="https://papilot.ai/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-05-papilot-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-05-papilot-1.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-04 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
