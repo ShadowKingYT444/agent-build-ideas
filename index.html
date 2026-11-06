@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 166 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 171 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-06 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Tobira Site Agent</h3>
+  <p class="what">Turns a website into an AI agent that sells to a visitor&#x27;s AI assistant inside ChatGPT, Claude, or Grok — it answers questions, negotiates, books calls, and takes orders, with leads routed to Telegram or email. Launched Nov 6, 2026 as Product Hunt&#x27;s #1 of the day.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It inverts the storefront: the buyer is another AI agent, not a human. The site&#x27;s agent reads the site about 2x faster than a human would navigate it and acts without touching the interface — no MCP or API setup required.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend team can ship a minimal site-agent for one vertical — product data plus a chat/order endpoint plus an agent-readable page — and demo it selling to ChatGPT/Claude.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/tobira-ai" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-06-tobira-site-agent.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-06-tobira-site-agent.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Mantis</h3>
+  <p class="what">A lean open-source (MIT) browser interface for AI agents, usable as an MCP server with Claude Code, Codex, Cursor, or a custom agent. Show HN, Nov 6, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of screenshots or the full Playwright accessibility tree, it returns the page as short numbered text lines and, after a click, only the diff — 29-47% fewer input tokens and about 36% faster on benchmarked long tasks at similar accuracy — and it can attach to your own running Chrome via CDP.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a numbered-text browser MCP for a few sites and measure token/time savings against Playwright MCP on a small task set.</p>
+  <p class="links"><a href="https://github.com/perzianhq/mantis" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-06-mantis.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-06-mantis.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Gauge</h3>
+  <p class="what">An open-source (MIT) CLI for hillclimbing &#x27;Agent Experience&#x27; — making docs, Skills, CLIs, SDKs, and MCPs easier for coding agents to use. Show HN, Nov 4, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A closed loop: run coding agents on realistic tasks in Docker VMs, mine session transcripts for friction, generate doc variants, then re-run the same tasks with the variant injected transparently at the same hostname via a TLS-terminating mitmproxy gateway — and repeat until the friction disappears.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A one-task, one-agent version — run the task, diff transcripts, swap one doc page, re-run — without the full gateway/VM setup.</p>
+  <p class="links"><a href="https://github.com/gauge-sh/gauge-cli" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-06-gauge.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-06-gauge.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Current</h3>
+  <p class="what">An open-source Elixir runtime for change control on AI agents: the agent proposes code changes but never acts directly — a human reviews and approves, and only then does the runtime apply them. Show HN, Nov 6, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The agent can only emit typed intents (read/edit/run/claim) as proposals; the runtime validates them, records approval as a separate step, applies changes itself, verifies the agent&#x27;s claims against recorded results, and stores every step in a hash-chained, event-sourced log with SHA-256 content-addressed artifacts — any change traces back to the exact prompt, reads, raw model reply, and approver.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A narrow version — proposal-only agent plus approve/apply split plus append-only log — for one language or file type.</p>
+  <p class="links"><a href="https://github.com/santosh79/current" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-06-current.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-06-current.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>spore</h3>
+  <p class="what">A runtime for running AI agents on your own Linux machines, driven from Node, the CLI, or HTTP. v1.58.0 released Nov 6, 2026; only 3 stars — genuinely tiny and fresh.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of sandboxing with containers, it confines agents at the kernel level and hard-caps their spending, with every run recorded — a spend-limited, kernel-confined agent runtime rather than another wrapper.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend team could ship a single-machine version: one agent, one kernel sandbox, one spend cap, one audit log.</p>
+  <p class="links"><a href="https://github.com/RHIZOGRIP/spore" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-06-spore.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-06-spore.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-05 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
