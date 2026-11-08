@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 176 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 181 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-08 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Recalc</h3>
+  <p class="what">Open-source spreadsheet where cells can be Claude Code or Codex terminals, plus formulas, text, images, and charts. Sessions communicate through cells, named cells, or an MCP server; the demo runs a real FDA benchmark task.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The spreadsheet becomes the agent orchestration layer — cells are live agent terminals and also the message bus between agents, with context management across sessions, instead of a separate chat/orchestrator UI.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ready-made multi-agent workflow demo — put a benchmark or data task in a cell and show agents passing work through the grid in minutes.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50413970" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-08-recalc.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-08-recalc.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>NoMac</h3>
+  <p class="what">Cloud Mac with Xcode that AI coding agents can start, use, and stop on their own, for iOS development, testing, and TestFlight shipping, at $0.90/hr billed per minute with no subscription. Live at nomac.app; also launched on Product Hunt the same day.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The agent connects once over MCP, then starts its own Mac in about 30 seconds, builds and tests, reads the iPhone Simulator as text rather than screenshots, and ships to TestFlight — and the Mac stops when the agent is done, so idle Macs do not keep billing.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A hackathon team with no Mac hardware can give each agent/task a disposable, per-minute Mac for a real iOS build-and-ship demo.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xr2uvz/nomac_a_cloud_mac_with_xcode_that_ai_coding/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-08-nomac.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-08-nomac.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Aircheck</h3>
+  <p class="what">Review screen for social posts and ad creative queued by Claude Code, Codex, cron, Airflow, or launchd jobs. Shows a send-time strip, thumbnail sheet by hour, and a list; it never posts itself. Made by Compound Labs, an independent product R&amp;D lab.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Jobs write one JSON file per post to a queue folder (wired by an MCP server); to fix a post, Aircheck re-runs that post&#x27;s own pipeline with a headless local agent — Repair replaces the queued post only on approval, and previews run with no network and can write only in their run folder.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A human-in-the-loop safety layer for agent-generated content — the simple queue-folder format is easy to copy for any agent pipeline.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50413906" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-08-aircheck.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-08-aircheck.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>billion-context</h3>
+  <p class="what">Context-compression plugin for month-long single sessions (billions of tokens), claiming a 100K context window is enough and 5x fewer tokens. MIT, 5.0k stars.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A proxy sits between any agent and the model API and the model itself calls compress/decompress/search_context tools — incremental, reversible, prefix-cache-friendly compression with a 95–97% cache hit rate and 30x steady-state compression, ranked #1 on a 1,500-item third-party ContextBench eval.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A proxy plus a compression tool pair is a focused weekend build; the eval harness is the harder part.</p>
+  <p class="links"><a href="https://github.com/ranxianglei/billion-context" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-08-billion-context.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-08-billion-context.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Openbar</h3>
+  <p class="what">Free, open-source macOS app that runs three AI agents (Claude Code, Codex, or Gemini CLI) on one repo at the same time, with SSH support for remote Claude sessions. Source: github.com/MF-DEEV/Openbar.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Each agent gets its own git worktree, so agents do not touch each other&#x27;s files and main stays clean, while the macOS notch shows live agent status and lets the user approve a plan straight into auto mode.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Run three agents in parallel on separate worktrees in a time-boxed build, merging only the winners, without merge conflicts or babysitting terminals.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xr0owg/openbar_three_ai_agents_on_one_repo_each_in_its/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-08-openbar.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-08-openbar.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-07 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
