@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 181 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 186 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-09 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Observer</h3>
+  <p class="what">Open-source, 100% local agent for iOS and Android that turns an old phone into a camera watcher: describe what to monitor in plain language (&#x27;when someone that&#x27;s not me approaches my car, send me a picture&#x27;) and it watches and notifies via Telegram, WhatsApp, or a phone call. Posted to r/LocalLLaMA Nov 7, 622 upvotes.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A two-layer micro-agent design: the main agent generates a tiny &#x27;dumb for-loop&#x27; micro-agent that asks one yes/no question repeatedly and returns a numeric score (0.014 for nobody there, 0.990 when someone sat down), requiring a score above 0.75 across multiple iterations before firing, which kills false positives. The decision model (OneJev-0.8b) and watchers (qwen-0.8b) run entirely on the phone, even an old one.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend version is very buildable: one camera loop, one tiny local/VLM scorer, one threshold + debounce, one notification webhook.</p>
+  <p class="links"><a href="https://github.com/Roy3838/Observer" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-09-observer.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-09-observer.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>ask-form</h3>
+  <p class="what">A Go CLI + skill that lets a coding agent (Claude Code or any CLI agent) put structured questions into a private web form you answer from anywhere, even your phone, with answers returned to the agent as JSON. Release v0.17.0 landed minutes before the scan, Nov 9.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The agent-to-human loop is inverted: instead of the agent stalling in the terminal, it publishes a form through a relay (ask-form.xyz, or a self-hosted relay in the same repo) and blocks on `wait` until you answer. It also supports --multi team votes on one link and self-contained HTML snapshots of closed forms.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend builder could ship a minimal version (form generator + public link + JSON callback) in a day; the relay and skill are the only hard parts, and both are small.</p>
+  <p class="links"><a href="https://github.com/GabrielVidal1/ask-form" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-09-ask-form.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-09-ask-form.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Exact</h3>
+  <p class="what">Charlie Cheever&#x27;s (Expo co-founder) new &#x27;Agent Native&#x27; app framework written in Rust, now in pre-alpha and open source, with a demo storefront app running on iPhone, Android, and web: benchmarked ahead of Next.js and SvelteKit and neck-and-neck with Astro on a RealWorld cold-load test. Announced Nov 9.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Its new &#x27;Contract&#x27; language: a Python-like, indentation-based, strongly typed language describing UI, data shapes, queries, and mutations in one file, designed to be fully analyzable and constrained so agents can&#x27;t hallucinate footguns. Agents also get control over the clock and can inspect app state, closing the feedback loop, with live code updates in milliseconds.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A strong builder could ship a weekend version: a tiny constrained UI-spec language plus a runtime that renders it live, with an agent writing the spec.</p>
+  <p class="links"><a href="https://x.com/ccheever/status/2119764253242695754" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-09-exact.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-09-exact.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>itcan.do</h3>
+  <p class="what">A tool that turns a coding agent into a real app: instead of chatting in a terminal, your agent builds a live page for the job (a to-do app, a meal planner, a whiteboard) on any screen you own, and every tap goes back to the agent. Works with Claude Code, Codex, OpenCode, Hermes Agent, Pi, and T3 Code, with no account and no server. Posted to r/LocalLLaMA Nov 8.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The agent is the backend and the UI is generated per task and persists after the chat closes: reopening the chat resumes it, with bidirectional tap-to-agent events and the same app usable simultaneously on laptop, phone, and TV, all without building or deploying a backend.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend version: an agent skill that emits a small HTML page plus a local event bridge back to the agent.</p>
+  <p class="links"><a href="https://itcan.do/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-09-itcan-do.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-09-itcan-do.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Agent Clan</h3>
+  <p class="what">Puts Claude Code and Codex agents on screen as a 3D team you run with your hands: make a fist and they appear, pinch and pull toward one to pick it, then say what you need, and pull right when an agent asks for permission. Product Hunt Nov 8, #10.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Replaces terminal/tab juggling for parallel coding agents with webcam hand-gesture orchestration: fist to summon, pinch to select, pull to approve, turning multi-agent control into a physical, spatial interface.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend build could do webcam hand tracking (fist/pinch) wired to launching, selecting, and approving parallel agent sessions.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/agent-clan" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-09-agent-clan.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-09-agent-clan.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-08 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
