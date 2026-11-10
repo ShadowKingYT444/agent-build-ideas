@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 186 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 191 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-10 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Text-to-CAD Studio</h3>
+  <p class="what">A free, open-source Mac/Windows app for hardware engineers: sketch or type and it builds the part, then does FEA, drawings, boards, and firmware in the same place, running on the Claude or Codex plan you already pay for.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It rebuilds the coding-app workflow for hardware — a hand-editable feature tree keeps agent output parametric and editable, and it bundles the downstream hardware work (FEA, drawings, boards, firmware) instead of stopping at a mesh.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Weekend version: sketch-to-part plus an editable feature tree for one CAD kernel.</p>
+  <p class="links"><a href="https://x.com/amypretzel/status/2120169615557087300" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-10-text-to-cad-studio.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-10-text-to-cad-studio.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>RunThru</h3>
+  <p class="what">Comment /runthru on a PR and an agent uses the feature on your preview, films a narrated walkthrough, and a second model grades whether it works — video and verdict land in the PR in 5 minutes.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The two-model loop: one agent acts and narrates on camera while an independent model judges the outcome, turning &quot;agent says it works&quot; into watchable evidence.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> GitHub Action + Playwright driver + screen recording + LLM judge is a natural weekend scope.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/runthru" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-10-runthru.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-10-runthru.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>ForAgent</h3>
+  <p class="what">Private phone numbers so AI agents can call each other — each agent gets its own number, calls are handled in-app or inside the AI via a plugin, and you choose who gets through.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Treats a phone number as an agent identity/address with an allowlist — voice calls as the inter-agent protocol, not another chat API.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Twilio numbers plus a voice bridge between two agent CLIs with call routing and an allowlist is a classic weekend build.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/foragent" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-10-foragent.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-10-foragent.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Swamp</h3>
+  <p class="what">Connect Codex or Claude Code to Swamp, ask the agent to solve a task, and get a deterministic TypeScript workflow plus a skill you can run whenever you want.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It inverts agent randomness — instead of a one-off chat answer, the agent&#x27;s solution is captured as a deterministic, repeatable TypeScript workflow/skill, so every step becomes reusable behavior.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Capture one agent run as a typed workflow plus a skill file, with one agent integration.</p>
+  <p class="links"><a href="https://x.com/svpino/status/2119885386763952131" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-10-swamp.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-10-swamp.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>ZTHR</h3>
+  <p class="what">A zero-code pattern language for what replaces code review when AI agents write all the code — a set of checks that say yes or no with proof, with a reference example app built entirely by agents under ZTHR fixtures.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It replaces reading the diff with re-running the agent&#x27;s claims (&quot;run what your agent says it did/tested/is true&quot;) and the verdict is evidence, not opinion — if there is no evidence, the verdict says so.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Pick one claim type (e.g. &quot;tests pass&quot;) and ship a weekend checker that re-runs the agent&#x27;s claimed command/test and returns pass/fail with the log as evidence.</p>
+  <p class="links"><a href="https://zthr.ai/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-10-zthr.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-10-zthr.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-09 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
