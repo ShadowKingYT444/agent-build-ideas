@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 196 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 201 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-12 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>OpenMausBot</h3>
+  <p class="what">Open-source Grok Bot alternative: a Telegram-style chat app where every chat is a real AI agent (Claude, Codex or Grok CLI running locally), each bot with its own computer/VM and live screen preview. 21.6k stars, +9,257 this week, latest commit Nov 12, 8:25 AM PST.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Whole agent teams are portable — a team installs from a single Markdown file (structured YAML frontmatter), departments share as one file, and bots ask permission through inline Allow/Deny cards in chat.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Per-bot computers + file-portable teams is the winning demo shape — build a scoped version (one team-file format, one agent runtime) in a weekend.</p>
+  <p class="links"><a href="https://github.com/milind-soni/OpenMausBot" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-12-openmausbot.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-12-openmausbot.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Plurai Simulation</h3>
+  <p class="what">The recursive self-improvement layer for AI agents: a simulated world that makes your agent improve on every run. Product Hunt #1 on Nov 12 (276 points).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> One command in Claude Code, Codex or GitHub Copilot builds a digital twin of the agent&#x27;s world — synthetic personas and documents plus mocked tools, APIs and databases — in sandboxes that never touch production, so the agent&#x27;s worst bugs surface before users do, each failure with reasoning and impact.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Eval/simulation infra is the highest-leverage hackathon build — a tiny digital-twin generator for one vertical (e.g. support agents) is very shippable.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/plurai" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-12-plurai.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-12-plurai.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>claude-octopus</h3>
+  <p class="what">Claude Code plugin that runs multiple AI models against the same research, design or coding task and surfaces disagreements before shipping. 4.4k stars, v11.23.0 released today.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A structured multi-LLM &#x27;council&#x27; (3/5/7 personas across Claude, Codex, Antigravity, OpenCode) with a 75% consensus gate, quorum plus critical-veto gates, and a &#x27;Dark Factory&#x27; mode that runs spec → research → build → adversarial review autonomously; dormant by default, activating only on explicit /octo:* commands.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Multi-model disagreement surfacing is a strong demo — a 3-model council with a consensus gate on one task type fits a weekend.</p>
+  <p class="links"><a href="https://github.com/nyldn/claude-octopus" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-12-claude-octopus.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-12-claude-octopus.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Tapdance</h3>
+  <p class="what">Free, open-source mobile testing for AI agents: gives your agent real phones to test your app on (Android and iOS, emulators and iPhone simulators). LinkedIn post Nov 11 by Mirzamehdi Karimov; repo github.com/mirzemehdi/tapdance.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> An agentic loop — the agent watches screenshots and screen recordings of every run, sees what broke, fixes the code and reruns; once a flow works it is saved as a Scenario and replayed without AI in the loop, saving tokens. Runs free on your own Mac/Linux or ~$0.20/hr on your own Google Cloud vs $9/hr Google device streaming.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Agent-tested-on-real-phones with token-free scenario replay is a concrete, demoable loop — clone the loop for web or one mobile flow.</p>
+  <p class="links"><a href="https://www.linkedin.com/posts/mirzemehdi_recently-i-saw-googles-new-android-cli-with-share-7526251396552093696-GBCI/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-12-tapdance.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-12-tapdance.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Pomelu</h3>
+  <p class="what">Free, open-source phone app for Hermes Agent, the self-hosted AI agent from Nous Research, now on Google Play. Each Hermes bot lives in a messenger-style chat with live streaming answers.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> You answer the agent&#x27;s questions and approve its commands right in the chat, view a bot&#x27;s skills and scheduled jobs, edit its SOUL.md, and watch the agent&#x27;s screen and take over via Bot Screen — with no Pomelu server, account or tracking; it only talks to your own gateway.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Phone-as-agent-remote is a fresh form factor — a chat UI that approves commands and takes over the agent&#x27;s screen is a weekend-sized build on any agent runtime.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xug0xm/pomelu_a_phone_app_for_your_selfhosted_hermes/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-12-pomelu.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-12-pomelu.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-11 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
