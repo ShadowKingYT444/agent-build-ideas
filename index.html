@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 201 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 206 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-13 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>AgentRun</h3>
+  <p class="what">Open-source managed-agents platform (Parcha / Grep.ai) — self-hostable with a 1-click Render install plus an OpenRouter key, or hosted; works with Pi, Claude Agents, Codex, OpenCode and any ACP harness, with sandboxes, thousands of tools/integrations and agent analytics. Show HN, 127 points, Nov 12.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Self-improving agents: a frontier model runs as an agent first, and as it runs it writes deterministic workflows for the parts it can do reliably — after ~100 repetitive cases the agent mostly just runs the compiled workflow, turning agents into workflows. Interrupted runs resume from saved conversation, files and tool results instead of re-planning with frontier tokens.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship the &#x27;agent compiles itself into a workflow&#x27; loop for one repetitive task class — the demo is a before/after token count.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50471650" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-13-agentrun.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-13-agentrun.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Plannotator</h3>
+  <p class="what">Local browser-based workspace on top of coding agents (Claude Code, Codex, Pi, OpenCode, Gemini CLI) so a human stays in the loop — shape, decide, plan, annotate and review agent work, then send all feedback back to the agents with one click. 10.3K stars, trending today, v0.28.63 released Nov 13.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The new &#x27;Plannotator Inbox&#x27; — a dedicated review layer between the user and multi-agent work, with annotations on plans, specs, rendered HTML and diffs that route back to the right agent.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The review-layer pattern is the clonable bit — build a one-click feedback router for a single agent harness.</p>
+  <p class="links"><a href="https://github.com/backnotprop/plannotator" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-13-plannotator.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-13-plannotator.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Sluice</h3>
+  <p class="what">Menu-bar app that clears out the caches and node_modules left behind by coding agents — it freed 61GB on its maker&#x27;s Mac in the first afternoon. Posted by Product Hunt, Nov 12.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Tooling for the multi-agent era itself: built for the disk churn of running 20 coding agents at once in parallel worktrees/Docker environments, not for one human&#x27;s browser cache.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend-sized utility with an obvious before/after number (GB reclaimed) — the multi-agent angle is the pitch.</p>
+  <p class="links"><a href="https://x.com/ProductHunt/status/2120973658583953721" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-13-sluice.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-13-sluice.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>DoboCache</h3>
+  <p class="what">Local proxy (point your client&#x27;s baseURL at localhost) plus MCP server that keeps LLM prompt-cache prefixes stable so provider prompt caching actually hits.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It normalizes key order, re-sorts tool arrays and aligns prefixes to 128-token boundaries — in its own 20-request controlled tests it took cache-hit rate from 0% to 98.59%. Fully local, white-box logging, no telemetry, and unusually honest docs about its limits.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A proxy that pays for itself — demo the cache-hit rate jump on a real multi-turn agent run.</p>
+  <p class="links"><a href="https://github.com/dobo123123/dobocache" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-13-dobocache.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-13-dobocache.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>idetea</h3>
+  <p class="what">Fast, quiet IDE written in pure Rust (iced), built for working side by side with coding agents; free under Apache 2.0, no built-in chat model. v0.7.0 released Nov 11.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of a chat sidebar, the agent asks the human for decisions through a small file-based JSON protocol — the agent writes a JSON file and the IDE pops up a real form (options, checkboxes, text, images, sounds) for approval, keeping the IDE itself agent-agnostic and quiet.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The JSON decision-request protocol is the portable idea — any tool can adopt &#x27;agent asks, human answers in a real form&#x27; without building a chat UI.</p>
+  <p class="links"><a href="https://github.com/fabiocmazzo/idetea" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-13-idetea.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-13-idetea.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-12 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
