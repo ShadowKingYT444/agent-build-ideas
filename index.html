@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 206 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 211 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-14 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Cyberviber</h3>
+  <p class="what">A $15 ESP32 touchscreen that lists all your Claude Code sessions sorted by urgency, so you can see at a glance which agent needs you.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Claude hooks report session state to a Go daemon over USB serial JSON lines (localhost only, no Wi-Fi); sessions show NEEDS YOU / READY / WORKING / IDLE, and tapping one focuses that terminal pane, tab and window.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Physical ambient status for parallel agents — glance, tap, answer — cheap enough to build at the table.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50496642" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-14-cyberviber.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-14-cyberviber.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Agweb</h3>
+  <p class="what">A native macOS (WebKit) browser built for agents, not humans, with commands mirroring playwright-cli so agents already know the API.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It never steals focus or pops up, suspends idle tabs (five idle pages at 0% CPU and 590 MB vs 1.6 GB for Playwright&#x27;s Chrome), and each reply reports what the action changed so agents need fewer snapshots, tool calls and tokens; secrets stay out of transcripts and &#x27;ask&#x27; hands a tab to the human for MFA/CAPTCHA.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Give a hackathon team a browser that won&#x27;t interrupt them and burns far fewer tokens, with an API they already know.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50497147" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-14-agweb.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-14-agweb.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>ARC 1.0</h3>
+  <p class="what">A 0.6B Apache 2.0 text-classification model that reads an agent&#x27;s conversation and outputs signals for choosing which model to use and how much reasoning effort to spend, combined with available models, prices and policies.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of a bigger model deciding, a tiny 0.6B classifier routes each agent request between cloud and local models, trading cost, latency and capability per turn.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend-sized, composable router — plug it in front of any agent stack to cut API spend without rewriting the agent.</p>
+  <p class="links"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xw29ic/arc_10_a_decision_model_for_routing_ai_agents/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Aris</h3>
+  <p class="what">An open-source macOS agent that lives in the MacBook notch — hold a key and talk or type, and it works across Messages, Mail, Notes, Calendar and Files.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The notch itself is the UI — a literal dead-space interface — and the &#x27;brain&#x27; is swappable (Claude Code, Codex, Antigravity, an API key, or a local model); it sees the screen via point/circle, uses confirm cards before writes, and fences off tainted external text.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The most demoable agent UI of the day — talk to the notch, watch it do desktop work, with explicit confirm-before-write safety.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50497071" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-14-aris.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-14-aris.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Antelog</h3>
+  <p class="what">A free safety layer that stops AI coding agents from leaking or destroying data, working with Claude Code, Cursor and Codex.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Built on the LogAct research paper, it records and checks every tool call — including MCP calls — before it runs; rules are plain language, it distinguishes a local test database from production, and the agent is told why a command was blocked and continues without it.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Run coding agents at hackathon speed with a pre-execution guardrail — one bad agent command can&#x27;t wipe a database or push secrets.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/antelog" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-14-antelog.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-14-antelog.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-13 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
