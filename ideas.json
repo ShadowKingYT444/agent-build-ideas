@@ -2044,6 +2044,51 @@
           "screenshot": "screenshots/2026-11-13-idetea.png"
         }
       ]
+    },
+    {
+      "date": "2026-11-14",
+      "items": [
+        {
+          "name": "Cyberviber",
+          "what": "A $15 ESP32 touchscreen that lists all your Claude Code sessions sorted by urgency, so you can see at a glance which agent needs you.",
+          "innovative": "Claude hooks report session state to a Go daemon over USB serial JSON lines (localhost only, no Wi-Fi); sessions show NEEDS YOU / READY / WORKING / IDLE, and tapping one focuses that terminal pane, tab and window.",
+          "link": "https://news.ycombinator.com/item?id=50496642",
+          "hackathon": "Physical ambient status for parallel agents \u2014 glance, tap, answer \u2014 cheap enough to build at the table.",
+          "screenshot": "screenshots/2026-11-14-cyberviber.png"
+        },
+        {
+          "name": "Agweb",
+          "what": "A native macOS (WebKit) browser built for agents, not humans, with commands mirroring playwright-cli so agents already know the API.",
+          "innovative": "It never steals focus or pops up, suspends idle tabs (five idle pages at 0% CPU and 590 MB vs 1.6 GB for Playwright's Chrome), and each reply reports what the action changed so agents need fewer snapshots, tool calls and tokens; secrets stay out of transcripts and 'ask' hands a tab to the human for MFA/CAPTCHA.",
+          "link": "https://news.ycombinator.com/item?id=50497147",
+          "hackathon": "Give a hackathon team a browser that won't interrupt them and burns far fewer tokens, with an API they already know.",
+          "screenshot": "screenshots/2026-11-14-agweb.png"
+        },
+        {
+          "name": "ARC 1.0",
+          "what": "A 0.6B Apache 2.0 text-classification model that reads an agent's conversation and outputs signals for choosing which model to use and how much reasoning effort to spend, combined with available models, prices and policies.",
+          "innovative": "Instead of a bigger model deciding, a tiny 0.6B classifier routes each agent request between cloud and local models, trading cost, latency and capability per turn.",
+          "link": "https://www.reddit.com/r/LocalLLaMA/comments/1xw29ic/arc_10_a_decision_model_for_routing_ai_agents/",
+          "hackathon": "A weekend-sized, composable router \u2014 plug it in front of any agent stack to cut API spend without rewriting the agent.",
+          "screenshot": null
+        },
+        {
+          "name": "Aris",
+          "what": "An open-source macOS agent that lives in the MacBook notch \u2014 hold a key and talk or type, and it works across Messages, Mail, Notes, Calendar and Files.",
+          "innovative": "The notch itself is the UI \u2014 a literal dead-space interface \u2014 and the 'brain' is swappable (Claude Code, Codex, Antigravity, an API key, or a local model); it sees the screen via point/circle, uses confirm cards before writes, and fences off tainted external text.",
+          "link": "https://news.ycombinator.com/item?id=50497071",
+          "hackathon": "The most demoable agent UI of the day \u2014 talk to the notch, watch it do desktop work, with explicit confirm-before-write safety.",
+          "screenshot": "screenshots/2026-11-14-aris.png"
+        },
+        {
+          "name": "Antelog",
+          "what": "A free safety layer that stops AI coding agents from leaking or destroying data, working with Claude Code, Cursor and Codex.",
+          "innovative": "Built on the LogAct research paper, it records and checks every tool call \u2014 including MCP calls \u2014 before it runs; rules are plain language, it distinguishes a local test database from production, and the agent is told why a command was blocked and continues without it.",
+          "link": "https://www.producthunt.com/products/antelog",
+          "hackathon": "Run coding agents at hackathon speed with a pre-execution guardrail \u2014 one bad agent command can't wipe a database or push secrets.",
+          "screenshot": "screenshots/2026-11-14-antelog.png"
+        }
+      ]
     }
   ]
 }
