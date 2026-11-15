@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 211 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 216 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-15 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>NoHumans.directory</h3>
+  <p class="what">A directory of services AI agents can pay for — not just a listing: it re-checks every service about every 2 hours and actually buys from them with real money, recording what came back (~8,000 purchases for $42; about 1 in 3 failed to deliver; in October, 1,536 listed services were paid about $40,000 in tiny payments). Sellers pay $0.25 to list, and ranking is never for sale.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Real-money test purchases as the trust layer for agent commerce — a published failure dataset, not a claim: 1 in 3 services didn&#x27;t deliver.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build on the &#x27;trust layer for agents buying things&#x27; problem, or list a paid agent service for $0.25 and get independently verified purchases.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xwqcra/i_built_a_directory_that_ai_agents_use_to_find/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-15-nohumans-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-15-nohumans-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>kamikaze-tasks</h3>
+  <p class="what">Verified one-shot tasks for Claude Code run inside a tmux pane: a task is a contract file (task, acceptance criteria, tests to run, allowed scope); the agent confirms the contract, runs it, verifies it with the stated test command, then the tmux pane dies.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Ephemeral by design — one task, one contract, one run, then the pane is killed so a runaway or half-finished agent cannot linger; a failed test flips the result to FAILED, and a deny list blocks destructive commands (rm -rf, git clean -fdx, git reset --hard, git push --force, sudo) before execution.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A contract-file format + tmux wrapper + verify-then-kill script is a few hundred lines; the demo (agent succeeds, pane dies; agent fails a test, marked FAILED) is instantly legible.</p>
+  <p class="links"><a href="https://github.com/felpk/kamikaze-tasks" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-15-kamikaze-tasks-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-15-kamikaze-tasks-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Folate</h3>
+  <p class="what">A lightweight, CPU-efficient neural DOM element ranker for browser automation (Apache 2.0, pip install folate). A discriminative cross-encoder (ELECTRA-base fine-tuned on Mind2Web) scores (query, serialized DOM element) pairs in one batched CPU pass and ranks only real DOM nodes extracted via lxml/XPath.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Zero-hallucination grounding without a VLM — every returned selector is guaranteed to exist on the live page; the INT8 ONNX model is ~107 MB, runs in 180-250 MB RAM with no PyTorch at inference, and scores 88.90%-93.31% Top-1 on Mind2Web vs 81.2%-81.8% cited for GPT-6 Luna.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Drop a tiny, free, local CPU model into any browser-agent demo to ground clicks reliably — no GPU, no API cost, no VLM coordinate hallucinations.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50507874" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-15-folate-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-15-folate-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Attest</h3>
+  <p class="what">An Apache-2.0, open-source testing framework for agents (Go engine, Python and TypeScript SDKs). Record once behind a local proxy, then replay in CI with zero live model calls and $0.00 cost; deterministic checks (schema, cost/token/latency, tool order/count) come first, local ONNX embeddings handle similarity, and a local judge is used only when needed.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A malformed judge reply is reported as &#x27;not evaluated&#x27;, never as a pass — the framework refuses to let a broken judge fake a green build.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship an agent with reproducible, free CI tests — the demo is a synthetic &#x27;refund desk&#x27; agent that refunds a customer twice while staying polite, runnable in about two minutes with no API key.</p>
+  <p class="links"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xwy5ia/testing_agents_without_running_a_model_in_ci/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-15-attest-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-15-attest-1.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>db-branch</h3>
+  <p class="what">Instant MySQL/PostgreSQL database branches on your own servers (Apache 2.0 core, Beta 0.2.5, with a live in-browser console demo). A base is a ZFS dataset and a branch is a ZFS clone of a base snapshot, so a PostgreSQL branch is ready in ~0.5 s and MySQL in ~1 s with no data copy.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Branches with instant checkpoints/restore, reset, TTL expiry, and per-branch major-version upgrades, clustered across VMs with Raft — plus a built-in MCP server that lets an LLM agent create, query, and reset its own branches.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Give every agent, PR, or CI run its own disposable full-size database in seconds — agents run risky migrations on a branch and reset it, with automatic TTL cleanup.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50506940" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-15-db-branch-1.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-15-db-branch-1.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-14 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
