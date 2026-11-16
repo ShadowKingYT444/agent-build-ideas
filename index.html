@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 216 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 221 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-16 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Turbo-Browser-MCP</h3>
+  <p class="what">A Playwright MCP server (MIT, 11 tools) that cuts agent turns and tokens when driving a browser: smart_fill_form fills a whole form in one call, and inspect_compact returns only what changed since the last snapshot.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Consolidated tools plus layered commit safety: a submit guard on by default (Submit/Send/Publish/Pay/Confirm in English, Korean, Japanese, Chinese and Vietnamese), a submissionKey JSONL ledger that refuses duplicate submits, and expect{} returning submitVerified with evidence such as a receipt number, so an agent cannot report &quot;done&quot; on a submission that never happened. Measured: a 10-field form went from 11 turns / 72,614 cumulative tokens to 1 turn / 811 tokens.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> An agent that fills real forms and wizards in one turn, with a guard that stops it double-submitting or paying twice, is a strong demo of &quot;agents you can trust with the browser.&quot;</p>
+  <p class="links"><a href="https://github.com/Tthanh2k6/turbo-browser-mcp" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-16-turbo-browser-mcp.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-16-turbo-browser-mcp.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>StateWeave</h3>
+  <p class="what">Runs an AI agent in sandboxes of the apps it works in — stateful clones of Slack, Gmail, Salesforce, Shopify, Zendesk, Google Calendar, Sheets, Drive, WhatsApp, and Teams — with the same APIs, MCP servers, and UIs as the real apps. You describe a scenario, it fills every app with consistent data, and graded runs show which checks failed and the exact calls behind them.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of mocking one API, it builds a whole consistent, cross-app stateful world for the agent, then injects faults such as outages and 401s — with a fresh copy for every run.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A ready-made eval harness for a hackathon agent — demo it surviving an injected outage, with graded proof, before the live demo.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/stateweave" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-16-stateweave.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-16-stateweave.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>CallForMe</h3>
+  <p class="what">Lets the agent you already use (Claude, ChatGPT, Cursor, Codex) phone businesses for you: you ask for the errand, it calls on a recorded line, navigates menus and holds, and returns the answers. No app and no signup — add one link to your agent. $1 per answered call.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A live mid-call loop: if the business asks something the agent does not know, the question comes back to your agent while the call is still going. Plus a fake practice restaurant, Maple Street Pizza, so agents can rehearse on a phone menu and host without bothering a real business.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> One link turns any agent demo into a phone-calling demo, and the fake pizza place is a ready-made test harness for judging voice agents.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1xxrwox/callforme_lets_the_agent_you_already_use_claude/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-16-callforme.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-16-callforme.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>xeet</h3>
+  <p class="what">A hermetic, pixel-perfect X post renderer in safe Rust/wasm that renders a post to PNG in ~1ms, with zero browser, network, filesystem, or system fonts. Previewing a post before publishing is &quot;great for both humans and agents,&quot; and rendering is 100x–1000x faster than booting a browser for a screenshot.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Structured as an &quot;autorepo&quot;: an oracle boots Chrome and verifies tens of thousands of text-layout rules, a CI canary watches the original evolve, and it files signed PRs for agents to act on. The repo is designed to be maintained by agents, not just used by them.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Ship a narrow renderer (one post layout, one font set) in Rust/wasm in a weekend; the oracle-verification loop is the hackathon-worthy twist to copy at small scale.</p>
+  <p class="links"><a href="https://x.com/rauchg/status/2122184794209714368" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-16-xeet.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-16-xeet.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>ffmpeg-skill</h3>
+  <p class="what">A local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server for Claude Code, Cursor, and Codex (cut, captions, reframe, loudness, platform exports). No cloud, no API keys.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> SPEC (Self-Producing Execution Contract): each tool&#x27;s input_schema is generated live from its argparse parser, so the MCP tool definitions can never drift from the CLI, and CI fails if docs or schema drift. Every job is also verified after execution (probe, check, and a contact sheet the agent inspects).</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The weekend version is 3–5 tools (probe, cut, caption, export) plus a parser-derived contract and a verify step.</p>
+  <p class="links"><a href="https://github.com/kajisho5/ffmpeg-skill" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-16-ffmpeg-skill.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-16-ffmpeg-skill.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-15 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
