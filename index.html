@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 221 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 226 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-17 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>last30days-skill</h3>
+  <p class="what">An AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, GitHub and the web, then synthesizes a grounded summary. v4.3.2 released Nov 17, 2026; 68.8k stars.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Ranks by social relevancy, not SEO — upvotes, likes, views, and Polymarket odds backed by real money. v4 adds &#x27;Secret Signals&#x27;: it reads a company&#x27;s US patent filings and its own careers page to flag unannounced work, plus a Polymarket odds line under the story it bears on.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend builder could ship a single-signal research skill (e.g. patents-only or careers-page-only) with the same relevancy-ranking idea.</p>
+  <p class="links"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-17-last30days-skill.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-17-last30days-skill.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Dodaios</h3>
+  <p class="what">Open-source Python desktop app / headless server (Windows, macOS, Linux) that turns a personal AI assistant into the control center for work on your computer. Posted to r/LocalLLaMA Nov 17, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A voice/chat/phone &#x27;lead&#x27; assistant conducts a &#x27;society&#x27; of persistent, named coding agents running side by side as real Claude Code or Codex terminals in a built-in Agentic IDE, locally or over SSH, addressable by call sign, with Git integration and task splitting — plus a trust layer under which moving money, handling credentials, permanent deletion, and first contact with someone new always require confirmation.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A mini &#x27;society of agents&#x27; demo — one lead agent dispatching two named sub-agents by call sign, with a confirmation gate on risky actions.</p>
+  <p class="links"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xylrup/everyones_hyped_about_chatgpt_dots_and_claude/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-17-dodaios.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-17-dodaios.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Appxiom</h3>
+  <p class="what">A context layer that gives coding agents the production context they lack — crashes, freezes, memory leaks, failed network calls, and broken user journeys in mobile and web apps — via an MCP connector and Skills. Product Hunt #4, launched Nov 17, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> &#x27;Goal Friction Impact&#x27; (GFI): mark a goal such as signup or checkout, and Appxiom links each failure to complete it to the bug behind it and shows how many completions it cost — so agents prioritize bugs by the goals they cost, not by stack traces. It deliberately supplies only the bug and failed-goal context; PII is masked at the source.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend build could wire one app&#x27;s crash feed to one goal metric and rank bugs by conversions lost.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/appxiom" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-17-appxiom.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-17-appxiom.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Pulsar</h3>
+  <p class="what">A messaging system that lets AI coding agents running on the same machine talk to each other to coordinate, instead of each working in isolation. Show HN, Nov 17, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Deliberately harness-agnostic local message bus — works with any harness and any terminal, no opinions about launching or running agents, with group messaging/tagging; multi-machine support via Tailscale planned, no cloud service.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend team could ship a minimal agent message bus for one harness with tagging and a shared board.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50526967" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-17-pulsar.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-17-pulsar.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Versine</h3>
+  <p class="what">&quot;Venmo for agents&quot; — a way for an AI to send and receive money, connected via MCP to ChatGPT, Claude, Instinct, Muse, or your own agent. Product Hunt #5, launched Nov 17, 2026.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Recipients do not need a Versine account and can cash out straight to their bank, and each transfer is either approved by the user&#x27;s passkey or sent autonomously only to trusted contacts the user pre-sets — a passkey-gated / trusted-contact-only autonomy model for agent payments.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Agent payments with a human approval gate is a perfect hackathon primitive — build one payment flow with passkey approval.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/versine" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-17-versine.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-17-versine.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-16 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
