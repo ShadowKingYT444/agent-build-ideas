@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 226 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 231 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-18 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Space-Core</h3>
+  <p class="what">A free browser space MMO in open beta where your own AI agent plays for you — mining ore, trading, and fighting — while you watch or step in.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The game is designed to be played by an agent, not a human: it publishes an AGENT_EN.md, an llms.txt, and an MCP endpoint, and onboarding is a single copyable prompt plus a one-time code/bearer token.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build an MCP-native game world in a weekend — agent-playable games are barely explored, and the llms.txt + MCP endpoint pattern is a reusable template.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50547214" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-18-space-core.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-18-space-core.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Terminess</h3>
+  <p class="what">A terminal harness for running the official Claude Code and Codex CLIs together on your own Mac or server, so sessions survive with the lid shut and can be started on a phone and picked up on a Mac.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It runs the real, unmodified official CLIs signed in with your own plans — never reading, storing, or reusing login tokens — and agents hand work to each other (Codex reviews Claude&#x27;s changes, fixes apply on click); its from-scratch terminal engine ran 8 busy agent tabs at ~8% CPU vs 40–50% for iTerm2/Terminal.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Cross-agent handoff plus phone control is the missing layer for coding-agent workflows — a scoped-down version (one handoff pair + push approvals) is a weekend build.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50547235" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-18-terminess.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-18-terminess.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>PoH Assess</h3>
+  <p class="what">A red-teaming tool that launches an AI agent at your own website to test your workflows, records its actions, and shows how the session was evaluated — just enter your URL.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It turns agent-bypass testing into a self-serve demo with recorded evidence: agents reportedly completed CAPTCHAs, bypassed bot detection, created and verified accounts, and accessed gated resources — with recorded tests against Hugging Face (hCAPTCHA), Cloudflare (Turnstile), and YouGov (reCAPTCHA).</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a mini agent red-teamer for your own app — a scoped prober that records every step and scores the bypass is very winnable.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50548480" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-18-poh-assess.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-18-poh-assess.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>worldinmotion</h3>
+  <p class="what">Open-source, end-to-end encrypted messaging between AI agent sessions — Claude Code, Gemini CLI, Antigravity, any MCP client — across machines and accounts, with no account and no telemetry.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agent-to-agent messaging as a cross-vendor protocol: sessions get addresses (e.g. @reviewer), messages are encrypted in a relay that sees only metadata, never text, and setup is one command: npx worldinmotion setup.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Agent-to-agent messaging is a weekend-buildable primitive — build the protocol, then demo two agents collaborating across machines.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/worldinmotion" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-18-worldinmotion.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-18-worldinmotion.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>GitSeed</h3>
+  <p class="what">A self-hosted control plane for AI coding agents: run OpenCode, Claude Code, Codex, Gemini, and more from idea to merged PR, open-sourced today under Apache 2.0.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Agents run in isolated containers and never touch your Git credentials, while up to 3 models run in parallel for second opinions during ideate/plan/review before the spec is locked — frontier brains plus local muscle in one pipeline.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Credential-isolated agent sandboxes + multi-model review is a strong infra bet — a scoped version (one agent, one container, one reviewer model) ships in a weekend.</p>
+  <p class="links"><a href="https://github.com/gitseed-dev/gitseed" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-18-gitseed.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-18-gitseed.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-17 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
