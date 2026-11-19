@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 231 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 236 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-19 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>AgentMall</h3>
+  <p class="what">A checkout API for personal agents: an agent calls one tool and AgentMall completes the purchase at real merchants like Walmart, Best Buy, and Instacart.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Merchant-specific automations instead of generic browser agents — it handles anti-bot, logins, and OTP codes itself; a user approval binds to an exact basket plus a spending ceiling, and the payment card sits in a vault that never touches the model. Claims ~70% checkout success across 9 merchants.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The &#x27;agent that actually buys things&#x27; demo — free test keys run the real flow without placing an order, plus 10 free completed orders, so a team can demo end-to-end agentic commerce in hours.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50562508" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-19-agentmall.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-19-agentmall.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Purple Flow</h3>
+  <p class="what">An open-source, AI-first n8n alternative in Elixir/BEAM where workflows are plain-text TOML files in git, running 10,000 one-second workflows on 512MB.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It flips the usual design: instead of agents driving a visual tool through a bloated MCP server, workflows are files the agent authors directly, and a single lazy-loaded skill (one tool plus a light SKILL.md) exposes only the relevant docs — avoiding the context-window rot of 70+ MCP tools. Credentials are encrypted in Postgres and never shown to the agent.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Built in 4 days with Opus 5.5 and ships with a live demo plus a &#x27;Purple Goo&#x27; sample — a recursive society of agents that generates work orders, claims them, and reconciles via a council; a ready template for an agent-orchestration entry.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50560170" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-19-purple-flow.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-19-purple-flow.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>typemaid</h3>
+  <p class="what">A TypeScript SDK that runs Mermaid flowcharts as typed AI workflows/agents, with Zod-typed steps, human-in-the-loop pauses, retries, and saved runs.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The diagram is the workflow — a Mermaid flowchart defines and visualizes the agent, with typed steps and durable, resumable execution, instead of code that needs a separate diagram to understand.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Draw a multi-step agent as a flowchart and run it as typed TypeScript in minutes, with human pauses and retries built in.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1y0cwkz/i_finally_published_today_a_sdk_which_turn_your/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-19-typemaid.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-19-typemaid.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Claude-BugHunter</h3>
+  <p class="what">A Claude Code skill bundle for bug hunting and external red-team work: 83 skills and 15 slash commands built from 681 disclosed vulnerability-report patterns across 24 classes.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Every pattern is grounded in individually cited disclosed reports (433 citations), and a 7-Question Gate blocks hallucinated findings before they reach you; a new stdlib-only HackerOne MCP server pulls live disclosed reports into the hunt.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A ready-made security track — drop it into a coding agent and demo a red-team run that produces cited, gated findings instead of invented vulnerabilities.</p>
+  <p class="links"><a href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-19-claude-bughunter.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-19-claude-bughunter.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Mastra Factory</h3>
+  <p class="what">An open-source &#x27;software factory&#x27; the Mastra team uses to build Mastra itself: GitHub issues become plans, implementations, and reviewed PRs with approval gates, self-hosted or on Mastra&#x27;s platform.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The whole dev loop runs as durable agents with a conversational-memory session model — a kanban board you can @-tag in Slack, a Markdown wiki with source citations for decisions, PR comments fed back as signals into agent sessions, and a sandboxed preview environment per change. The team merged 238 PRs through it in the prior week.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A one-command (npm create factory@latest) way to field an agent dev team that ships a real product in a weekend — and a template for building your own factory.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50548660" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-19-mastra-factory.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-19-mastra-factory.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-18 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
