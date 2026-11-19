@@ -2269,6 +2269,51 @@
      "screenshot": "screenshots/2026-11-18-gitseed.png"
     }
    ]
+  },
+  {
+   "date": "2026-11-19",
+   "items": [
+    {
+     "name": "AgentMall",
+     "what": "A checkout API for personal agents: an agent calls one tool and AgentMall completes the purchase at real merchants like Walmart, Best Buy, and Instacart.",
+     "innovative": "Merchant-specific automations instead of generic browser agents — it handles anti-bot, logins, and OTP codes itself; a user approval binds to an exact basket plus a spending ceiling, and the payment card sits in a vault that never touches the model. Claims ~70% checkout success across 9 merchants.",
+     "link": "https://news.ycombinator.com/item?id=50562508",
+     "hackathon": "The 'agent that actually buys things' demo — free test keys run the real flow without placing an order, plus 10 free completed orders, so a team can demo end-to-end agentic commerce in hours.",
+     "screenshot": "screenshots/2026-11-19-agentmall.png"
+    },
+    {
+     "name": "Purple Flow",
+     "what": "An open-source, AI-first n8n alternative in Elixir/BEAM where workflows are plain-text TOML files in git, running 10,000 one-second workflows on 512MB.",
+     "innovative": "It flips the usual design: instead of agents driving a visual tool through a bloated MCP server, workflows are files the agent authors directly, and a single lazy-loaded skill (one tool plus a light SKILL.md) exposes only the relevant docs — avoiding the context-window rot of 70+ MCP tools. Credentials are encrypted in Postgres and never shown to the agent.",
+     "link": "https://news.ycombinator.com/item?id=50560170",
+     "hackathon": "Built in 4 days with Opus 5.5 and ships with a live demo plus a 'Purple Goo' sample — a recursive society of agents that generates work orders, claims them, and reconciles via a council; a ready template for an agent-orchestration entry.",
+     "screenshot": "screenshots/2026-11-19-purple-flow.png"
+    },
+    {
+     "name": "typemaid",
+     "what": "A TypeScript SDK that runs Mermaid flowcharts as typed AI workflows/agents, with Zod-typed steps, human-in-the-loop pauses, retries, and saved runs.",
+     "innovative": "The diagram is the workflow — a Mermaid flowchart defines and visualizes the agent, with typed steps and durable, resumable execution, instead of code that needs a separate diagram to understand.",
+     "link": "https://www.reddit.com/r/SideProject/comments/1y0cwkz/i_finally_published_today_a_sdk_which_turn_your/",
+     "hackathon": "Draw a multi-step agent as a flowchart and run it as typed TypeScript in minutes, with human pauses and retries built in.",
+     "screenshot": "screenshots/2026-11-19-typemaid.png"
+    },
+    {
+     "name": "Claude-BugHunter",
+     "what": "A Claude Code skill bundle for bug hunting and external red-team work: 83 skills and 15 slash commands built from 681 disclosed vulnerability-report patterns across 24 classes.",
+     "innovative": "Every pattern is grounded in individually cited disclosed reports (433 citations), and a 7-Question Gate blocks hallucinated findings before they reach you; a new stdlib-only HackerOne MCP server pulls live disclosed reports into the hunt.",
+     "link": "https://github.com/elementalsouls/Claude-BugHunter",
+     "hackathon": "A ready-made security track — drop it into a coding agent and demo a red-team run that produces cited, gated findings instead of invented vulnerabilities.",
+     "screenshot": "screenshots/2026-11-19-claude-bughunter.png"
+    },
+    {
+     "name": "Mastra Factory",
+     "what": "An open-source 'software factory' the Mastra team uses to build Mastra itself: GitHub issues become plans, implementations, and reviewed PRs with approval gates, self-hosted or on Mastra's platform.",
+     "innovative": "The whole dev loop runs as durable agents with a conversational-memory session model — a kanban board you can @-tag in Slack, a Markdown wiki with source citations for decisions, PR comments fed back as signals into agent sessions, and a sandboxed preview environment per change. The team merged 238 PRs through it in the prior week.",
+     "link": "https://news.ycombinator.com/item?id=50548660",
+     "hackathon": "A one-command (npm create factory@latest) way to field an agent dev team that ships a real product in a weekend — and a template for building your own factory.",
+     "screenshot": "screenshots/2026-11-19-mastra-factory.png"
+    }
+   ]
   }
  ]
 }
