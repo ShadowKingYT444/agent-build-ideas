@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 236 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 241 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-20 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Frowse</h3>
+  <p class="what">A drop-in agent-browser CLI (Go, Apache-2.0) that replaces the browser tools of Claude Code, Codex, Copilot and Gemini, claiming 90%+ lower token spend.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Throws away the two expensive habits of agent browsers — full accessibility-tree snapshots and vision-LLM grounding — and sends the model a ~100–300-token deduplicated, landmark-grouped DOM summary, while a local INT8 ONNX model (Folate, 10–25 ms on CPU, $0) resolves natural-language prompts like &#x27;Run Search button&#x27; to a CSS/XPath selector.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Swap a browser agent&#x27;s full AX-tree snapshots for a landmark-grouped DOM summary plus a tiny local ranker for element grounding — a weekend build.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50575434" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-20-frowse.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-20-frowse.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>UndoGuard</h3>
+  <p class="what">A &#x27;Ctrl+Z&#x27; rollback proxy and MCP server by solo maker Jort Dockx that sits between agents and APIs, automatically snapshotting and AES-256-encrypting state before every mutating call so you can revert a single mistake or a whole agent session in one click.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Pre-state snapshots plus an encrypted, sessionId-tied audit log turn irreversible-looking agent writes into reversible ones, with a configurable hold-and-delay window and non_reversible flagging for emails and webhooks.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A proxy that snapshots one API (e.g. a CRM) before writes and exposes an undo endpoint is a classic weekend build.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/undoguard" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-20-undoguard.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-20-undoguard.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>tensorViz</h3>
+  <p class="what">A free, open-source (MIT) tool that lets a coding agent see inside a PyTorch model: one real forward pass becomes an interactive graph with every module and measured tensor shape, so Claude Code, Codex and Cursor fix model code from evidence instead of guesses. Its Model Explorer also has graphs of 560+ models from recent papers.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Gives agents measured runtime tensor shapes from a real forward pass — an agent-searchable graph of what actually flows through the model — not static code analysis.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A single-model tracer that dumps shapes to a searchable JSON/graph for one framework is a weekend build.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/tensorviz" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-20-tensorviz.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-20-tensorviz.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Benchmark Router</h3>
+  <p class="what">A CLI, web app and API that runs 25 official AI benchmarks (24,525 samples) on any model or agent harness from one place, at a claimed 10% of model API cost via a metered gateway.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Swappable agent harnesses (claude-code, codex, opencode, openhands, aider, pi, hermes, openclaw) on the official Harbor benchmarks, with full downloads for every run — results.json, tasks.csv, SHA-256 manifest, logs and trajectories.jsonl.gz — so a benchmark claim can actually be checked.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Benchmark your own agent against frontier models in minutes and publish a leaderboard instead of spending the hackathon wiring up benchmarks.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1y17lps/we_built_benchmark_router_to_run_25_official_ai/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-20-benchmark-router.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-20-benchmark-router.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Qwen3.8-27B super adapter</h3>
+  <p class="what">One rank-96 LoRA adapter that improves three agent harnesses at once: SWE-Bench Pro mean 55% to 63% with 53–73% fewer tool calls, also improving SWE-Bench Multilingual and Terminal-Bench 2.0.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A single small adapter generalizes across harnesses and cuts tool calls by more than half, instead of training a separate model per harness — the efficiency gain is the product.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A cheap, local, fast agent model that makes fewer (and cheaper) tool calls keeps a local-agent demo fast and affordable.</p>
+  <p class="links"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y16sam/qwen3827b_super_adapter_one_rank96_lora_that/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-20-qwen-super-adapter.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-20-qwen-super-adapter.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-19 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
