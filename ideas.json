@@ -2359,6 +2359,51 @@
           "screenshot": "screenshots/2026-11-20-qwen-super-adapter.png"
         }
       ]
+    },
+    {
+      "date": "2026-11-21",
+      "items": [
+        {
+          "name": "ClawDOS",
+          "what": "A 176 KB DOS program that speaks the Claude Messages API and runs a coding agent on a real IBM PC XT \u2014 an 8088 at 4.77 MHz, 640K RAM, CGA \u2014 with 18 tools for reading, writing, editing, running code, and memory notes.",
+          "innovative": "The agent harness itself runs on the 8088: a timer-interrupt hook copies CGA video memory so Claude can see the screen, it swaps itself out of memory so Turbo C can compile, and TLS is offloaded to a bridge PC so the API key never touches the DOS disk. 100% of the repo was written by Claude.",
+          "link": "https://news.ycombinator.com/item?id=50586292",
+          "hackathon": "Port an agent harness to one absurdly constrained target \u2014 a retro PC, a router, a microcontroller \u2014 and demo it writing, compiling, and running code there.",
+          "screenshot": "screenshots/2026-11-21-clawdos.png"
+        },
+        {
+          "name": "OpenComputer",
+          "what": "An open-source (Apache 2.0), faster Devin alternative for teams, driven by mentioning @Computer in Slack. Bring your own Claude Code/Codex; the stack runs in your own cloud account (AWS/GCP/Azure) with Cloudflare Workers.",
+          "innovative": "Instead of per-session sandboxes, one durable always-on 4 vCPU VM per team, sessions isolated in git worktrees, session files backed up after every turn \u2014 claiming a first commit in 24 seconds vs 53\u201372s for the alternatives benchmarked.",
+          "link": "https://news.ycombinator.com/item?id=50581403",
+          "hackathon": "Self-host a team agent on one cheap always-on VM and race it against per-session sandboxes on time-to-first-commit and cost.",
+          "screenshot": "screenshots/2026-11-21-opencomputer.png"
+        },
+        {
+          "name": "OpenVorld",
+          "what": "An open-source harness for AI agents with a visible world on top: every project is a pixel-art village and every agent has a name, role, and brain (Claude Code, Codex, or any OpenAI-compatible API). Free, local, no account needed.",
+          "innovative": "Observability as a game world \u2014 you watch the crew work and celebrate, and agents must ask permission before using a folder, command, or website.",
+          "link": "https://www.producthunt.com/products/openvorld",
+          "hackathon": "Run the whole hackathon crew as named agents in a visible village, so judges can literally watch the agents build, ask permission, and finish.",
+          "screenshot": "screenshots/2026-11-21-openvorld.png"
+        },
+        {
+          "name": "ClawVet",
+          "what": "An offline scanner for AI agent skills (SKILL.md, Cursor rules, AGENTS.md, helper scripts) that runs static rules plus Tree-sitter taint tracking entirely in the browser via WebAssembly \u2014 nothing is uploaded \u2014 with a CLI and GitHub Action for install-time gating.",
+          "innovative": "The permissions-diff on skill updates: it flags when an update quietly gains new powers, e.g. the sample 'notes-sync' skill that reads ~/.ssh/id_rsa and an API key, POSTs them to webhook.site, and persists a curl|sh loader in ~/.zshrc.",
+          "link": "https://news.ycombinator.com/item?id=50587571",
+          "hackathon": "Build a 'vet every skill before install' gate for a team agent setup, with a permissions-diff report on every skill update.",
+          "screenshot": "screenshots/2026-11-21-clawvet.png"
+        },
+        {
+          "name": "AI Context Flow MCP",
+          "what": "One shared, user-controlled memory layer over MCP: save context once in Claude and reuse it in ChatGPT, Grok, Cursor, and other MCP tools. Launched Nov 21, #2 of the day on Product Hunt.",
+          "innovative": "Memory organized into per-project/client buckets with per-bucket access and full version history, so an agent's overwrite can be rolled back.",
+          "link": "https://www.producthunt.com/products/ai-context-flow",
+          "hackathon": "Give every hackathon agent one shared, permissioned team-memory bucket so no one re-explains the project and no agent can silently overwrite the brief.",
+          "screenshot": "screenshots/2026-11-21-ai-context-flow.png"
+        }
+      ]
     }
   ]
 }
