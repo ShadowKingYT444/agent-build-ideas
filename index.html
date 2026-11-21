@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 241 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 246 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-21 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>ClawDOS</h3>
+  <p class="what">A 176 KB DOS program that speaks the Claude Messages API and runs a coding agent on a real IBM PC XT — an 8088 at 4.77 MHz, 640K RAM, CGA — with 18 tools for reading, writing, editing, running code, and memory notes.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The agent harness itself runs on the 8088: a timer-interrupt hook copies CGA video memory so Claude can see the screen, it swaps itself out of memory so Turbo C can compile, and TLS is offloaded to a bridge PC so the API key never touches the DOS disk. 100% of the repo was written by Claude.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Port an agent harness to one absurdly constrained target — a retro PC, a router, a microcontroller — and demo it writing, compiling, and running code there.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50586292" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-21-clawdos.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-21-clawdos.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>OpenComputer</h3>
+  <p class="what">An open-source (Apache 2.0), faster Devin alternative for teams, driven by mentioning @Computer in Slack. Bring your own Claude Code/Codex; the stack runs in your own cloud account (AWS/GCP/Azure) with Cloudflare Workers.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of per-session sandboxes, one durable always-on 4 vCPU VM per team, sessions isolated in git worktrees, session files backed up after every turn — claiming a first commit in 24 seconds vs 53–72s for the alternatives benchmarked.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Self-host a team agent on one cheap always-on VM and race it against per-session sandboxes on time-to-first-commit and cost.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50581403" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-21-opencomputer.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-21-opencomputer.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>OpenVorld</h3>
+  <p class="what">An open-source harness for AI agents with a visible world on top: every project is a pixel-art village and every agent has a name, role, and brain (Claude Code, Codex, or any OpenAI-compatible API). Free, local, no account needed.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Observability as a game world — you watch the crew work and celebrate, and agents must ask permission before using a folder, command, or website.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Run the whole hackathon crew as named agents in a visible village, so judges can literally watch the agents build, ask permission, and finish.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/openvorld" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-21-openvorld.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-21-openvorld.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>ClawVet</h3>
+  <p class="what">An offline scanner for AI agent skills (SKILL.md, Cursor rules, AGENTS.md, helper scripts) that runs static rules plus Tree-sitter taint tracking entirely in the browser via WebAssembly — nothing is uploaded — with a CLI and GitHub Action for install-time gating.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The permissions-diff on skill updates: it flags when an update quietly gains new powers, e.g. the sample &#x27;notes-sync&#x27; skill that reads ~/.ssh/id_rsa and an API key, POSTs them to webhook.site, and persists a curl|sh loader in ~/.zshrc.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a &#x27;vet every skill before install&#x27; gate for a team agent setup, with a permissions-diff report on every skill update.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50587571" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-21-clawvet.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-21-clawvet.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>AI Context Flow MCP</h3>
+  <p class="what">One shared, user-controlled memory layer over MCP: save context once in Claude and reuse it in ChatGPT, Grok, Cursor, and other MCP tools. Launched Nov 21, #2 of the day on Product Hunt.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Memory organized into per-project/client buckets with per-bucket access and full version history, so an agent&#x27;s overwrite can be rolled back.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Give every hackathon agent one shared, permissioned team-memory bucket so no one re-explains the project and no agent can silently overwrite the brief.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/ai-context-flow" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-21-ai-context-flow.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-21-ai-context-flow.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-20 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
