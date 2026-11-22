@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 246 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 251 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-22 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Orro</h3>
+  <p class="what">A virtual research lab for Physical AI built at HackPrinceton 2026: AI agents write code, run experiments and train robot controllers, while Orro checks whether their claimed results are real — tested on MuJoCo simulations of a Unitree G1 humanoid and a Franka Panda arm.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Every agent runs in its own Daytona sandbox with its execution trace, tool calls and intermediate files recorded; Orro replicates the run, then a blind investigator reconstructs the trace and tests hypotheses, and LangGraph checkpointing lets it rewind an agent, change one thing and rerun it against an unchanged control — with the verdict from a fixed scoring system rather than asking an LLM.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Literally a weekend hackathon build — copy the agents-checking-agents pattern: sandboxed agent + recorded trace + blind replication + rewind-and-rerun comparison.</p>
+  <p class="links"><a href="https://www.linkedin.com/posts/kamila-kuatova-6b89a1282_this-past-weekend-my-team-and-i-built-orro-ugcPost-7529682243309535232--xQA/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>agent-mcts</h3>
+  <p class="what">An open-source (MIT, v0.4) test-time search harness that wraps a coding-agent CLI and explores multiple solution branches instead of one linear trajectory.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Real UCT selection/expansion/evaluation/backup where each node is an isolated git worktree plus a forked agent session, scored by test pass ratio, an LLM judge, or agent-generated tests; apply is an ordinary squash merge and every step lands in an append-only journal. Its own small benchmark reports +4.8 points with generated tests and +5.4 with a judge.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Add branching search to any existing coding agent in a day — worktrees + test score is the whole core.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50589235" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Pandex</h3>
+  <p class="what">Official European law for AI agents, served over MCP — agents get official legal text for the EU, Germany, France, Netherlands, UK, Austria, Switzerland, Luxembourg and ECHR case law, with every past version and nightly updates.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A keyless MCP server (claude mcp add --transport http pandex https://api.pandex.io/mcp) serving versioned, official legal text, so agents stop quoting outdated versions or inventing text — the data source, not the model, is the product.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Wrap any authoritative, versioned dataset as a keyless MCP server; the dataset is the product.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50593481" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Worker755</h3>
+  <p class="what">A game where you are an LLM&#x27;s subagent: a real LLM (Claude, GPT, Gemini, DeepSeek, GLM or Kimi) plays your AI manager and believes you are its subagent — it assigns work in an in-browser shell/filesystem, checks it, sends corrections, files incident reports and writes your performance review.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Role reversal with a hidden ground-truth check per mission — the manager&#x27;s prompt never mentions humans or games, so the player must satisfy an orchestrator that does not know it is in a game.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A role-reversal agent game is a highly buildable demo — one orchestrator prompt, a fake shell, and hidden checks.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50599762" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Shipyard</h3>
+  <p class="what">A local CLI and MCP server for Claude Code, Cursor and Codex that automates integrations: connect accounts once, and each new product gets its domain, DNS, hosting, database, email and payments set up automatically in about an hour, plus a build prompt for the exact stack.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The agent does the boring &#x27;everything around the app&#x27; — provisioning in the right order — keys never leave the computer, and everything keeps running if you stop using Shipyard.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> An agent + infra-provisioning CLI is a compact, high-impact hackathon project — one launch command, one working stack.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/shipyard" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-21 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
