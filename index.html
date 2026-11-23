@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 251 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 256 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-23 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Worker 755</h3>
+  <p class="what">A browser game where a real LLM manager (Claude, GPT, Gemini, DeepSeek, local Ollama, or Claude Code) delegates shell work to you in a simulated terminal — you play the subagent, on a countdown, with incident reports and a performance review.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The manager grades your work against hidden ground-truth checks for each mission, so the game doubles as an eval harness for how well an LLM manages a human or agent — and your keystrokes never leave the browser except as anonymized per-shift summaries.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Clone the inversion in a weekend — an LLM manager plus hidden-check missions is a playable agent-eval demo.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50599762" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-23-worker-755.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-23-worker-755.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Feega</h3>
+  <p class="what">A free, open-source visual editor for your codebase: click any element in your running app, edit it like in Figma, and the change is written straight into your code — works next to Claude Code and Cursor with no AI credits and no lock-in.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It replaces describing UI edits to an agent in prose with direct visual manipulation that produces a code diff — the human points at the pixels, the tool writes the patch.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Clone the pattern for any framework in a weekend — the fastest way to demo agent-assisted UI work.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1y3lp93/i_got_tired_of_describing_ui_edits_to_my_agents/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-23-feega.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-23-feega.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Verfy</h3>
+  <p class="what">An MIT CLI that checks your AI coding agent&#x27;s tool calls before they run: it pins MCP tool definitions and agent-loaded files into a verfy.lock of SHA-256 hashes and blocks any tool that changed after you approved it.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It treats MCP tools like npm dependencies — a lockfile for tools, not just code — so a silently edited tool definition is a hard failure instead of a prompt-injection vector, with a deterministic allow/ask/deny guard on every PreToolUse call and signed hash-chained receipts.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A hook plus a hash-lockfile guard is a small, shippable agent-safety layer for any coding agent.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50614956" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-23-verfy.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-23-verfy.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>ELBI</h3>
+  <p class="what">An Apache-2.0 MCP server that gives data agents an empirical memory: past analytical work is stored as cached &#x27;derivations&#x27; (Python functions with declared inputs, cached against code plus data), and 30+ verify_* tools return sound, unsound, or inconclusive for claims like &#x27;is this query trustworthy?&#x27;</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Memory is empirical, not retrieval — a skill is only reused if its past results were verified and are not stale, so the agent learns what actually worked instead of recalling text.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a verified-claim memory layer for a data agent in a day — the sound/unsound/inconclusive verdict is the demo.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50611885" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-23-elbi.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-23-elbi.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Blobby</h3>
+  <p class="what">A macOS menu-bar app that shows each running Claude Code, Codex, or Gemini CLI session as a blob next to the MacBook notch — working, finished, or waiting for you — with one click to its terminal tab.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It reads the state files the CLIs&#x27; own hooks already write, and warns when two agents edit the same file, offering each agent its own git worktree — then shows what changed and whether tests passed.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A hook-driven multi-agent traffic light and collision detector is very buildable and solves a real parallel-agent pain.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50612033" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-23-blobby.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-23-blobby.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-22 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
