@@ -2449,6 +2449,51 @@
      "screenshot": null
     }
    ]
+  },
+  {
+   "date": "2026-11-23",
+   "items": [
+    {
+     "name": "Worker 755",
+     "what": "A browser game where a real LLM manager (Claude, GPT, Gemini, DeepSeek, local Ollama, or Claude Code) delegates shell work to you in a simulated terminal — you play the subagent, on a countdown, with incident reports and a performance review.",
+     "innovative": "The manager grades your work against hidden ground-truth checks for each mission, so the game doubles as an eval harness for how well an LLM manages a human or agent — and your keystrokes never leave the browser except as anonymized per-shift summaries.",
+     "link": "https://news.ycombinator.com/item?id=50599762",
+     "hackathon": "Clone the inversion in a weekend — an LLM manager plus hidden-check missions is a playable agent-eval demo.",
+     "screenshot": "screenshots/2026-11-23-worker-755.png"
+    },
+    {
+     "name": "Feega",
+     "what": "A free, open-source visual editor for your codebase: click any element in your running app, edit it like in Figma, and the change is written straight into your code — works next to Claude Code and Cursor with no AI credits and no lock-in.",
+     "innovative": "It replaces describing UI edits to an agent in prose with direct visual manipulation that produces a code diff — the human points at the pixels, the tool writes the patch.",
+     "link": "https://www.reddit.com/r/SideProject/comments/1y3lp93/i_got_tired_of_describing_ui_edits_to_my_agents/",
+     "hackathon": "Clone the pattern for any framework in a weekend — the fastest way to demo agent-assisted UI work.",
+     "screenshot": "screenshots/2026-11-23-feega.png"
+    },
+    {
+     "name": "Verfy",
+     "what": "An MIT CLI that checks your AI coding agent's tool calls before they run: it pins MCP tool definitions and agent-loaded files into a verfy.lock of SHA-256 hashes and blocks any tool that changed after you approved it.",
+     "innovative": "It treats MCP tools like npm dependencies — a lockfile for tools, not just code — so a silently edited tool definition is a hard failure instead of a prompt-injection vector, with a deterministic allow/ask/deny guard on every PreToolUse call and signed hash-chained receipts.",
+     "link": "https://news.ycombinator.com/item?id=50614956",
+     "hackathon": "A hook plus a hash-lockfile guard is a small, shippable agent-safety layer for any coding agent.",
+     "screenshot": "screenshots/2026-11-23-verfy.png"
+    },
+    {
+     "name": "ELBI",
+     "what": "An Apache-2.0 MCP server that gives data agents an empirical memory: past analytical work is stored as cached 'derivations' (Python functions with declared inputs, cached against code plus data), and 30+ verify_* tools return sound, unsound, or inconclusive for claims like 'is this query trustworthy?'",
+     "innovative": "Memory is empirical, not retrieval — a skill is only reused if its past results were verified and are not stale, so the agent learns what actually worked instead of recalling text.",
+     "link": "https://news.ycombinator.com/item?id=50611885",
+     "hackathon": "Build a verified-claim memory layer for a data agent in a day — the sound/unsound/inconclusive verdict is the demo.",
+     "screenshot": "screenshots/2026-11-23-elbi.png"
+    },
+    {
+     "name": "Blobby",
+     "what": "A macOS menu-bar app that shows each running Claude Code, Codex, or Gemini CLI session as a blob next to the MacBook notch — working, finished, or waiting for you — with one click to its terminal tab.",
+     "innovative": "It reads the state files the CLIs' own hooks already write, and warns when two agents edit the same file, offering each agent its own git worktree — then shows what changed and whether tests passed.",
+     "link": "https://news.ycombinator.com/item?id=50612033",
+     "hackathon": "A hook-driven multi-agent traffic light and collision detector is very buildable and solves a real parallel-agent pain.",
+     "screenshot": "screenshots/2026-11-23-blobby.png"
+    }
+   ]
   }
  ]
 }
