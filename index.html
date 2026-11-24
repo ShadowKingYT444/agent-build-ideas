@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 256 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 261 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-24 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>pilotfish</h3>
+  <p class="what">An open-source (MIT) browser for AI agents: any MCP-speaking agent gets a real Chrome. On a competitor&#x27;s public harness it scored GAIA Level 1 88.7% and AssistantBench 72.7%, with 0 timeouts in 86 tasks.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Instead of re-sending the whole page after every click, the agent gets a compact outline of the screen once and then only the lines that changed — same accuracy as Playwright MCP on 100 WebVoyager tasks (66 vs 63 right) but 24k input tokens per task instead of 85k and 4.5 tool calls instead of 10.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend slice is very doable: one MCP tool that returns a compact page outline plus only-changed-lines diffs, benchmarked on ~10 web tasks.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1y47tyv/pilotfish_opensource_browser_for_ai_agents_we_ran/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-24-pilotfish.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-24-pilotfish.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Homie</h3>
+  <p class="what">A fully local voice assistant that lives in the MacBook notch: a 4B model (Qwen 3 5 4B via llama.cpp/Metal), on-device speech recognition, and an 82M-parameter voice, with all apps, files, and settings controlled locally.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Two latency tricks make a small local model feel instant: an &#x27;instant lane&#x27; of pattern-matched commands that skip the model entirely (0.43s median end-to-end), and a llama.cpp prompt cache saved to disk so the 3,700-token system prompt is never re-read (launch-to-ready 5-10s to 0.12s). It points at UI elements via the Accessibility tree and on-device OCR instead of having the model draw coordinates.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The pattern-matched instant lane plus a disk-cached prompt for one local model is a clean weekend core; the notch UI and full macOS control are the stretch goal.</p>
+  <p class="links"><a href="https://homie-mac.vercel.app/fast" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-24-homie.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-24-homie.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Agent World</h3>
+  <p class="what">A public board of real, unsolved problems (math, science, medicine, tech) that AI agents connect to over MCP, register themselves, pick a problem, and file real work in the open under a spend cap; humans post the problems.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It flips the agent benchmark into a live public job board — work is filed where anyone can check it, and agents self-register via a single paste into Claude Code or any MCP agent using an llms.txt.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A board plus MCP server, agent registration and a spend cap, with one agent solving one seeded problem in public, is a classic weekend build.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1y42ypb/agent_world_a_public_board_of_real_unsolved/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-24-agent-world.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-24-agent-world.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>kane-loop</h3>
+  <p class="what">A Node 20+, zero-dependency loop that stops a coding agent from claiming &#x27;done&#x27; until Kane CLI passes every user flow in a real Chrome. Flows are written in plain-English flows.md; failures become FIX_REQUEST.md for the agent; `kane-loop gate -- &lt;deploy&gt;` deploys only on all-green.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It treats the verifier, not the agent, as the source of truth — spec edits by the agent get reverted, and `kane-loop calibrate` measures which flows are stable enough to gate on. Demo: 0/4 to 4/4 verified in ~11 minutes.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Built for the Kane CLI hackathon; a weekend version is flows.md, a browser runner, a FIX_REQUEST.md loop, and a deploy gate.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1y4hahr/kaneloop_my_ai_coding_agent_isnt_done_until_kane/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-24-kane-loop.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-24-kane-loop.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Clam AI</h3>
+  <p class="what">A permission layer that lets AI agents work in your Gmail without holding the master key to your inbox. A 3-person team, in capped Gmail beta, working via MCP with Claude, ChatGPT, Gemini, and Codex.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Rules are written in plain English (&#x27;Read travel email. Draft replies. Never send.&#x27;) but enforced deterministically as Cedar policies over email attributes and semantic Gmail labels — so a bill from a new sender is still a bill — with &#x27;ask me first&#x27; approvals via WhatsApp/Telegram/Slack and a full log of every action with the rule that decided it.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend build could ship one Gmail MCP proxy with plain-English rules compiled to a small allow/deny policy and an approval step in Slack.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/clam-ai" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-24-clam-ai.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-24-clam-ai.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-23 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
