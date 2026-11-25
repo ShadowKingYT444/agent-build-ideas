@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 261 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 266 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-25 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Verilays</h3>
+  <p class="what">Open-source tool that catches AI agents reporting success for actions that never happened. You decorate a tool and a separate worker re-reads the record from your Postgres database (read-only) and marks each action verified, mismatch, missing, or failed.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It treats an agent&#x27;s &#x27;done&#x27; as a self-report and verifies it against ground truth in the database instead of trusting the model — evals by re-reading state, not by asking the agent.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The &#x27;did it actually do it?&#x27; check is the missing layer in most agent demos — a drop-in decorator with a one-command demo is tailor-made for hackathon judging.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1y59rnw/an_agents_done_is_a_selfreport_we_opensourced_a/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-25-verilays.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-25-verilays.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Rethink Phone</h3>
+  <p class="what">An experiment putting Claude Code on a rooted phone as a chief of staff: it answers real calls, reads the screen, taps and types, and does things like ordering groceries on Blinkit while still on the call. Runs on stock LineageOS 24 with no custom ROM or kernel.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The in-call audio hack: Android 13 privileged APIs and DownlinkExtraction to hear the caller, with a media track pinned to the telephony device (INCALL_MUSIC out) because the official voice_tx path never reaches the modem — Claude Code answers calls in about a second from a Debian chroot on the phone.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend version could do the screen-control and voice part on a spare Android — the full in-call audio path is the stretch goal, not the starting point.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50641921" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-25-rethink-phone.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-25-rethink-phone.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Tendeck</h3>
+  <p class="what">A Mac board that runs Claude Code, Codex, and other agent CLIs side by side — one card per coding agent, a worktree per agent, $59 one-time. Solo maker.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A card turns gold when an agent needs the user, with the permission question answered on the card via Claude Code&#x27;s permission hook — and an agent can be moved to another account mid-conversation, with the conversation copied into that account&#x27;s Claude folder and resumed with --resume, so full context is kept instead of a replayed summary.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend version could be a simple board over tmux/CLI sessions with a gold &#x27;needs you&#x27; state and permission-hook forwarding.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/tendeck" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-25-tendeck.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-25-tendeck.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Belay</h3>
+  <p class="what">Open-source, pre-alpha tool that turns a coding agent&#x27;s system changes into deterministic, human-readable semantic diffs with integrity checks and receipts — instead of a raw file list, it explains what changed (a pip install, a new sudoers rule, a cron job).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It interprets changes semantically per subsystem (package managers, git refs, hooks, sudoers, cron, systemd, SSH keys) rather than diffing paths, records live runs with `belay watch`, and ships a `pybelay` reward helper for agent evals — verified against 2,115 published agent runs.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend team could ship a narrow version covering one package manager plus a watcher; the core idea is small, the breadth of coverage is the hard part.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50641716" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-25-belay.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-25-belay.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>PeerBand</h3>
+  <p class="what">Connects the coding agents run in Herdr across a laptop, desktop, and VMs so they can be checked from ChatGPT or another MCP client, with no SSH required. Solo maker.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> When an agent needs the user, PeerBand sends a Telegram message and the user can reply to that exact agent from their phone — the reply is routed back to the specific agent session on the specific machine, rather than to a generic chat or terminal.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> The most weekend-shaped idea of the day: an MCP relay plus a Telegram bot that maps each chat thread to one agent session.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/peerband" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-25-peerband.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-25-peerband.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-24 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
