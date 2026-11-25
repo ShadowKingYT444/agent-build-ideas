@@ -2539,6 +2539,51 @@
      "what": "A permission layer that lets AI agents work in your Gmail without holding the master key to your inbox. A 3-person team, in capped Gmail beta, working via MCP with Claude, ChatGPT, Gemini, and Codex."
     }
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "items": [
+    {
+     "hackathon": "The 'did it actually do it?' check is the missing layer in most agent demos \u2014 a drop-in decorator with a one-command demo is tailor-made for hackathon judging.",
+     "innovative": "It treats an agent's 'done' as a self-report and verifies it against ground truth in the database instead of trusting the model \u2014 evals by re-reading state, not by asking the agent.",
+     "link": "https://www.reddit.com/r/SideProject/comments/1y59rnw/an_agents_done_is_a_selfreport_we_opensourced_a/",
+     "name": "Verilays",
+     "screenshot": "screenshots/2026-11-25-verilays.png",
+     "what": "Open-source tool that catches AI agents reporting success for actions that never happened. You decorate a tool and a separate worker re-reads the record from your Postgres database (read-only) and marks each action verified, mismatch, missing, or failed."
+    },
+    {
+     "hackathon": "A weekend version could do the screen-control and voice part on a spare Android \u2014 the full in-call audio path is the stretch goal, not the starting point.",
+     "innovative": "The in-call audio hack: Android 13 privileged APIs and DownlinkExtraction to hear the caller, with a media track pinned to the telephony device (INCALL_MUSIC out) because the official voice_tx path never reaches the modem \u2014 Claude Code answers calls in about a second from a Debian chroot on the phone.",
+     "link": "https://news.ycombinator.com/item?id=50641921",
+     "name": "Rethink Phone",
+     "screenshot": "screenshots/2026-11-25-rethink-phone.png",
+     "what": "An experiment putting Claude Code on a rooted phone as a chief of staff: it answers real calls, reads the screen, taps and types, and does things like ordering groceries on Blinkit while still on the call. Runs on stock LineageOS 24 with no custom ROM or kernel."
+    },
+    {
+     "hackathon": "A weekend version could be a simple board over tmux/CLI sessions with a gold 'needs you' state and permission-hook forwarding.",
+     "innovative": "A card turns gold when an agent needs the user, with the permission question answered on the card via Claude Code's permission hook \u2014 and an agent can be moved to another account mid-conversation, with the conversation copied into that account's Claude folder and resumed with --resume, so full context is kept instead of a replayed summary.",
+     "link": "https://www.producthunt.com/products/tendeck",
+     "name": "Tendeck",
+     "screenshot": "screenshots/2026-11-25-tendeck.png",
+     "what": "A Mac board that runs Claude Code, Codex, and other agent CLIs side by side \u2014 one card per coding agent, a worktree per agent, $59 one-time. Solo maker."
+    },
+    {
+     "hackathon": "A weekend team could ship a narrow version covering one package manager plus a watcher; the core idea is small, the breadth of coverage is the hard part.",
+     "innovative": "It interprets changes semantically per subsystem (package managers, git refs, hooks, sudoers, cron, systemd, SSH keys) rather than diffing paths, records live runs with `belay watch`, and ships a `pybelay` reward helper for agent evals \u2014 verified against 2,115 published agent runs.",
+     "link": "https://news.ycombinator.com/item?id=50641716",
+     "name": "Belay",
+     "screenshot": "screenshots/2026-11-25-belay.png",
+     "what": "Open-source, pre-alpha tool that turns a coding agent's system changes into deterministic, human-readable semantic diffs with integrity checks and receipts \u2014 instead of a raw file list, it explains what changed (a pip install, a new sudoers rule, a cron job)."
+    },
+    {
+     "hackathon": "The most weekend-shaped idea of the day: an MCP relay plus a Telegram bot that maps each chat thread to one agent session.",
+     "innovative": "When an agent needs the user, PeerBand sends a Telegram message and the user can reply to that exact agent from their phone \u2014 the reply is routed back to the specific agent session on the specific machine, rather than to a generic chat or terminal.",
+     "link": "https://www.producthunt.com/products/peerband",
+     "name": "PeerBand",
+     "screenshot": "screenshots/2026-11-25-peerband.png",
+     "what": "Connects the coding agents run in Herdr across a laptop, desktop, and VMs so they can be checked from ChatGPT or another MCP client, with no SSH required. Solo maker."
+    }
+   ]
   }
  ]
 }
