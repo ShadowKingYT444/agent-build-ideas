@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 266 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 271 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-26 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>Cubicle</h3>
+  <p class="what">A solo-built canvas where each AI agent sits in its own room; you draw a wire from a document or card to an agent, and that wire is exactly what the agent can read. Side effects like sending an email come back as proposals in a &quot;Needs you&quot; list; it runs on free tiers and local models via Ollama, with 17 ready-made teams.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Permissions as wiring — access control is literally the diagram, with a human-approval queue for side effects.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Clone the room-and-wire metaphor for one domain in a weekend — every agent&#x27;s data access visible as a wire.</p>
+  <p class="links"><a href="https://www.linkedin.com/posts/adithyapoojary_a-startup-asked-for-my-take-on-companies-ugcPost-7524448939337699328-1Wq6/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>lip-dictation</h3>
+  <p class="what">A Claude Code plugin that lets you mouth a phrase at your webcam and have a local lip-reading model type it into the prompt — no audio recorded, no video leaves the machine, runs on Apple Silicon.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> A personal LoRA trained on your own lips from about 100 mouthed phrases (10-15 minutes), and each dictation also sends Claude the recognizer&#x27;s alternative readings so the agent helps disambiguate a misread.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Demo silent prompting in a noisy hackathon room, then train the personal model live and show before/after accuracy.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50655639" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Beakdown</h3>
+  <p class="what">An open-source MCP server that gives AI agents a visual checkpoint before they run data pipelines. The agent stages a DuckDB SQL DAG, the human opens a local URL, sees the steps as a map with sample tables and null counts, edits the SQL, and approves the exact plan.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The checkpoint is visual and non-blocking — the agent doesn&#x27;t sit waiting while the human reads — and deliberately sandboxed: a single DuckDB SELECT only, no Python exec, no file writes, no network calls, previews capped at 50 rows per node.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> &quot;Show the agent&#x27;s intermediate steps as a map, not a terminal dump&quot; — human approval as a first-class UI.</p>
+  <p class="links"><a href="https://www.reddit.com/r/SideProject/comments/1y650qb/i_built_an_opensource_mcp_server_to_give_ai/" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>plannotator</h3>
+  <p class="what">A local, browser-based review workspace for AI coding agents. Annotate plans, specs, HTML artifacts, and diffs, review code and PRs, and send all feedback back to the agent with one click.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The Plannotator Inbox is one local window where multiple agents leave messages, questions, files, and prototypes grouped by what each needs, plus hooks that intercept an agent&#x27;s plan-mode exit so a plan opens for human annotation before work proceeds.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build the human-in-the-loop layer — a review/inbox UI and annotation-to-agent feedback loop — instead of another autonomous agent.</p>
+  <p class="links"><a href="https://github.com/backnotprop/plannotator" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Agentic Algorithm Engineering</h3>
+  <p class="what">An agent skill that optimizes code by looping: profile performance, propose a falsifiable hypothesis, implement and test it automatically, keep the change only if performance improves and negotiated tests pass — with a PDF report and a growing knowledge base of optimization knowledge.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> It imports the scientific method into code optimization — falsifiable hypotheses tested on real-world instances, not &quot;make it faster&quot; prompting — reporting 3.9x faster on the KaHIP graph-partitioning toolkit and 8.9x on the VieCut minimum-cut solver.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Give a team a slow baseline and let the skill run the hypothesis loop overnight — the PDF report makes the speedup auditable.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50611593" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-25 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
