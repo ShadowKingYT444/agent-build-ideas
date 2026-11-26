@@ -2613,19 +2613,19 @@
           "screenshot": null
         },
         {
-          "name": "plannotator",
-          "what": "A local, browser-based review workspace for AI coding agents. Annotate plans, specs, HTML artifacts, and diffs, review code and PRs, and send all feedback back to the agent with one click.",
-          "innovative": "The Plannotator Inbox is one local window where multiple agents leave messages, questions, files, and prototypes grouped by what each needs, plus hooks that intercept an agent's plan-mode exit so a plan opens for human annotation before work proceeds.",
-          "link": "https://github.com/backnotprop/plannotator",
-          "hackathon": "Build the human-in-the-loop layer \u2014 a review/inbox UI and annotation-to-agent feedback loop \u2014 instead of another autonomous agent.",
-          "screenshot": null
-        },
-        {
           "name": "Agentic Algorithm Engineering",
           "what": "An agent skill that optimizes code by looping: profile performance, propose a falsifiable hypothesis, implement and test it automatically, keep the change only if performance improves and negotiated tests pass \u2014 with a PDF report and a growing knowledge base of optimization knowledge.",
           "innovative": "It imports the scientific method into code optimization \u2014 falsifiable hypotheses tested on real-world instances, not \"make it faster\" prompting \u2014 reporting 3.9x faster on the KaHIP graph-partitioning toolkit and 8.9x on the VieCut minimum-cut solver.",
           "link": "https://news.ycombinator.com/item?id=50611593",
           "hackathon": "Give a team a slow baseline and let the skill run the hypothesis loop overnight \u2014 the PDF report makes the speedup auditable.",
+          "screenshot": null
+        },
+        {
+          "name": "AgentDE",
+          "what": "Puts all your terminal coding agents (Claude Code, Codex, or any CLI agent) in one native Mac window \u2014 groups and tabs, each tab's icon showing whether its agent is working, needs you, or is done. Free, MIT licensed. Published on Product Hunt Nov 25.",
+          "innovative": "Workstreams: agents keep a shared record of each piece of work (overview, rules, memory, questions for you) through an MCP server, and it comes back after every compaction \u2014 plus each shell runs in its own small process, so agents keep working when you quit or update the app (about 0.4 GB with 30 agent tabs).",
+          "link": "https://www.producthunt.com/products/agentde",
+          "hackathon": "A weekend version is one window over tmux sessions with per-tab agent state and a shared workstream record that survives compaction.",
           "screenshot": null
         }
       ]
