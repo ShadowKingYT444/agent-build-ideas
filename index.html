@@ -25,8 +25,51 @@ footer a{color:var(--acc);text-decoration:none}
 <body><div class="wrap">
 <header>
 <h1>Agent Build Ideas</h1>
-<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 271 ideas so far.</p>
+<p class="sub">A daily top-5 of niche things people are building <em>for</em> agents or <em>with</em> agents as part of the product — mined from X, GitHub, HN, Reddit, Product Hunt &amp; LinkedIn. Big-company launches excluded. 276 ideas so far.</p>
 </header>
+<section class="day">
+  <h2>2026-11-27 <span class="count">5 ideas</span></h2>
+  <div class="grid"><article class="card">
+  <h3>BoBe</h3>
+  <p class="what">An open-source ESP32-S3 talking toy that serves as a physical body for a local AI assistant desktop app (Mac/Linux), built around a ~$35 toy with zero API keys on the chip.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The author reverse-engineered the toy&#x27;s screen, audio, and power-latch pins with no schematic, and tests bad-Wi-Fi behavior with a Raspberry Pi Pico 2 that physically presses the toy&#x27;s buttons automatically behind a packet-loss router — a hardware-in-the-loop test rig for a desk gadget.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Flash a cheap ESP32 toy with local-assistant firmware in a weekend; the pin mapping is already documented and open-sourced.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50668024" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-27-bobe.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-27-bobe.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Ghost Mode</h3>
+  <p class="what">An MIT-licensed open-source Rust tool that converts an existing agent to &#x27;Code Mode&#x27; with ~20 lines of setup: instead of one LLM round-trip per tool call, the LLM writes a single script against the available tools, claiming 60-70% token savings.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> The generated script can pause execution, have the runtime run an MCP call on its behalf, and then resume — so code-mode scripts can reach MCP servers, which plain generated scripts in Codex/Claude Code cannot.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Implement a code-mode loop for one agent framework in a weekend: generate script, sandbox it, pause/resume on tool calls, measure the token savings.</p>
+  <p class="links"><a href="https://news.ycombinator.com/item?id=50665796" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-27-ghost-mode.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-27-ghost-mode.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>Waku Agent</h3>
+  <p class="what">An open-source, always-on, local-first personal AI agent harness that runs on your own machine and works through Telegram, Discord, and WhatsApp.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Deliberately tiny and persistent: a ~95-line readable Python loop with local memory in SQLite (semantic, episodic, and procedural) plus an event inbox, timers, approvals, and an outbox, so the agent keeps working between chats instead of only answering prompts.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> Build a 95-line always-on agent loop in a weekend — add one event source and one human approval gate.</p>
+  <p class="links"><a href="https://www.linkedin.com/posts/shen-sean-chen_github-shenseanchenwaku-agent-waku-waku-activity-7530669458617548800-D2kn" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  
+</article>
+<article class="card">
+  <h3>Hub</h3>
+  <p class="what">Open-source (Apache-2.0) multi-agent orchestration that runs &#x27;100 Claude Code or Codex sessions like 5&#x27; — a coordinator plus task queues, long-running jobs, and per-task model routing.</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Risk-tiered model routing (a normal model for routine tasks, a stronger one for risky tasks) combined with hubs that talk to each other via Telegram, so multiple machines coordinate as one fleet.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend coordinator that fans tasks out to N agent CLIs, routes by a risk tag, and reports progress in Telegram.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/hub-20" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-27-hub.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-27-hub.png" alt="screenshot" loading="lazy"></a>
+</article>
+<article class="card">
+  <h3>ExtraOrbital</h3>
+  <p class="what">Open-source, one-command provisioning of databases, storage buckets, and AI keys for agents — `npx extraorbital` creates the infra, rotates keys, and everything is ephemeral (7 days).</p>
+  <p class="innov"><span class="lbl">The innovative part:</span> Infra-as-a-prompt with scoped, time-boxed credentials: agents never hold long-lived keys, because each run gets its own database, bucket, and keys that auto-expire.</p>
+  <p class="hack"><span class="lbl">Hackathon angle:</span> A weekend CLI that mints scoped, expiring API keys plus a bucket per agent run and revokes them on exit.</p>
+  <p class="links"><a href="https://www.producthunt.com/products/extraorbital-deleted-1365752" target="_blank" rel="noopener">Original post &rarr;</a></p>
+  <a class="shot" href="screenshots/2026-11-27-extraorbital.png" target="_blank" rel="noopener"><img src="screenshots/2026-11-27-extraorbital.png" alt="screenshot" loading="lazy"></a>
+</article></div>
+</section>
 <section class="day">
   <h2>2026-11-26 <span class="count">5 ideas</span></h2>
   <div class="grid"><article class="card">
